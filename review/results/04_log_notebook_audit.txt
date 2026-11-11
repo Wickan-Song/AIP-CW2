@@ -1,0 +1,20 @@
+[PASS] log lists 24 run headers — n=24
+[PASS] log start/end timestamps present
+[PASS] all 24 runs trained on one recorded device (mps) — {'mps'}
+[PASS] 480 epoch timings recorded — n=480
+    total logged epoch time: 158.3 min (mean 19.8s/epoch)
+[PASS] no NaN validation epoch in log — []
+[PASS] protocol verdict echoed in log (criteria not met)
+[PASS] Predict.ipynb: no error outputs saved — []
+[PASS] Predict.ipynb: saved figure outputs present — n=3
+[PASS] Predict.ipynb: markdown cells present — n=9
+[PASS] Predict.ipynb: code cells carry execution counts — 14/14
+[PASS] Predict.ipynb: no CJK characters in source or saved outputs — []
+[PASS] Formal_Experiment.ipynb: no error outputs saved — []
+[PASS] Formal_Experiment.ipynb: saved figure outputs present — n=3
+[PASS] Formal_Experiment.ipynb: markdown cells present — n=6
+[PASS] Formal_Experiment.ipynb: code cells carry execution counts — 4/4
+[PASS] Formal_Experiment.ipynb: no CJK characters in source or saved outputs — []
+[PASS] Formal_Experiment.ipynb: training flags default to False — {'RUN_TRAINING': 'False', 'RUN_VALIDATION': 'False', 'RUN_TEST': 'False'}
+
+0 finding(s).

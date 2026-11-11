@@ -1,0 +1,32 @@
+[PASS] training uses torchvision ImageNet ResNet-18 weights identifier
+[PASS] no weight loading from PlantSeg-named sources; 'PlantSeg' only labels the dataset
+[PASS] RGBDataset never reads mask paths
+[PASS] LesionTrainingDataset refuses non-train/non-known rows
+[PASS] mask mirrors with the image (synchronous augmentation)
+[PASS] padding region excluded from lesion loss (valid_region)
+[PASS] mask binarised as non-zero foreground, nearest-neighbour resize
+[PASS] evaluation source never reads lesion masks/annotations (RGB-only paths)
+[PASS] validation uses inference mode and eval()
+[PASS] validation loader built with training=False (deterministic transform)
+[PASS] EXIF orientation applied before resize (no orientation label leakage)
+[PASS] normalisation uses the pretrained weights' documented statistics
+[PASS] evaluation constant KNOWN_ACCEPTANCE = 0.95 matches protocol
+[PASS] evaluation constant KNOWN_F1_TOLERANCE = 0.02 matches protocol
+[PASS] evaluation constant AUOSCR_TARGET = 0.02 matches protocol
+[PASS] evaluation constant MIN_POSITIVE_SEEDS = 2 matches protocol
+[PASS] score order MSP, MaxLogit, Negative energy (documented tie-break)
+[PASS] test evaluation refuses to run without frozen thresholds
+[PASS] acceptance rule is score >= threshold
+[PASS] calibration takes the ceil(0.95 n)-th largest known score
+[PASS] per-run seeding of python, torch and loader generator
+[PASS] lesion head initialisation forked off the paired RNG stream
+[PASS] checkpoint rule keeps the earliest best epoch (strictly greater)
+[PASS] training loop pairs identical loss weighting (0.25 lesion loss)
+[PASS] resume path restores RNG, optimizer and scheduler state
+[PASS] nonfinite losses abort the run
+[PASS] checkpoints pin manifest sha and class order (anti-mixing guard)
+[PASS] manifest generator refuses metadata/class mismatch
+[PASS] manifest generator verifies near-duplicate decision hashes
+[PASS] formal notebook drives the same module functions (no divergent copy)
+
+0 finding(s).

@@ -1,0 +1,36 @@
+[PASS] [A] prediction files cover exactly the manifest test set
+[PASS] [A] baseline_A_seed42_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] lesion_A_seed42_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] baseline_A_seed123_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] lesion_A_seed123_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] baseline_A_seed2026_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] lesion_A_seed2026_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [A] known_accuracy: recomputed means match stored summary — baseline 0.7850/0.7850 lesion 0.7844/0.7844
+[PASS] [A] known_accuracy: means match README headline (0.7850 → 0.7844) — recomputed 0.7850 → 0.7844
+    [A] known_accuracy: baseline 0.7850±0.0123 lesion 0.7844±0.0042
+[PASS] [A] known_macro_f1: recomputed means match stored summary — baseline 0.7578/0.7578 lesion 0.7589/0.7589
+    [A] known_macro_f1: baseline 0.7578±0.0203 lesion 0.7589±0.0095
+[PASS] [A] familiar_auoscr: recomputed means match stored summary — baseline 0.6245/0.6245 lesion 0.6316/0.6316
+[PASS] [A] familiar_auoscr: means match README headline (0.6245 → 0.6316) — recomputed 0.6245 → 0.6316
+    [A] familiar_auoscr: baseline 0.6245±0.0115 lesion 0.6316±0.0048
+[PASS] [A] paired AUOSCR diff matches README +0.0071 — recomputed +0.0071
+[PASS] [B] prediction files cover exactly the manifest test set
+[PASS] [B] baseline_B_seed42_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] lesion_B_seed42_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] baseline_B_seed123_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] lesion_B_seed123_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] baseline_B_seed2026_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] lesion_B_seed2026_lr0.0001_epochs20: rows match manifest and frozen thresholds — []
+[PASS] [B] known_accuracy: recomputed means match stored summary — baseline 0.7471/0.7471 lesion 0.7478/0.7478
+[PASS] [B] known_accuracy: means match README headline (0.7471 → 0.7478) — recomputed 0.7471 → 0.7478
+    [B] known_accuracy: baseline 0.7471±0.0092 lesion 0.7478±0.0080
+[PASS] [B] known_macro_f1: recomputed means match stored summary — baseline 0.7017/0.7017 lesion 0.7031/0.7031
+    [B] known_macro_f1: baseline 0.7017±0.0099 lesion 0.7031±0.0065
+[PASS] [B] familiar_auoscr: recomputed means match stored summary — baseline 0.6007/0.6007 lesion 0.5987/0.5987
+[PASS] [B] familiar_auoscr: means match README headline (0.6007 → 0.5987) — recomputed 0.6007 → 0.5987
+    [B] familiar_auoscr: baseline 0.6007±0.0119 lesion 0.5987±0.0141
+[PASS] [B] paired AUOSCR diff matches README -0.0020 — recomputed -0.0020
+[PASS] stored hypothesis verdict is 'not supported' in both assignments — A diff=+0.0071 pos_seeds=2/3; B diff=-0.0020 pos_seeds=1/3
+
+numeric comparisons against stored results: 912 (max |diff| = 7.77e-16 at lesion_A_seed123_lr0.0001_epochs20:MaxLogit.familiar_unshared_name.auoscr)
+0 finding(s).
