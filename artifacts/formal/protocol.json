@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-11-11T09:37:01+08:00",
+  "stage": "Formal experiment, recorded after the assignment-A pilot and before formal training or test inference.",
+  "pilot_manifest_sha256": "cc9a775edf59da9b52e2c3a036b7fb0045dd0f6b5d33fcbf2be125b1a760b594",
+  "data": "PlantSeg v7 with original partitions and the coursework A/B class roles. The formal manifest applies reviewed cross-partition near-duplicate exclusions in addition to the exact-pixel audit.",
+  "assignments": [
+    "A",
+    "B"
+  ],
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "learning_rates": [
+    0.0001,
+    0.0003
+  ],
+  "models": [
+    "baseline",
+    "lesion"
+  ],
+  "epochs": 20,
+  "batch_size": 32,
+  "optimizer": "AdamW",
+  "weight_decay": 0.0001,
+  "minimum_learning_rate": 1e-06,
+  "scheduler": "CosineAnnealingLR",
+  "backbone": "ResNet-18 ImageNet1K V1",
+  "lesion_loss_weight": 0.25,
+  "checkpoint_rule": "Maximum macro-F1 on known validation images, with the earliest epoch selected on ties.",
+  "score_rule": "Select the score with highest mean familiar-host validation AUOSCR over baseline runs, equally weighting both assignments, both learning rates and all seeds. In case of ties use MSP, then MaxLogit, then Negative energy. Use this same score for both models and assignments.",
+  "learning_rate_rule": "For each assignment, consider learning rates whose mean paired known-validation macro-F1 difference (lesion minus baseline) is at least -0.02. Among eligible learning rates, select the one maximizing the equally weighted mean of the baseline and lesion familiar-host validation AUOSCR under the selected score. Break ties by smaller learning rate. If none are eligible, flag the tolerance violation and select the highest paired known macro-F1 difference, then mean familiar-host AUOSCR, then smaller learning rate for descriptive reporting.",
+  "threshold_rule": "For each model, seed and score, choose the largest observed known validation score accepting at least 95% of known validation images. Freeze all choices for both assignments before test inference.",
+  "primary_outcome": "AUOSCR on known and familiar-host test-unknown images. Report unfamiliar-host results separately. Retain comparisons under all three scores.",
+  "hypothesis": {
+    "minimum_mean_auoscr_gain": 0.02,
+    "minimum_positive_pairs": 2,
+    "maximum_mean_known_macro_f1_drop": 0.02,
+    "assessment": "Support requires all three criteria in both assignments on frozen test comparisons. Report each criterion, the paired differences, seed means, sample standard deviations and group sizes. Describe inconsistent or insufficient evidence, including any known-class tolerance violation."
+  }
+}
