@@ -1,0 +1,181 @@
+{
+  "validation_counts": {
+    "known": 278,
+    "familiar_dev": 54,
+    "unfamiliar_dev": 42
+  },
+  "models": {
+    "Baseline": {
+      "known_accuracy": 0.7877697841726619,
+      "known_macro_f1": 0.7661355212984888,
+      "known_correct_count": 219,
+      "scores": {
+        "MSP": {
+          "threshold": 0.41483429074287415,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7733812949640287,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.5937250199840127,
+              "unknown_auroc": 0.6732613908872903,
+              "unknown_false_acceptance": 0.9629629629629629,
+              "unknown_accepted_count": 52
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6273552586502228,
+              "unknown_auroc": 0.7073484069886947,
+              "unknown_false_acceptance": 0.9523809523809523,
+              "unknown_accepted_count": 40
+            }
+          }
+        },
+        "MaxLogit": {
+          "threshold": 3.40126371383667,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7769784172661871,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6077804423128164,
+              "unknown_auroc": 0.70230482280842,
+              "unknown_false_acceptance": 0.8888888888888888,
+              "unknown_accepted_count": 48
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6348920863309353,
+              "unknown_auroc": 0.7291024323398425,
+              "unknown_false_acceptance": 0.9047619047619048,
+              "unknown_accepted_count": 38
+            }
+          }
+        },
+        "Negative energy": {
+          "threshold": 4.150298118591309,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7733812949640287,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6099120703437251,
+              "unknown_auroc": 0.7088329336530775,
+              "unknown_false_acceptance": 0.8703703703703703,
+              "unknown_accepted_count": 47
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6383179170948956,
+              "unknown_auroc": 0.736125385405961,
+              "unknown_false_acceptance": 0.9047619047619048,
+              "unknown_accepted_count": 38
+            }
+          }
+        }
+      }
+    },
+    "Lesion": {
+      "known_accuracy": 0.8165467625899281,
+      "known_macro_f1": 0.7825309782980956,
+      "known_correct_count": 227,
+      "scores": {
+        "MSP": {
+          "threshold": 0.4860028922557831,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7877697841726619,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6091127098321343,
+              "unknown_auroc": 0.6887823074873435,
+              "unknown_false_acceptance": 0.8333333333333334,
+              "unknown_accepted_count": 45
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6819116135662897,
+              "unknown_auroc": 0.789482699554642,
+              "unknown_false_acceptance": 0.7142857142857143,
+              "unknown_accepted_count": 30
+            }
+          }
+        },
+        "MaxLogit": {
+          "threshold": 3.624772787094116,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7949640287769785,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6274313882227551,
+              "unknown_auroc": 0.7139621636024513,
+              "unknown_false_acceptance": 0.7777777777777778,
+              "unknown_accepted_count": 42
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6885919835560123,
+              "unknown_auroc": 0.7929085303186022,
+              "unknown_false_acceptance": 0.7857142857142857,
+              "unknown_accepted_count": 33
+            }
+          }
+        },
+        "Negative energy": {
+          "threshold": 4.168117046356201,
+          "known_acceptance": 0.9532374100719424,
+          "known_correct_acceptance": 0.7913669064748201,
+          "known_accepted_count": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6315614175326404,
+              "unknown_auroc": 0.720490274447109,
+              "unknown_false_acceptance": 0.7962962962962963,
+              "unknown_accepted_count": 43
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6872216512504282,
+              "unknown_auroc": 0.7904248030147311,
+              "unknown_false_acceptance": 0.8333333333333334,
+              "unknown_accepted_count": 35
+            }
+          }
+        }
+      }
+    }
+  },
+  "pilot": {
+    "assignment": "A",
+    "seed": 42,
+    "partition": "validation",
+    "manifest_sha256": "cc9a775edf59da9b52e2c3a036b7fb0045dd0f6b5d33fcbf2be125b1a760b594",
+    "epochs": 20,
+    "initial_learning_rate": 0.0003,
+    "lesion_loss_weight": 0.25,
+    "checkpoints": {
+      "Baseline": {
+        "path": "artifacts/baseline_A_seed42_lr0.0003_epochs20.pt",
+        "selected_epoch": 15,
+        "known_validation_at_selection": {
+          "epoch": 15,
+          "learning_rate": 6.262610478227527e-05,
+          "train_loss": 0.016604612989514385,
+          "val_loss": 0.7128195835532044,
+          "val_macro_f1": 0.766135573387146,
+          "val_accuracy": 0.7877697841726619
+        }
+      },
+      "Lesion": {
+        "path": "artifacts/lesion_A_seed42_lr0.0003_epochs20.pt",
+        "selected_epoch": 17,
+        "known_validation_at_selection": {
+          "epoch": 17,
+          "learning_rate": 2.9551959340945366e-05,
+          "train_classification_loss": 0.014504073248082706,
+          "train_lesion_loss": 0.49713905075160253,
+          "val_loss": 0.7377163088150162,
+          "val_macro_f1": 0.7825309634208679,
+          "val_accuracy": 0.8165467625899281
+        }
+      }
+    },
+    "lesion_minus_baseline_known_macro_f1": 0.01639545699960676,
+    "within_known_macro_f1_tolerance": true
+  }
+}

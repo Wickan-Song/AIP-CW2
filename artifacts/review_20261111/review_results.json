@@ -1,0 +1,170 @@
+{
+  "review_date": "2026-11-11",
+  "device": "mps",
+  "source_sha256": {
+    "artifacts/lesion_A_seed42_lr0.0003_epochs20.pt": "99c8bbbd3548ce72b358fa46444254cdd6ccf4a20fa5959ffec4a32821381f28",
+    "artifacts/baseline_A_seed42_lr0.0003_epochs20.pt": "2bd30885dae3a8d501e70c757419f7d870589589f650caa644ce3aa69aa33733",
+    "artifacts/option2_manifest.json": "cc9a775edf59da9b52e2c3a036b7fb0045dd0f6b5d33fcbf2be125b1a760b594",
+    "artifacts/pilot_A_seed42_open_set_validation.json": "543cd039a6736434a57ee1e2103018d08decc9904b3f62b0d4304229a5045da4",
+    "Predict.ipynb": "c581f2d4e4332c772e85bba24acd7d4fd03b0f187328901c856844fcb3192533"
+  },
+  "counts": {
+    "A": {
+      "val/familiar_dev": 54,
+      "val/known": 278,
+      "train/known": 1666,
+      "test/known": 495,
+      "val/unfamiliar_dev": 42,
+      "test/familiar_test": 145,
+      "test/unfamiliar_test": 27
+    },
+    "B": {
+      "train/known": 1516,
+      "val/known": 257,
+      "val/familiar_dev": 70,
+      "test/familiar_test": 132,
+      "test/known": 460,
+      "val/unfamiliar_dev": 42,
+      "test/unfamiliar_test": 27
+    }
+  },
+  "checks": [
+    "English sources and outputs; code syntax; no saved error outputs",
+    "Fresh source-data audit and unchanged frozen manifest",
+    "A/B eligible roles; masks only in training manifest records",
+    "Shared initial weights and first three augmented batches identical",
+    "Auxiliary gradient reaches layer2; padding gradient zero",
+    "Classification forward paths equal in eval mode",
+    "Tied-score and all-wrong synthetic AUOSCR/AUROC checks",
+    "Saved checkpoint re-inference on 374 RGB validation images",
+    "Independent per-class F1 and pairwise AUOSCR/AUROC",
+    "All source notebooks, checkpoints and original JSON files unchanged",
+    "Paired checkpoint hyperparameters and all 20 learning-rate steps match"
+  ],
+  "models": {
+    "Baseline": {
+      "selected_epoch": 15,
+      "known_correct": 219,
+      "accuracy": 0.7877697841726619,
+      "macro_f1": 0.7661355212984888,
+      "scores": {
+        "MSP": {
+          "threshold": 0.41483429074287415,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.5937250199840128,
+              "unknown_auroc": 0.6732613908872902,
+              "unknown_accepted": 52,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6273552586502227,
+              "unknown_auroc": 0.7073484069886947,
+              "unknown_accepted": 40,
+              "unknown_count": 42
+            }
+          }
+        },
+        "MaxLogit": {
+          "threshold": 3.40126371383667,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6077804423128164,
+              "unknown_auroc": 0.7023048228084199,
+              "unknown_accepted": 48,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6348920863309353,
+              "unknown_auroc": 0.7291024323398424,
+              "unknown_accepted": 38,
+              "unknown_count": 42
+            }
+          }
+        },
+        "Negative energy": {
+          "threshold": 4.150298118591309,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.609912070343725,
+              "unknown_auroc": 0.7088329336530775,
+              "unknown_accepted": 47,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6383179170948955,
+              "unknown_auroc": 0.736125385405961,
+              "unknown_accepted": 38,
+              "unknown_count": 42
+            }
+          }
+        }
+      }
+    },
+    "Lesion": {
+      "selected_epoch": 17,
+      "known_correct": 227,
+      "accuracy": 0.8165467625899281,
+      "macro_f1": 0.7825309782980956,
+      "scores": {
+        "MSP": {
+          "threshold": 0.4860028922557831,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6091127098321343,
+              "unknown_auroc": 0.6887823074873435,
+              "unknown_accepted": 45,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6819116135662898,
+              "unknown_auroc": 0.789482699554642,
+              "unknown_accepted": 30,
+              "unknown_count": 42
+            }
+          }
+        },
+        "MaxLogit": {
+          "threshold": 3.624772787094116,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6274313882227551,
+              "unknown_auroc": 0.7139621636024513,
+              "unknown_accepted": 42,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6885919835560124,
+              "unknown_auroc": 0.7929085303186023,
+              "unknown_accepted": 33,
+              "unknown_count": 42
+            }
+          }
+        },
+        "Negative energy": {
+          "threshold": 4.168117046356201,
+          "known_accepted": 265,
+          "groups": {
+            "familiar_dev": {
+              "auoscr": 0.6315614175326405,
+              "unknown_auroc": 0.720490274447109,
+              "unknown_accepted": 43,
+              "unknown_count": 54
+            },
+            "unfamiliar_dev": {
+              "auoscr": 0.6872216512504282,
+              "unknown_auroc": 0.7904248030147311,
+              "unknown_accepted": 35,
+              "unknown_count": 42
+            }
+          }
+        }
+      }
+    }
+  }
+}

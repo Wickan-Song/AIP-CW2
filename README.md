@@ -7,7 +7,7 @@
 ## 快速开始
 
 1. Clone 本仓库，或下载仓库的 Source code ZIP 后解压。从包含 `README.md` 的目录打开 Codex 或 IDE。
-2. 从项目根目录运行下面的命令。脚本会从 [GitHub Release](https://github.com/Wickan-Song/AIP-CW2/releases/tag/v0.1.0-handoff) 下载分段，恢复原始 PlantSeg ZIP 和 26 份权重，并校验文件。如果已经拿到完整 ZIP，也可以直接执行 `python restore_assets.py plantseg.zip AIP-CW2-weights.zip`。
+2. 从项目根目录运行下面的命令。脚本会从 [GitHub Release](https://github.com/Wickan-Song/AIP-CW2/releases/tag/v0.1.0) 下载原始 PlantSeg ZIP 和 26 份权重，并校验后放回正确位置。如果已经拿到完整 ZIP，也可以直接执行 `python restore_assets.py plantseg.zip AIP-CW2-weights.zip`。
 
 ```shell
 python download_release_assets.py
@@ -39,7 +39,7 @@ python verify_package.py --full
 | 冻结规则、正式结果、每张测试图的预测 | `artifacts/formal/evaluation/` |
 | 验证误判、病斑热图及复现脚本 | `artifacts/formal/diagnostics/` |
 
-Release 的 `plantseg.zip.partXX` 可以重组为未经改动的原始数据包。恢复脚本校验原始附件和每个恢复文件，并把数据放在项目根目录下的 `data/plantseg`，把权重放回 `artifacts/`。若你把数据单独移到别处，可自行设置 `PLANTSEG_ROOT` 指向包含 `Metadata.csv`、`images/` 和 `annotations/` 的目录。保留数据内的元数据和原始分区。原始下载记录及来源是 [PlantSeg v7](https://zenodo.org/records/17719108)。
+Release 的 `plantseg.zip` 是未经改动的原始数据包。恢复脚本校验原始附件和每个恢复文件，并把数据放在项目根目录下的 `data/plantseg`，把权重放回 `artifacts/`。若你把数据单独移到别处，可自行设置 `PLANTSEG_ROOT` 指向包含 `Metadata.csv`、`images/` 和 `annotations/` 的目录。保留数据内的元数据和原始分区。原始下载记录及来源是 [PlantSeg v7](https://zenodo.org/records/17719108)。
 
 ## 检查文件与运行
 

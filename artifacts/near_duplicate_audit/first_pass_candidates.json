@@ -1,0 +1,3692 @@
+{
+  "pilot_manifest_sha256": "cc9a775edf59da9b52e2c3a036b7fb0045dd0f6b5d33fcbf2be125b1a760b594",
+  "screened_count": 4148,
+  "split_counts": {
+    "test": 847,
+    "train": 2843,
+    "val": 458
+  },
+  "candidates": [
+    {
+      "pair_id": 1,
+      "left": {
+        "image_path": "images/test/soybean_downy_mildew_Bing_0045.jpg",
+        "split": "test",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "http://storage.agravery.com/uploads/files/SPETSproekt/Line%20of%20defense_Corteva/26_06_19/Peronospora-manshurica.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_downy_mildew_Bing_0006.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "http://storage.agravery.com/uploads/files/SPETSproekt/Line%20of%20defense_Corteva/26_06_19/Peronospora-manshurica.jpg"
+      },
+      "full_neg_corr": -1.0,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 2,
+      "left": {
+        "image_path": "images/train/wheat_septoria_blotch_blotch (42).jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://cs-assets.bayer.com/is/image/bayer/TP-2021072337-1573115-LGPT%20(1)"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_google_septoria (5).jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://cs-assets.bayer.com/is/image/bayer/TP-2021072337-1573115-LGPT%20(1)"
+      },
+      "full_neg_corr": -0.9999998211860657,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 3,
+      "left": {
+        "image_path": "images/test/wheat_leaf_rust_Google_0040.jpg",
+        "split": "test",
+        "class_id": 105,
+        "class_name": "wheat leaf rust",
+        "url": "https://source.roboflow.com/QMKdp67lrSZzZfPTv9Nj/0eoIhkmANtQuB4DpPmam/original.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_leaf_rust_Bing_0015.jpg",
+        "split": "train",
+        "class_id": 105,
+        "class_name": "wheat leaf rust",
+        "url": "https://source.roboflow.com/QMKdp67lrSZzZfPTv9Nj/0eoIhkmANtQuB4DpPmam/original.jpg"
+      },
+      "full_neg_corr": -0.9999986886978149,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 4,
+      "left": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0013.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0007.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "full_neg_corr": -0.999980092048645,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 5,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Bing_0206.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0007.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "full_neg_corr": -0.999977707862854,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 6,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Bing_0206.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0013.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.scidev.net/sub-saharan-africa/wp-content/uploads/sites/5/2019/08/wheat_stem_rust.jpg"
+      },
+      "full_neg_corr": -0.9999775886535645,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 7,
+      "left": {
+        "image_path": "images/train/wheat_septoria_blotch_Bing_0031.jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://extensionaus.com.au/FieldCropDiseasesVic/wp-content/uploads/sites/25/2017/03/Figure-2.17-Septoria-tritici-with-black-fruiting-bodies-pycinidia.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_blotch (20).jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://extensionaus.com.au/FieldCropDiseasesVic/wp-content/uploads/sites/25/2017/03/Figure-2.17-Septoria-tritici-with-black-fruiting-bodies-pycinidia.jpg"
+      },
+      "full_neg_corr": -0.9999690055847168,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "crop_neg_corr": -0.9616211652755737,
+      "crop": "photo 1: 0.9@0.5,0.5",
+      "shared_url": true
+    },
+    {
+      "pair_id": 8,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Google_0223.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://news.utcrops.com/wp-content/uploads/2015/03/early-stripe-rust1.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Bing_0263.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://news.utcrops.com/wp-content/uploads/2015/03/early-stripe-rust1.jpg"
+      },
+      "full_neg_corr": -0.999968409538269,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "crop_neg_corr": -0.9105530381202698,
+      "crop": "photo 2: 0.9@0.5,0.5",
+      "shared_url": true
+    },
+    {
+      "pair_id": 9,
+      "left": {
+        "image_path": "images/test/wheat_powdery_mildew_Bing_0023.jpg",
+        "split": "test",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://s3.amazonaws.com/plantvillage-production-new/images/pics/000/062/758/large/5072188496_7db9b767ba_o.jpg?1464710611"
+      },
+      "right": {
+        "image_path": "images/train/wheat_powdery_mildew_Google_0016.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://s3.amazonaws.com/plantvillage-production-new/images/pics/000/062/758/large/5072188496_7db9b767ba_o.jpg?1464710611"
+      },
+      "full_neg_corr": -0.9999678134918213,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 10,
+      "left": {
+        "image_path": "images/test/soybean_rust_Bing_0055.jpg",
+        "split": "test",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://namibianfarming.com/wp-content/uploads/2024/10/Soybean-Rust-Threat-Looms-large-2.jpeg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_rust_Bing_0023.jpg",
+        "split": "val",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://namibianfarming.com/wp-content/uploads/2024/10/Soybean-Rust-Threat-Looms-large-2.jpeg"
+      },
+      "full_neg_corr": -0.9999668598175049,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 11,
+      "left": {
+        "image_path": "images/train/banana_black_leaf_streak_Bing_0003.jpg",
+        "split": "train",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://dehaat-kheti-prod.s3.amazonaws.com/django-summernote/2021-02-25/ebba40f0-175a-4a58-86b9-327af8f6c0d2.jpg"
+      },
+      "right": {
+        "image_path": "images/val/banana_black_leaf_streak_Bing_0073.jpg",
+        "split": "val",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://dehaat-kheti-prod.s3.amazonaws.com/django-summernote/2021-02-25/ebba40f0-175a-4a58-86b9-327af8f6c0d2.jpg"
+      },
+      "full_neg_corr": -0.9999661445617676,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 12,
+      "left": {
+        "image_path": "images/test/soybean_bacterial_blight_Bing_0049.jpg",
+        "split": "test",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://ecosystemsunited.com/wp-content/uploads/2016/03/soybeanbacterialblight.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Google_0242.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://www.giardinaggio.net/giardinaggio/malattie-delle-piante/batteriosi_N1.jpg"
+      },
+      "full_neg_corr": -0.9999648332595825,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 13,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0109.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "right": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0140.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "full_neg_corr": -0.99996417760849,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 14,
+      "left": {
+        "image_path": "images/test/wheat_powdery_mildew_Bing_0023.jpg",
+        "split": "test",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://s3.amazonaws.com/plantvillage-production-new/images/pics/000/062/758/large/5072188496_7db9b767ba_o.jpg?1464710611"
+      },
+      "right": {
+        "image_path": "images/train/wheat_powdery_mildew_Bing_0127.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://s3.amazonaws.com/plantvillage-production-new/images/pics/000/062/758/large/5072188496_7db9b767ba_o.jpg?1464710611"
+      },
+      "full_neg_corr": -0.9999622702598572,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 15,
+      "left": {
+        "image_path": "images/test/wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg",
+        "split": "test",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://extension.sdstate.edu/sites/default/files/styles/twitter/public/2020-06/W-00653-01-bacterial-leaf-streak-symptoms-wheat.jpg?h=95ffb99b&itok=aBhB4mdE"
+      },
+      "right": {
+        "image_path": "images/train/wheat_septoria_blotch_blotch (82).jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://extension.sdstate.edu/sites/default/files/2020-06/W-00653-01-bacterial-leaf-streak-symptoms-wheat.jpg"
+      },
+      "full_neg_corr": -0.9999604821205139,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 16,
+      "left": {
+        "image_path": "images/train/soybean_downy_mildew_Bing_0037.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://www.legumehub.eu/is_article/risk-management-of-downy-mildew-in-soybean/"
+      },
+      "right": {
+        "image_path": "images/val/soybean_downy_mildew_Bing_0015.jpg",
+        "split": "val",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://www.legumehub.eu/wp-content/uploads/2021/11/Downy-mildew-back-side-leaf-IFVC-August-2020-768x1024.jpg"
+      },
+      "full_neg_corr": -0.9999595880508423,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 17,
+      "left": {
+        "image_path": "images/train/wheat_powdery_mildew_Baidu_0178.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://baijiahao.baidu.com/s?id=1840630768701580384&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Baidu_0022.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://mt.sohu.com/a/465089660_100066616"
+      },
+      "full_neg_corr": -0.9999589920043945,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 18,
+      "left": {
+        "image_path": "images/train/wheat_loose_smut_Google_0007.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "right": {
+        "image_path": "images/val/wheat_loose_smut_Bing_0000.jpg",
+        "split": "val",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "full_neg_corr": -0.9999587535858154,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 19,
+      "left": {
+        "image_path": "images/test/wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg",
+        "split": "test",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "http://www.facaishur.com/zhishi/94565.html"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Bing_0130.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://www.sanatateaplantelor.ro/wp-content/uploads/2023/11/wheat-disease-figure-3.jpg"
+      },
+      "full_neg_corr": -0.9999578595161438,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 20,
+      "left": {
+        "image_path": "images/test/banana_cigar_end_rot_Bing_0014.jpg",
+        "split": "test",
+        "class_id": 7,
+        "class_name": "banana cigar end rot",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=946483127500169"
+      },
+      "right": {
+        "image_path": "images/train/banana_cigar_end_rot_Bing_0071.jpg",
+        "split": "train",
+        "class_id": 7,
+        "class_name": "banana cigar end rot",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=946483127500169"
+      },
+      "full_neg_corr": -0.9999575614929199,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 21,
+      "left": {
+        "image_path": "images/train/wheat_loose_smut_Bing_0197.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "right": {
+        "image_path": "images/val/wheat_loose_smut_Bing_0000.jpg",
+        "split": "val",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "full_neg_corr": -0.9999569058418274,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 22,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0109.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "right": {
+        "image_path": "images/val/zucchini_powdery_mildew_Bing_0183.jpg",
+        "split": "val",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "full_neg_corr": -0.9999558329582214,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 23,
+      "left": {
+        "image_path": "images/train/banana_panama_disease_google_0062.jpg",
+        "split": "train",
+        "class_id": 9,
+        "class_name": "banana panama disease",
+        "url": "https://www.wur.nl/upload_mm/c/4/5/8f1291a0-24f0-40c1-9858-8a06c5f85602_black.jpg"
+      },
+      "right": {
+        "image_path": "images/val/banana_black_leaf_streak_banana black sigatoka (15).jpg",
+        "split": "val",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://www.wur.nl/upload_mm/c/4/5/8f1291a0-24f0-40c1-9858-8a06c5f85602_black.jpg"
+      },
+      "full_neg_corr": -0.9999542832374573,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 24,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Bing_0016.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://s3.eu-west-2.amazonaws.com/uploads.tsl.ac.uk/shared-images/_800x418_fit_center-center_82_none/wheat-stem-rust-768x1024.jpg?mtime=1612347222"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0136.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://s3.eu-west-2.amazonaws.com/uploads.tsl.ac.uk/shared-images/_800x418_fit_center-center_82_none/wheat-stem-rust-768x1024.jpg?mtime=1612347222"
+      },
+      "full_neg_corr": -0.9999540448188782,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 25,
+      "left": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0140.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "right": {
+        "image_path": "images/val/zucchini_powdery_mildew_Bing_0183.jpg",
+        "split": "val",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://missourigirlhome.com/wp-content/uploads/2021/07/powdery-mildew-on-zucchini.jpg"
+      },
+      "full_neg_corr": -0.9999536871910095,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 26,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Google_0057.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0186.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "full_neg_corr": -0.9999508261680603,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 27,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0002.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.gardenanswers.com/wp-content/uploads/2015/12/4754305911357440.jpeg"
+      },
+      "right": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0037.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.gardenanswers.com/wp-content/uploads/2015/12/4754305911357440.jpeg"
+      },
+      "full_neg_corr": -0.9999473690986633,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 28,
+      "left": {
+        "image_path": "images/train/soybean_rust_Bing_0115.jpg",
+        "split": "train",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://cdn.mos.cms.futurecdn.net/BYqiMJoRPCjXLCASJ9vPCP-1200-80.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_rust_Bing_0255.jpg",
+        "split": "val",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://cdn.mos.cms.futurecdn.net/BYqiMJoRPCjXLCASJ9vPCP-1200-80.jpg"
+      },
+      "full_neg_corr": -0.9999467134475708,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 29,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Bing_0111.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://ocj.com/wp-content/uploads/2011/06/Head-Scab1-e1679676385682.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Bing_0009.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://ocj.com/wp-content/uploads/2011/06/Head-Scab1-e1679676385682.jpg"
+      },
+      "full_neg_corr": -0.999945878982544,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 30,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Google_0309.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://i0.wp.com/www.mississippi-crops.com/wp-content/uploads/2015/04/FHB.jpg?ssl=1"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Bing_0214.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://i0.wp.com/www.mississippi-crops.com/wp-content/uploads/2015/04/FHB.jpg?ssl=1"
+      },
+      "full_neg_corr": -0.9999454021453857,
+      "phash_distance": 0,
+      "dhash_distance": 2,
+      "shared_url": true
+    },
+    {
+      "pair_id": 31,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0004.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://sunnyhomegardens.com/wp-content/uploads/2021/03/Powdery-Mildew-Featured.jpg"
+      },
+      "right": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0282.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://sunnyhomegardens.com/wp-content/uploads/2021/03/Powdery-Mildew-Featured.jpg"
+      },
+      "full_neg_corr": -0.9999439120292664,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 32,
+      "left": {
+        "image_path": "images/train/soybean_downy_mildew_Bing_0059.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.39717/asset/a76206ee-6cc5-40c3-979a-eaa031c66d13/assets/graphic/bugwood-1436011.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_downy_mildew_Google_0127.jpg",
+        "split": "val",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.39717/asset/a76206ee-6cc5-40c3-979a-eaa031c66d13/assets/graphic/bugwood-1436011.jpg"
+      },
+      "full_neg_corr": -0.9999420046806335,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 33,
+      "left": {
+        "image_path": "images/train/tomato_early_blight_193.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://dy.163.com/v2/article/detail/EFFVPANK0514BNMT.html"
+      },
+      "right": {
+        "image_path": "images/val/tomato_early_blight_47.jpg",
+        "split": "val",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://dy.163.com/v2/article/detail/EFFVPANK0514BNMT.html"
+      },
+      "full_neg_corr": -0.9999415278434753,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 34,
+      "left": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0036.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://cdn2.botanichka.ru/wp-content/uploads/2016/07/Powdery-mildew-06.jpg"
+      },
+      "right": {
+        "image_path": "images/val/zucchini_powdery_mildew_Bing_0015.jpg",
+        "split": "val",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://cdn2.botanichka.ru/wp-content/uploads/2016/07/Powdery-mildew-06.jpg"
+      },
+      "full_neg_corr": -0.9999379515647888,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 35,
+      "left": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0075.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.seezon.es/wp-content/uploads/sites/16/2023/01/XLarge-Seezon-Powdery-Mildew-identify-treat-prevent.jpeg"
+      },
+      "right": {
+        "image_path": "images/val/zucchini_powdery_mildew_Bing_0203.jpg",
+        "split": "val",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.seezon.es/wp-content/uploads/sites/16/2023/01/XLarge-Seezon-Powdery-Mildew-identify-treat-prevent.jpeg"
+      },
+      "full_neg_corr": -0.9999344348907471,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 36,
+      "left": {
+        "image_path": "images/train/wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (6).jpg",
+        "split": "train",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://cdn.realagriculture.com/file/ramedia/uploads/2014/08/wheat_black_chaff_or_glume_blotch_courtesy_mafrd_pam_de_rocquigny.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (27).jpg",
+        "split": "val",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://cdn.realagriculture.com/file/ramedia/uploads/2014/08/wheat_black_chaff_or_glume_blotch_courtesy_mafrd_pam_de_rocquigny.jpg"
+      },
+      "full_neg_corr": -0.9999324083328247,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 37,
+      "left": {
+        "image_path": "images/test/soybean_downy_mildew_Bing_0038.jpg",
+        "split": "test",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/dmild2_600px.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_downy_mildew_Google_0029.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/dmild2_600px.jpg"
+      },
+      "full_neg_corr": -0.9999315142631531,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 38,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0095.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://news.utcrops.com/wp-content/uploads/2014/07/Picture1.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0024.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://news.utcrops.com/wp-content/uploads/2014/07/Picture1.jpg"
+      },
+      "full_neg_corr": -0.9999312162399292,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 39,
+      "left": {
+        "image_path": "images/train/wheat_septoria_blotch_blotch (66).jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://content.peat-cloud.com/w200/leaf-and-glume-blotch-of-wheat-wheat-1551112985.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_blotch (16).jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://content.peat-cloud.com/thumbnails/leaf-and-glume-blotch-of-wheat-wheat-1551112985.jpg"
+      },
+      "full_neg_corr": -0.9999275207519531,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 40,
+      "left": {
+        "image_path": "images/test/soybean_bacterial_blight_Bing_0066.jpg",
+        "split": "test",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://sagrainmag.co.za/wp-content/uploads/2023/09/26.-Foto-2.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Google_0022.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/bacblight4_600px.jpg"
+      },
+      "full_neg_corr": -0.9999251961708069,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 41,
+      "left": {
+        "image_path": "images/train/wheat_stripe_rust_Bing_0001.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://cropwatch.unl.edu/2016/stripe-rust-widespread-wheat-mostly-low-levels"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stripe_rust_Bing_0082.jpg",
+        "split": "val",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://cropwatch.unl.edu/2016/stripe-rust-widespread-wheat-mostly-low-levels"
+      },
+      "full_neg_corr": -0.9999192357063293,
+      "phash_distance": 0,
+      "dhash_distance": 2,
+      "shared_url": true
+    },
+    {
+      "pair_id": 42,
+      "left": {
+        "image_path": "images/train/wheat_septoria_blotch_blotch (73).jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://www.flickr.com/photos/cimmyt/5071586437"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_blotch (55).jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://www.flickr.com/photos/cimmyt/5071586437"
+      },
+      "full_neg_corr": -0.9999160766601562,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 43,
+      "left": {
+        "image_path": "images/test/wheat_loose_smut_Google_0081.jpg",
+        "split": "test",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_HTQCvExWS40IGNdWt9pw9iA0NNMvcUkRZ5SuaV9D6qdMWzelnXUQcAAR_jSEADu7hoqO64Twqkw_9COnkEFoQen5MLIrEFGtjZlUfs-Ieglz81AmaR2I2PJ4YbvmDUFxSs1M-ffGckRZ3G6Uj6Y?key=PHqKDCk_hBPxiSrwtMdw38vY"
+      },
+      "right": {
+        "image_path": "images/train/wheat_loose_smut_Bing_0200.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_HTQCvExWS40IGNdWt9pw9iA0NNMvcUkRZ5SuaV9D6qdMWzelnXUQcAAR_jSEADu7hoqO64Twqkw_9COnkEFoQen5MLIrEFGtjZlUfs-Ieglz81AmaR2I2PJ4YbvmDUFxSs1M-ffGckRZ3G6Uj6Y?key=PHqKDCk_hBPxiSrwtMdw38vY"
+      },
+      "full_neg_corr": -0.9999140501022339,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 44,
+      "left": {
+        "image_path": "images/test/potato_late_blight_google_0048.jpg",
+        "split": "test",
+        "class_id": 76,
+        "class_name": "potato late blight",
+        "url": "https://doraagri.com/wp-content/uploads/2021/09/potato-late-blight.jpg"
+      },
+      "right": {
+        "image_path": "images/train/potato_late_blight_3.jpg",
+        "split": "train",
+        "class_id": 76,
+        "class_name": "potato late blight",
+        "url": "http://baijiahao.baidu.com/s?id=1803974883290430074&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9999120831489563,
+      "phash_distance": 2,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 45,
+      "left": {
+        "image_path": "images/train/citrus_canker_412.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://tech.caoding.cn/a/202201/297389.html"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_371.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://m.sohu.com/a/323119695_100263048"
+      },
+      "full_neg_corr": -0.9999098181724548,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 46,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0336.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2024/06/fungus-plants-1.jpg?size=*:900"
+      },
+      "right": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0230.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://cf-img-a-in.tosshub.com/sites/visualstory/wp/2024/06/fungus-plants-1.jpg?size=*:900"
+      },
+      "full_neg_corr": -0.9999067783355713,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 47,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Bing_0052.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.gardentech.com/-/media/project/oneweb/gardentech/images/pest-id/plant-pest/powdery-mildew/zucchini-powdery-mildew.jpg"
+      },
+      "right": {
+        "image_path": "images/train/zucchini_powdery_mildew_Bing_0097.jpg",
+        "split": "train",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://www.gardentech.com/-/media/project/oneweb/gardentech/images/pest-id/plant-pest/powdery-mildew/zucchini-powdery-mildew.jpg"
+      },
+      "full_neg_corr": -0.9999063014984131,
+      "phash_distance": 2,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 48,
+      "left": {
+        "image_path": "images/train/tomato_early_blight_google_0076.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://www.syngenta.es/sites/g/files/kgtney1561/files/media/image/2023/11/18/alternaria-en-tomate.jpg"
+      },
+      "right": {
+        "image_path": "images/val/potato_early_blight_google_0048.jpg",
+        "split": "val",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://www.syngenta.es/sites/g/files/kgtney1561/files/media/image/2023/11/18/alternaria-en-tomate.jpg"
+      },
+      "full_neg_corr": -0.9999017715454102,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 49,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_google_0267.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://apps.lucidcentral.org/ppp_v9/images/entities/tomato_early_blight_211/asolani_jkami.jpg"
+      },
+      "right": {
+        "image_path": "images/train/potato_early_blight_google_0079.jpg",
+        "split": "train",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://apps.lucidcentral.org/ppp_v9/images/entities/tomato_early_blight_211/asolani_jkami.jpg"
+      },
+      "full_neg_corr": -0.9998974800109863,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 50,
+      "left": {
+        "image_path": "images/train/wheat_powdery_mildew_Bing_0136.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://bugwoodcloud.org/images/3072x2048/1573110.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Bing_0172.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://bugwoodcloud.org/images/3072x2048/1573110.jpg"
+      },
+      "full_neg_corr": -0.9998962879180908,
+      "phash_distance": 2,
+      "dhash_distance": 1,
+      "crop_neg_corr": -0.9608107209205627,
+      "crop": "photo 2: 0.9@0.5,0.5",
+      "shared_url": true
+    },
+    {
+      "pair_id": 51,
+      "left": {
+        "image_path": "images/train/wheat_loose_smut_Bing_0077.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "right": {
+        "image_path": "images/val/wheat_loose_smut_Bing_0000.jpg",
+        "split": "val",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://herbariofitopatologia.agro.uba.ar/wp-content/uploads/2016/03/CIMMYT.jpg?v=1670129865"
+      },
+      "full_neg_corr": -0.9998866319656372,
+      "phash_distance": 0,
+      "dhash_distance": 2,
+      "shared_url": true
+    },
+    {
+      "pair_id": 52,
+      "left": {
+        "image_path": "images/test/apple_black_rot_144.jpg",
+        "split": "test",
+        "class_id": 0,
+        "class_name": "apple black rot",
+        "url": "http://baijiahao.baidu.com/s?id=1654964028474879478&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/apple_black_rot_6.jpg",
+        "split": "train",
+        "class_id": 0,
+        "class_name": "apple black rot",
+        "url": "http://baijiahao.baidu.com/s?id=1654964028474879478&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9998835325241089,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 53,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Bing_0002.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extensionaus.com.au/FieldCropDiseasesVic/wp-content/uploads/sites/25/2017/03/Wheat-stem-rust.-source-grant-hollaway.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0185.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extensionaus.com.au/FieldCropDiseasesVic/wp-content/uploads/sites/25/2017/03/Wheat-stem-rust.-source-grant-hollaway.jpg"
+      },
+      "full_neg_corr": -0.9998815059661865,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 54,
+      "left": {
+        "image_path": "images/train/wheat_septoria_blotch_Bing_0043.jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://cs-assets.bayer.com/is/image/bayer/TP-2021072337-1573115-LGPT%20(1)"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_google_septoria (5).jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://cs-assets.bayer.com/is/image/bayer/TP-2021072337-1573115-LGPT%20(1)"
+      },
+      "full_neg_corr": -0.9998708963394165,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 55,
+      "left": {
+        "image_path": "images/test/wheat_septoria_blotch_Google_0309.jpg",
+        "split": "test",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://www.agricentre.basf.co.uk/Pictures/migrated_pictures/pest_images_pictures/images_11_pictures/060526_Septoria_tritici_groC39F_360x203.jpeg?1678972307745"
+      },
+      "right": {
+        "image_path": "images/train/wheat_septoria_blotch_blotch (56).jpg",
+        "split": "train",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://www.agricentre.basf.co.uk/Pictures/migrated_pictures/pest_images_pictures/images_11_pictures/060526_Septoria_tritici_groC39F_360x203.jpeg?1678972307745"
+      },
+      "full_neg_corr": -0.9998697638511658,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 56,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Google_0048.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/fels1_600px.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0138.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/fels1_600px.jpg"
+      },
+      "full_neg_corr": -0.9998626112937927,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 57,
+      "left": {
+        "image_path": "images/train/wheat_powdery_mildew_Bing_0021.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://doraagri.com/wp-content/uploads/2018/06/wheat-powdery-mildew.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Bing_0096.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://doraagri.com/wp-content/uploads/2018/06/wheat-powdery-mildew.jpg"
+      },
+      "full_neg_corr": -0.9998618960380554,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 58,
+      "left": {
+        "image_path": "images/test/soybean_bacterial_blight_Bing_0055.jpg",
+        "split": "test",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://www.canr.msu.edu/soybeans/uploads/images/Septoria%20Chilvers2.JPG?language_id=1"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0166.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://www.canr.msu.edu/soybeans/uploads/images/Septoria%20Chilvers2.JPG?language_id=1"
+      },
+      "full_neg_corr": -0.9998592138290405,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 59,
+      "left": {
+        "image_path": "images/train/wheat_loose_smut_Bing_0025.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://image.slidesharecdn.com/loosesmutofwheat-161214080103/85/Loose-smut-of-wheat-2-320.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_loose_smut_Google_0061.jpg",
+        "split": "val",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://image.slidesharecdn.com/loosesmutofwheat-161214080103/75/Loose-smut-of-wheat-2-2048.jpg"
+      },
+      "full_neg_corr": -0.9998568296432495,
+      "phash_distance": 0,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 60,
+      "left": {
+        "image_path": "images/train/citrus_canker_252.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.sohu.com/a/685644980_121123708"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_59.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.sohu.com/a/685644980_121123708"
+      },
+      "full_neg_corr": -0.9998461008071899,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 61,
+      "left": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0197.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0076.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "full_neg_corr": -0.9998423457145691,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 62,
+      "left": {
+        "image_path": "images/test/wheat_powdery_mildew_Google_0101.jpg",
+        "split": "test",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://i0.wp.com/blog.uvm.edu/outcropn/files/2017/06/powderymildew.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_powdery_mildew_Bing_0106.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://i0.wp.com/blog.uvm.edu/outcropn/files/2017/06/powderymildew.jpg"
+      },
+      "full_neg_corr": -0.9998390674591064,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 63,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Google_0056.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/fels2_600px.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0135.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://extension.umn.edu/sites/extension.umn.edu/files/fels2_600px.jpg"
+      },
+      "full_neg_corr": -0.9998235702514648,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 64,
+      "left": {
+        "image_path": "images/train/banana_bunchy_top_Bing_0141.jpg",
+        "split": "train",
+        "class_id": 6,
+        "class_name": "banana bunchy top",
+        "url": "https://live-production.wcms.abc-cdn.net.au/4cf056c75f794e91da4fda9df5975645?impolicy=wcms_crop_resize&cropH=852&cropW=1280&xPos=0&yPos=106&width=862&height=575"
+      },
+      "right": {
+        "image_path": "images/val/banana_bunchy_top_Google_0159.jpg",
+        "split": "val",
+        "class_id": 6,
+        "class_name": "banana bunchy top",
+        "url": "https://live-production.wcms.abc-cdn.net.au/4cf056c75f794e91da4fda9df5975645?impolicy=wcms_crop_resize&cropH=852&cropW=1280&xPos=0&yPos=106&width=862&height=575"
+      },
+      "full_neg_corr": -0.9998180866241455,
+      "phash_distance": 0,
+      "dhash_distance": 2,
+      "shared_url": true
+    },
+    {
+      "pair_id": 65,
+      "left": {
+        "image_path": "images/test/soybean_rust_Bing_0032.jpg",
+        "split": "test",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://storage.googleapis.com/dgw-event-bucket-1/xsmall/Karat_Daun_Kacang_Hijau-e1609741619635.png"
+      },
+      "right": {
+        "image_path": "images/train/soybean_rust_Bing_0053.jpg",
+        "split": "train",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://storage.googleapis.com/dgw-event-bucket-1/xsmall/Karat_Daun_Kacang_Hijau-e1609741619635.png"
+      },
+      "full_neg_corr": -0.9998093843460083,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "crop_neg_corr": -0.934412956237793,
+      "crop": "photo 2: 0.9@0.5,0.5",
+      "shared_url": true
+    },
+    {
+      "pair_id": 66,
+      "left": {
+        "image_path": "images/test/soybean_mosaic_Bing_0062.jpg",
+        "split": "test",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://panorama-agro.com/wp-content/uploads/2015/02/Frijol-mosaico-dorado-2-Howard-F.-Schwartz-Colorado-State-University-Bugwood.org_-1600x1060.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_mosaic_Bing_0226.jpg",
+        "split": "val",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://panorama-agro.com/wp-content/uploads/2015/02/Frijol-mosaico-dorado-2-Howard-F.-Schwartz-Colorado-State-University-Bugwood.org_-1600x1060.jpg"
+      },
+      "full_neg_corr": -0.9997909069061279,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 67,
+      "left": {
+        "image_path": "images/test/soybean_rust_Bing_0074.jpg",
+        "split": "test",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2415162921898857"
+      },
+      "right": {
+        "image_path": "images/train/soybean_rust_Bing_0014.jpg",
+        "split": "train",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=2415162921898857"
+      },
+      "full_neg_corr": -0.9997789859771729,
+      "phash_distance": 2,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 68,
+      "left": {
+        "image_path": "images/test/soybean_downy_mildew_Bing_0023.jpg",
+        "split": "test",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://cropprotectionnetwork.org/image?s=%2Fimg%2Fhttp%2Fgeneral%2FDowny-mildew-Daren-Mueller-29.jpg%2F396d1186829a02af758d3eee1ec1bb02.jpg&h=0&w=316&fit=contain"
+      },
+      "right": {
+        "image_path": "images/train/soybean_downy_mildew_Bing_0151.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://www.ipmimages.org/browse/detail.cfm?imgnum=5465814"
+      },
+      "full_neg_corr": -0.9997386932373047,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 69,
+      "left": {
+        "image_path": "images/test/banana_black_leaf_streak_banana black sigatoka (42).jpg",
+        "split": "test",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://www.uniagronegocios.com.br/cms/assets/uploads/files/bb78a-sigatoka-negra.jpg"
+      },
+      "right": {
+        "image_path": "images/train/banana_black_leaf_streak_Bing_0029.jpg",
+        "split": "train",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://www.uniagronegocios.com.br/cms/assets/uploads/files/bb78a-sigatoka-negra.jpg"
+      },
+      "full_neg_corr": -0.9997243881225586,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 70,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Baidu_0484.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://www.sohu.com/a/771395488_121123711"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Baidu_0027.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://baike.baidu.com/item/%E5%B0%8F%E9%BA%A6%E6%9D%A1%E9%94%88%E7%97%85/3628120"
+      },
+      "full_neg_corr": -0.9997051954269409,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 71,
+      "left": {
+        "image_path": "images/test/citrus_canker_282.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://m.sohu.com/a/260218148_100024247"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_17.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.360doc.com/content/22/0403/09/52794690_1024623294.shtml"
+      },
+      "full_neg_corr": -0.9997041821479797,
+      "phash_distance": 0,
+      "dhash_distance": 28
+    },
+    {
+      "pair_id": 72,
+      "left": {
+        "image_path": "images/train/banana_black_leaf_streak_Bing_0056.jpg",
+        "split": "train",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.20177801329/asset/46067285-a30e-4796-9a25-607f39539c0e/assets/graphic/black-sigatoka-on-banana-global-2.png"
+      },
+      "right": {
+        "image_path": "images/val/banana_black_leaf_streak_banana black sigatoka (55).jpg",
+        "split": "val",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://apps.lucidcentral.org/pppw_v12/images/entities_samoa/faamai_o_le_lausului_uliuli_sigatoka_banana_black_sigatoka_002/blscloseup.jpg"
+      },
+      "full_neg_corr": -0.9996517300605774,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 73,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Baidu_0003.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/2020-04-28MGClassPlantPathology.pdf"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0197.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "full_neg_corr": -0.9996054172515869,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 74,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Baidu_0003.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/2020-04-28MGClassPlantPathology.pdf"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0076.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "full_neg_corr": -0.9995864629745483,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 75,
+      "left": {
+        "image_path": "images/test/wheat_loose_smut_Bing_0097.jpg",
+        "split": "test",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "http://ephytia.inra.fr/fr/I/39593/Ustilago-segetum-var-tritici-Ble"
+      },
+      "right": {
+        "image_path": "images/val/wheat_loose_smut_Bing_0011.jpg",
+        "split": "val",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "http://ephytia.inra.fr/fr/I/39593/Ustilago-segetum-var-tritici-Ble"
+      },
+      "full_neg_corr": -0.9994416832923889,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 76,
+      "left": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0176.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.360doc.com/content/17/0324/21/30214551_639858874.shtml"
+      },
+      "right": {
+        "image_path": "images/val/wheat_head_scab_Baidu_0369.jpg",
+        "split": "val",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.360doc.com/content/17/0324/21/30214551_639858874.shtml"
+      },
+      "full_neg_corr": -0.9994138479232788,
+      "phash_distance": 2,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 77,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Baidu_0310.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://baijiahao.baidu.com/s?id=1825175759949814830&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0496.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://k.sina.com.cn/article_2274557610_8792feaa00101iwt3.html"
+      },
+      "full_neg_corr": -0.9989153742790222,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 78,
+      "left": {
+        "image_path": "images/test/apple_scab_66.jpg",
+        "split": "test",
+        "class_id": 3,
+        "class_name": "apple scab",
+        "url": "http://www.ke82.com/view/150s185919u0.html"
+      },
+      "right": {
+        "image_path": "images/train/apple_black_rot_1.jpg",
+        "split": "train",
+        "class_id": 0,
+        "class_name": "apple black rot",
+        "url": "https://baijiahao.baidu.com/s?id=1592172448991454823&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9988299012184143,
+      "phash_distance": 2,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 79,
+      "left": {
+        "image_path": "images/train/wheat_powdery_mildew_Baidu_0186.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://www.360doc.com/content/21/0430/05/11066447_974830351.shtml"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Baidu_0000.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://www.360doc.com/content/18/0903/14/34829883_783522021.shtml"
+      },
+      "full_neg_corr": -0.9983426928520203,
+      "phash_distance": 4,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 80,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Baidu_0120.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://www.sohu.com/a/458245501_100066616"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Baidu_0456.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://www.sohu.com/a/456332110_120766411"
+      },
+      "full_neg_corr": -0.9983342885971069,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 81,
+      "left": {
+        "image_path": "images/test/wheat_loose_smut_Google_0065.jpg",
+        "split": "test",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.55946/asset/8d548e75-034d-4fbc-bcf2-320063a6d15b/assets/graphic/ustilago%20tritici.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_loose_smut_Google_0206.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.55946/asset/8d548e75-034d-4fbc-bcf2-320063a6d15b/assets/graphic/ustilago%20tritici.jpg"
+      },
+      "full_neg_corr": -0.9982581734657288,
+      "phash_distance": 0,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 82,
+      "left": {
+        "image_path": "images/test/soybean_bacterial_blight_Bing_0172.jpg",
+        "split": "test",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://www.forestryimages.org/browse/detail.cfm?imgnum=5363765"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0056.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://bugwoodcloud.org/images/768x512/5363765.jpg"
+      },
+      "full_neg_corr": -0.9981656670570374,
+      "phash_distance": 0,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 83,
+      "left": {
+        "image_path": "images/test/citrus_canker_285.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.sohu.com/a/413500350_100045127"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_312.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.sohu.com/picture/413500350"
+      },
+      "full_neg_corr": -0.997416615486145,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 84,
+      "left": {
+        "image_path": "images/test/soybean_mosaic_Bing_0112.jpg",
+        "split": "test",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://www.agrifind.fr/alertes/wp-content/uploads/2020/04/Virose-BYMV_feuille_Haricot_Ephytia-INRAE-300x222.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_mosaic_Bing_0140.jpg",
+        "split": "train",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://bugwoodcloud.org/images/768x512/5384845.jpg"
+      },
+      "full_neg_corr": -0.9969095587730408,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 85,
+      "left": {
+        "image_path": "images/test/soybean_brown_spot_Bing_0090.jpg",
+        "split": "test",
+        "class_id": 84,
+        "class_name": "soybean brown spot",
+        "url": "https://news.utcrops.com/wp-content/uploads/2014/08/Brown-spot.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_brown_spot_Bing_0021.jpg",
+        "split": "val",
+        "class_id": 84,
+        "class_name": "soybean brown spot",
+        "url": "https://news.utcrops.com/wp-content/uploads/2014/08/Brown-spot.jpg"
+      },
+      "full_neg_corr": -0.995567798614502,
+      "phash_distance": 2,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 86,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Baidu_0317.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://dy.163.com/article/F8PE0LV905325BXL.html"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Baidu_0359.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://baijiahao.baidu.com/s?id=1828666272561018889&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.991657018661499,
+      "phash_distance": 2,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 87,
+      "left": {
+        "image_path": "images/test/tomato_bacterial_leaf_spot_78.jpg",
+        "split": "test",
+        "class_id": 96,
+        "class_name": "tomato bacterial leaf spot",
+        "url": "http://www.360doc.com/content/18/1214/20/44197863_801840047.shtml"
+      },
+      "right": {
+        "image_path": "images/train/tomato_septoria_leaf_spot_174.jpg",
+        "split": "train",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "http://www.360doc.com/content/18/1214/20/44197863_801840047.shtml"
+      },
+      "full_neg_corr": -0.9873676896095276,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 88,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_173.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://www.xnz360.com/209-163956-1.html"
+      },
+      "right": {
+        "image_path": "images/val/tomato_early_blight_28.jpg",
+        "split": "val",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1639838421729421687&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9860138297080994,
+      "phash_distance": 6,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 89,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Baidu_0317.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://dy.163.com/article/F8PE0LV905325BXL.html"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Baidu_0165.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://m.sohu.com/a/206811443_99903558"
+      },
+      "full_neg_corr": -0.9854435920715332,
+      "phash_distance": 2,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 90,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Google_0071.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.thenewhumanitarian.org/fr/node/248588"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0173.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://www.thenewhumanitarian.org/fr/node/248588"
+      },
+      "full_neg_corr": -0.9849777221679688,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 91,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Google_0057.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_frog_eye_leaf_spot_Bing_0031.jpg",
+        "split": "val",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "full_neg_corr": -0.9843957424163818,
+      "phash_distance": 2,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 92,
+      "left": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0186.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_frog_eye_leaf_spot_Bing_0031.jpg",
+        "split": "val",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5625040.jpg"
+      },
+      "full_neg_corr": -0.9843693375587463,
+      "phash_distance": 2,
+      "dhash_distance": 0,
+      "shared_url": true
+    },
+    {
+      "pair_id": 93,
+      "left": {
+        "image_path": "images/test/tomato_septoria_leaf_spot_243.jpg",
+        "split": "test",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "http://www.sohu.com/a/256026990_99942979"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_210.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://dy.163.com/article/GQ3EEIFC0552GFBZ.html"
+      },
+      "full_neg_corr": -0.9807450771331787,
+      "phash_distance": 2,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 94,
+      "left": {
+        "image_path": "images/train/citrus_canker_225.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.sohu.com/a/414579218_120803696"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_37.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1833318272592964318&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9803064465522766,
+      "phash_distance": 2,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 95,
+      "left": {
+        "image_path": "images/test/citrus_canker_90.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.meipian.cn/180yvgh0?from=groupmessage"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_441.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://dy.163.com/v2/article/detail/DHAD5BSB0514DFFS.html"
+      },
+      "full_neg_corr": -0.9794573187828064,
+      "phash_distance": 2,
+      "dhash_distance": 0
+    },
+    {
+      "pair_id": 96,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_159.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://www.sohu.com/a/274517876_761821"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_12.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4429492497392943312"
+      },
+      "full_neg_corr": -0.9766837358474731,
+      "phash_distance": 2,
+      "dhash_distance": 44
+    },
+    {
+      "pair_id": 97,
+      "left": {
+        "image_path": "images/test/soybean_downy_mildew_Bing_0045.jpg",
+        "split": "test",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "http://storage.agravery.com/uploads/files/SPETSproekt/Line%20of%20defense_Corteva/26_06_19/Peronospora-manshurica.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_downy_mildew_Google_0007.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://cropprotectionnetwork.org/image?s=%2Fimg%2Fhttp%2Fgeneral%2FDowny-mildew-Daren-Mueller-28.jpg%2Fa5781ed42e5222f1b6ac493aa95c1c7a.jpg&h=256&w=316&fit=cover"
+      },
+      "full_neg_corr": -0.9753537178039551,
+      "phash_distance": 2,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 98,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_google_0059.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=122173230290448897"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_google_0347.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://cdn.shopify.com/s/files/1/0736/5693/files/Early_Blight_2_medium.jpg?v=1472349918"
+      },
+      "full_neg_corr": -0.9743531942367554,
+      "phash_distance": 4,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 99,
+      "left": {
+        "image_path": "images/test/tomato_septoria_leaf_spot_google_0070.jpg",
+        "split": "test",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "https://th-test-11.slatic.net/p/8d1fa79a3611a89df7774a8e77c025f1.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_google_0347.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://cdn.shopify.com/s/files/1/0736/5693/files/Early_Blight_2_medium.jpg?v=1472349918"
+      },
+      "full_neg_corr": -0.9743472933769226,
+      "phash_distance": 4,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 100,
+      "left": {
+        "image_path": "images/train/citrus_canker_169.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.360doc.com/content/17/0915/02/47050448_687389982.shtml"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_202.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1786206933959962539&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9742711186408997,
+      "phash_distance": 4,
+      "dhash_distance": 3,
+      "crop_neg_corr": -0.9291331171989441,
+      "crop": "photo 2: 0.9@0.5,0.5"
+    },
+    {
+      "pair_id": 101,
+      "left": {
+        "image_path": "images/train/citrus_canker_382.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://mt.sohu.com/a/662342866_121124542"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_202.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1786206933959962539&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9740653038024902,
+      "phash_distance": 2,
+      "dhash_distance": 3,
+      "crop_neg_corr": -0.9290899634361267,
+      "crop": "photo 2: 0.9@0.5,0.5"
+    },
+    {
+      "pair_id": 102,
+      "left": {
+        "image_path": "images/test/potato_early_blight_google_0018.jpg",
+        "split": "test",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://static.catalog.farmis.lt/problems/2/23/235/2350d878-2897-487e-8319-340fe710b72d.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_google_0101.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://extension.wvu.edu/files/af7ee468-2a73-43cc-ad35-6488dab65c7d/190x184?cb=9314ff839c259ebd7868e45f36613df2"
+      },
+      "full_neg_corr": -0.6569273471832275,
+      "phash_distance": 6,
+      "dhash_distance": 9,
+      "crop_neg_corr": -0.9705880880355835,
+      "crop": "photo 2: 0.9@0.5,0.5"
+    },
+    {
+      "pair_id": 103,
+      "left": {
+        "image_path": "images/train/banana_panama_disease_25.jpg",
+        "split": "train",
+        "class_id": 9,
+        "class_name": "banana panama disease",
+        "url": "http://news.sohu.com/20070313/n248678713.shtml"
+      },
+      "right": {
+        "image_path": "images/val/banana_panama_disease_109.jpg",
+        "split": "val",
+        "class_id": 9,
+        "class_name": "banana panama disease",
+        "url": "http://news.sohu.com/20070313/n248678713.shtml"
+      },
+      "full_neg_corr": -0.9696379899978638,
+      "phash_distance": 6,
+      "dhash_distance": 3,
+      "shared_url": true
+    },
+    {
+      "pair_id": 104,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Baidu_0431.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.360doc.com/content/17/0503/10/6705457_650559287.shtml"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0468.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.360doc.cn/article/6705457_650559287.html"
+      },
+      "full_neg_corr": -0.9686481356620789,
+      "phash_distance": 2,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 105,
+      "left": {
+        "image_path": "images/train/soybean_downy_mildew_Bing_0065.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://cals.cornell.edu/sites/default/files/styles/image_callout_standard/public/2021-06/downy-mildew-soy.jpg?h=435125e8&itok=RIyEFQbb"
+      },
+      "right": {
+        "image_path": "images/val/soybean_downy_mildew_Google_0019.jpg",
+        "split": "val",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://cals.cornell.edu/sites/default/files/styles/image_callout_standard/public/2021-06/downy-mildew-soy.jpg?h=435125e8&itok=RIyEFQbb"
+      },
+      "full_neg_corr": -0.9678905010223389,
+      "phash_distance": 0,
+      "dhash_distance": 1,
+      "shared_url": true
+    },
+    {
+      "pair_id": 106,
+      "left": {
+        "image_path": "images/test/soybean_rust_Bing_0022.jpg",
+        "split": "test",
+        "class_id": 88,
+        "class_name": "soybean rust",
+        "url": "https://o.quizlet.com/yy3Ph2Vh767w4JlPwi-ymA.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Baidu_0033.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "http://www.plantasonya.com.br/wp-content/img/ferrugem.jpg"
+      },
+      "full_neg_corr": -0.9591431021690369,
+      "phash_distance": 4,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 107,
+      "left": {
+        "image_path": "images/train/citrus_canker_google_0037.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "https://orangeleader.com/wp-content/uploads/sites/42/2020/04/Lesions-on-Citrus-leaf-.jpeg"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_37.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1833318272592964318&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9590265154838562,
+      "phash_distance": 2,
+      "dhash_distance": 6
+    },
+    {
+      "pair_id": 108,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Bing_0319.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_2V2qSZpsKq9Yv-yUT2vhQE-JuEF6Nt43YlGpvKF8KWM-RIngJVECmwXg8FfI1s302Gs_YxnuE_Z_1TZCWLVcpL8EaKXj1bUnaBpnGySSF6hfDmvHfvSTblSYh7Fns2xJNOeYtrw746AdIv-feCq9idUicSPCsO_X416-Vl3v2TPLk6RVYUw2-qtg2nk/w1200-h630-p-k-no-nu/Wheat_scab.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Bing_0269.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://www.ppo.ir/_douranportal/usersfiles/control@ppo.ir_3164/images/%D8%B2%D8%B1%D8%A7%D8%B9%DB%8C/%DA%AF%D9%86%D8%AF%D9%85.jpg"
+      },
+      "full_neg_corr": -0.9553177356719971,
+      "phash_distance": 4,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 109,
+      "left": {
+        "image_path": "images/train/soybean_mosaic_Bing_0182.jpg",
+        "split": "train",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://i0.wp.com/agritech.tnau.ac.in/crop_protection/images/crop_diseases/soybean_mosaic_sym.png?resize=151%2C124&ssl=1"
+      },
+      "right": {
+        "image_path": "images/val/soybean_mosaic_Bing_0217.jpg",
+        "split": "val",
+        "class_id": 87,
+        "class_name": "soybean mosaic",
+        "url": "https://agritech.tnau.ac.in/org_farm/orgfarm_agridiseases_clip_image008_0002.jpg"
+      },
+      "full_neg_corr": -0.9542596936225891,
+      "phash_distance": 2,
+      "dhash_distance": 1
+    },
+    {
+      "pair_id": 110,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Bing_0287.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A2cb576e9cd96e3c76adc76d9a237764f6d13eb8a875f1855f30f4b3b%2BIMAGE_THUMB_POSTCARD_TINY%2BIMAGE_THUMB_POSTCARD_TINY.1"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Bing_0269.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://www.ppo.ir/_douranportal/usersfiles/control@ppo.ir_3164/images/%D8%B2%D8%B1%D8%A7%D8%B9%DB%8C/%DA%AF%D9%86%D8%AF%D9%85.jpg"
+      },
+      "full_neg_corr": -0.9527102708816528,
+      "phash_distance": 2,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 111,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Baidu_0264.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://baijiahao.baidu.com/s?id=1759260624215005699&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0006.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://baijiahao.baidu.com/s?id=1829906814624947725&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9524754881858826,
+      "phash_distance": 10,
+      "dhash_distance": 5,
+      "crop_neg_corr": -0.9381755590438843,
+      "crop": "photo 2: 0.9@0.5,0.5"
+    },
+    {
+      "pair_id": 112,
+      "left": {
+        "image_path": "images/train/citrus_canker_233.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.360doc.com/content/17/0915/02/47050448_687389982.shtml"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_202.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1786206933959962539&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9135016798973083,
+      "phash_distance": 6,
+      "dhash_distance": 8,
+      "crop_neg_corr": -0.9481889605522156,
+      "crop": "photo 2: 0.9@0.5,0.5"
+    },
+    {
+      "pair_id": 113,
+      "left": {
+        "image_path": "images/train/banana_black_leaf_streak_banana black sigatoka (23).jpg",
+        "split": "train",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://us.123rf.com/450wm/rahuldsilva/rahuldsilva2001/rahuldsilva200100051/138090717-enfermedad-del-banano-s%C3%ADntomas-de-la-sigatoka-negra-en-el-follaje-del-banano-planta-infectada-con.jpg?ver=6"
+      },
+      "right": {
+        "image_path": "images/val/banana_black_leaf_streak_Baidu_0002.jpg",
+        "split": "val",
+        "class_id": 5,
+        "class_name": "banana black leaf streak",
+        "url": "https://as1.ftcdn.net/jpg/03/15/82/78/1000_F_315827864_Nh7u42AwLK0yHhu6r6HkY8yokMajrNj5.jpg"
+      },
+      "full_neg_corr": -0.9474385976791382,
+      "phash_distance": 10,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 114,
+      "left": {
+        "image_path": "images/train/wheat_stripe_rust_Google_0010.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://extension.sdstate.edu/sites/default/files/styles/twitter/public/2020-06/W-00639-01-strip-rust-winter-wheat-symptoms.jpg?h=dd1e4d4b&itok=waIk4U7z"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stripe_rust_Bing_0094.jpg",
+        "split": "val",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://extension.sdstate.edu/sites/default/files/styles/facebook/public/2020-06/W-00639-01-strip-rust-winter-wheat-symptoms.jpg?h=dd1e4d4b&itok=9epT5pw-"
+      },
+      "full_neg_corr": -0.9443969130516052,
+      "phash_distance": 6,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 115,
+      "left": {
+        "image_path": "images/test/citrus_canker_107.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1581198434848796913&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_399.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://healthnews.sohu.com/a/679101184_120556826"
+      },
+      "full_neg_corr": -0.9443264007568359,
+      "phash_distance": 4,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 116,
+      "left": {
+        "image_path": "images/test/wheat_powdery_mildew_Baidu_0049.jpg",
+        "split": "test",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://www.sohu.com/a/301484774_758491?sec=wd"
+      },
+      "right": {
+        "image_path": "images/train/wheat_powdery_mildew_Baidu_0194.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://www.360doc.com/content/19/0407/14/32555205_826985484.shtml"
+      },
+      "full_neg_corr": -0.9418565630912781,
+      "phash_distance": 4,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 117,
+      "left": {
+        "image_path": "images/train/tomato_leaf_mold_224.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://baijiahao.baidu.com/s?id=1788592691813947598&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/val/tomato_leaf_mold_167.jpg",
+        "split": "val",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://www.360doc.com/content/19/0528/01/63470208_838739886.shtml"
+      },
+      "crop_neg_corr": -0.9376553893089294,
+      "crop": "photo 2: 0.8@0.5,0.5"
+    },
+    {
+      "pair_id": 118,
+      "left": {
+        "image_path": "images/test/citrus_canker_60.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://mt.sohu.com/a/694713697_120556826"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_17.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.360doc.com/content/22/0403/09/52794690_1024623294.shtml"
+      },
+      "full_neg_corr": -0.9253365993499756,
+      "phash_distance": 6,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 119,
+      "left": {
+        "image_path": "images/test/tomato_septoria_leaf_spot_243.jpg",
+        "split": "test",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "http://www.sohu.com/a/256026990_99942979"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_29.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1628123552392887658&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.9251099824905396,
+      "phash_distance": 6,
+      "dhash_distance": 6
+    },
+    {
+      "pair_id": 120,
+      "left": {
+        "image_path": "images/train/zucchini_downy_mildew_Bing_0105.jpg",
+        "split": "train",
+        "class_id": 112,
+        "class_name": "zucchini downy mildew",
+        "url": "https://timedia.tierient.com/timg/beb0dc3d7d9a4419.jpg"
+      },
+      "right": {
+        "image_path": "images/val/zucchini_downy_mildew_Bing_0003.jpg",
+        "split": "val",
+        "class_id": 112,
+        "class_name": "zucchini downy mildew",
+        "url": "https://www.agrotopvsg.rs/images/main/201801/plamenjaca-krastavca-00.jpeg"
+      },
+      "full_neg_corr": -0.9188168048858643,
+      "phash_distance": 6,
+      "dhash_distance": 3
+    },
+    {
+      "pair_id": 121,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0012.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://www.chamsoccanhquan.com/wp-content/uploads/2025/05/nam-la-300x225.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_frog_eye_leaf_spot_Google_0135.jpg",
+        "split": "val",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://www.chamsoccanhquan.com/wp-content/uploads/2025/05/nam-la-300x225.jpg"
+      },
+      "full_neg_corr": -0.9082595109939575,
+      "phash_distance": 4,
+      "dhash_distance": 3,
+      "shared_url": true
+    },
+    {
+      "pair_id": 122,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_160.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://www.sohu.com/a/193567457_761858"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_221.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://www.sohu.com/picture/207626085"
+      },
+      "crop_neg_corr": -0.9054398536682129,
+      "crop": "photo 1: 0.8@0,0.5"
+    },
+    {
+      "pair_id": 123,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0047.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5465824.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_frog_eye_leaf_spot_Google_0054.jpg",
+        "split": "val",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5465824.jpg"
+      },
+      "full_neg_corr": -0.894363284111023,
+      "phash_distance": 10,
+      "dhash_distance": 11,
+      "shared_url": true
+    },
+    {
+      "pair_id": 124,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0047.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5465824.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_frog_eye_leaf_spot_Google_0004.jpg",
+        "split": "val",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5465824.jpg"
+      },
+      "full_neg_corr": -0.8943629264831543,
+      "phash_distance": 8,
+      "dhash_distance": 9,
+      "shared_url": true
+    },
+    {
+      "pair_id": 125,
+      "left": {
+        "image_path": "images/train/corn_northern_leaf_blight_google_0163.jpg",
+        "split": "train",
+        "class_id": 45,
+        "class_name": "corn northern leaf blight",
+        "url": "https://ohioline.osu.edu/factsheet/plpath-cer-10"
+      },
+      "right": {
+        "image_path": "images/val/corn_northern_leaf_blight_google_0003.jpg",
+        "split": "val",
+        "class_id": 45,
+        "class_name": "corn northern leaf blight",
+        "url": "https://dsl5f3u3dyxci.cloudfront.net/croplife/wp-content/uploads/2018/05/Northern-COrn-Leaf-Blight-Photo-The-Ohio-State-University.jpg"
+      },
+      "full_neg_corr": -0.893818736076355,
+      "phash_distance": 8,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 126,
+      "left": {
+        "image_path": "images/test/potato_early_blight_google_0018.jpg",
+        "split": "test",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://static.catalog.farmis.lt/problems/2/23/235/2350d878-2897-487e-8319-340fe710b72d.jpg"
+      },
+      "right": {
+        "image_path": "images/train/potato_early_blight_google_0081.jpg",
+        "split": "train",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://cms.htwettoe.com/cmshtwettoe/upload/image/education/2019/20190101/IMG111820190108095522482.png"
+      },
+      "full_neg_corr": -0.8934080004692078,
+      "phash_distance": 0,
+      "dhash_distance": 10
+    },
+    {
+      "pair_id": 127,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Baidu_0127.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "http://www.360doc.cn/article/71852096_1063372924.html"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Baidu_0252.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "http://baijiahao.baidu.com/s?id=1841961590685441032&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.892853856086731,
+      "phash_distance": 8,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 128,
+      "left": {
+        "image_path": "images/test/tomato_leaf_mold_59.jpg",
+        "split": "test",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "https://static.catalog.farmis.lt/problems/3/3f/3f2/3f256828-1145-4c0e-ba73-ec2467d3b6b5.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_leaf_mold_173.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "https://static.catalog.farmis.lt/problems/3/3f/3f2/3f256828-1145-4c0e-ba73-ec2467d3b6b5.jpg"
+      },
+      "full_neg_corr": -0.8919534683227539,
+      "phash_distance": 10,
+      "dhash_distance": 22,
+      "shared_url": true
+    },
+    {
+      "pair_id": 129,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_136.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1773992883172827156&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_193.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://dy.163.com/v2/article/detail/EFFVPANK0514BNMT.html"
+      },
+      "full_neg_corr": -0.8873114585876465,
+      "phash_distance": 8,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 130,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_136.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1773992883172827156&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/val/tomato_early_blight_47.jpg",
+        "split": "val",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://dy.163.com/v2/article/detail/EFFVPANK0514BNMT.html"
+      },
+      "full_neg_corr": -0.8870729207992554,
+      "phash_distance": 8,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 131,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_google_0291.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://sadovod.expert/wp-content/uploads/2019/07/bolezn_tomatov_2_11101025-400x267.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_septoria_leaf_spot_google_0050.jpg",
+        "split": "train",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "https://agritech.tnau.ac.in/crop_protection/Symptoms%20on%20leaves01.jpg"
+      },
+      "full_neg_corr": -0.8795072436332703,
+      "phash_distance": 6,
+      "dhash_distance": 6
+    },
+    {
+      "pair_id": 132,
+      "left": {
+        "image_path": "images/test/soybean_downy_mildew_Bing_0078.jpg",
+        "split": "test",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://bugwoodcloud.org/images/384x256/5605299.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_downy_mildew_Google_0114.jpg",
+        "split": "train",
+        "class_id": 85,
+        "class_name": "soybean downy mildew",
+        "url": "https://agrio.app/library/PowderyMildewOfCucurbits-4/"
+      },
+      "full_neg_corr": -0.8751375675201416,
+      "phash_distance": 16,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 133,
+      "left": {
+        "image_path": "images/test/tomato_septoria_leaf_spot_61.jpg",
+        "split": "test",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "http://k.sina.com.cn/article_7454506220_1bc52bcec00100ujml.html"
+      },
+      "right": {
+        "image_path": "images/train/tomato_septoria_leaf_spot_google_0065.jpg",
+        "split": "train",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "https://builderhub.techinfus.com/images/article/thumb/718-0/2020/12/vse-ob-askohitoze-4.jpg"
+      },
+      "full_neg_corr": -0.8686681985855103,
+      "phash_distance": 16,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 134,
+      "left": {
+        "image_path": "images/test/potato_early_blight_google_0004.jpg",
+        "split": "test",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://www.slideshare.net/slideshow/idm-in-potatopdf/258837884"
+      },
+      "right": {
+        "image_path": "images/val/potato_early_blight_google_0345.jpg",
+        "split": "val",
+        "class_id": 75,
+        "class_name": "potato early blight",
+        "url": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=341564088621091"
+      },
+      "full_neg_corr": -0.8506965041160583,
+      "phash_distance": 4,
+      "dhash_distance": 8
+    },
+    {
+      "pair_id": 135,
+      "left": {
+        "image_path": "images/train/wheat_stripe_rust_Baidu_0472.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://m.my478.com/question/20210401/85211.html"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stripe_rust_Bing_0064.jpg",
+        "split": "val",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://www.gaonconnection.com/wp-content/uploads/2024/05/500x300_350787-rust-yellow-wheat.webp"
+      },
+      "full_neg_corr": -0.8324229717254639,
+      "phash_distance": 12,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 136,
+      "left": {
+        "image_path": "images/train/tomato_leaf_mold_209.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://m.sohu.com/a/203842962_282415"
+      },
+      "right": {
+        "image_path": "images/val/tomato_leaf_mold_19.jpg",
+        "split": "val",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://www.haowenshi.com/jishu/201806211522.html"
+      },
+      "full_neg_corr": -0.8246653079986572,
+      "phash_distance": 10,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 137,
+      "left": {
+        "image_path": "images/train/wheat_stem_rust_Google_0312.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://image.slidesharecdn.com/rustofwheat-180419073313/75/Rust-of-wheat-5-2048.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0076.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "full_neg_corr": -0.8164055347442627,
+      "phash_distance": 10,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 138,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_62.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://www.zs-chem.cn/zbfaxq/1053007656990216192.html"
+      },
+      "right": {
+        "image_path": "images/train/tomato_septoria_leaf_spot_google_0050.jpg",
+        "split": "train",
+        "class_id": 101,
+        "class_name": "tomato septoria leaf spot",
+        "url": "https://agritech.tnau.ac.in/crop_protection/Symptoms%20on%20leaves01.jpg"
+      },
+      "full_neg_corr": -0.8151546120643616,
+      "phash_distance": 6,
+      "dhash_distance": 9
+    },
+    {
+      "pair_id": 139,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Baidu_0003.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/2020-04-28MGClassPlantPathology.pdf"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Google_0312.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://image.slidesharecdn.com/rustofwheat-180419073313/75/Rust-of-wheat-5-2048.jpg"
+      },
+      "full_neg_corr": -0.8147296905517578,
+      "phash_distance": 10,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 140,
+      "left": {
+        "image_path": "images/test/wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (10).jpg",
+        "split": "test",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://extensionpubs.unl.edu/publication/g1672/na/pdf/view"
+      },
+      "right": {
+        "image_path": "images/train/wheat_bacterial_leaf_streak_(black_chaff)_Bing_0008.jpg",
+        "split": "train",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://www.dehkadesabze-shomalgan.ir/wp-content/uploads/2024/02/Picture111-300x266.jpg"
+      },
+      "full_neg_corr": -0.8115745186805725,
+      "phash_distance": 8,
+      "dhash_distance": 10
+    },
+    {
+      "pair_id": 141,
+      "left": {
+        "image_path": "images/test/tomato_leaf_mold_151.jpg",
+        "split": "test",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://m.sohu.com/a/259426503_656462/?pvid=000115_3w_a"
+      },
+      "right": {
+        "image_path": "images/train/tomato_leaf_mold_137.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://www.360doc.com/content/18/0110/01/51559835_720766939.shtml"
+      },
+      "full_neg_corr": -0.811331033706665,
+      "phash_distance": 8,
+      "dhash_distance": 46
+    },
+    {
+      "pair_id": 142,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Google_0148.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://source.roboflow.com/nyKZGYb820Yhw9NsE1GkxWc5DvA3/05Ic4TWlSdEp4MaXSTDd/original.jpg"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stripe_rust_Bing_0162.jpg",
+        "split": "train",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "https://plantvillage-production-new.s3.amazonaws.com/image/2356/file/default-93e69ad0698994cf7f6f033f8f8e0d6f.jpg"
+      },
+      "full_neg_corr": -0.8108901381492615,
+      "phash_distance": 6,
+      "dhash_distance": 9
+    },
+    {
+      "pair_id": 143,
+      "left": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0065.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://image.slidesharecdn.com/rustofwheat-180419073313/75/Rust-of-wheat-5-2048.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stem_rust_Bing_0076.jpg",
+        "split": "val",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://blog.plantwise.org/wp-content/uploads/sites/7/2022/05/Stem_rust_close_up-scaled.jpg"
+      },
+      "full_neg_corr": -0.808544397354126,
+      "phash_distance": 10,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 144,
+      "left": {
+        "image_path": "images/test/wheat_stem_rust_Baidu_0003.jpg",
+        "split": "test",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://extension.arizona.edu/sites/extension.arizona.edu/files/attachment/2020-04-28MGClassPlantPathology.pdf"
+      },
+      "right": {
+        "image_path": "images/train/wheat_stem_rust_Bing_0065.jpg",
+        "split": "train",
+        "class_id": 109,
+        "class_name": "wheat stem rust",
+        "url": "https://image.slidesharecdn.com/rustofwheat-180419073313/75/Rust-of-wheat-5-2048.jpg"
+      },
+      "full_neg_corr": -0.8068690299987793,
+      "phash_distance": 10,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 145,
+      "left": {
+        "image_path": "images/test/citrus_canker_255.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1837211828273110986&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_323.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1838244002801531181&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.8043994903564453,
+      "phash_distance": 8,
+      "dhash_distance": 12
+    },
+    {
+      "pair_id": 146,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_google_0291.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://sadovod.expert/wp-content/uploads/2019/07/bolezn_tomatov_2_11101025-400x267.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_google_0032.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "https://greenway.sgp1.digitaloceanspaces.com/post_covers/db52d631d9b45b46b881019ad1e6dab3.jpeg"
+      },
+      "full_neg_corr": -0.7988496422767639,
+      "phash_distance": 10,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 147,
+      "left": {
+        "image_path": "images/test/tomato_leaf_mold_151.jpg",
+        "split": "test",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://m.sohu.com/a/259426503_656462/?pvid=000115_3w_a"
+      },
+      "right": {
+        "image_path": "images/train/tomato_leaf_mold_217.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://www.360doc.com/content/18/0110/01/51559835_720766939.shtml"
+      },
+      "full_neg_corr": -0.7967736721038818,
+      "phash_distance": 10,
+      "dhash_distance": 45
+    },
+    {
+      "pair_id": 148,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Bing_0023.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://www.canr.msu.edu/news/combating_head_scab_in_wheat"
+      },
+      "right": {
+        "image_path": "images/val/wheat_head_scab_Bing_0016.jpg",
+        "split": "val",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://www.canr.msu.edu/news/combating_head_scab_in_wheat"
+      },
+      "full_neg_corr": -0.7937932014465332,
+      "shared_url": true
+    },
+    {
+      "pair_id": 149,
+      "left": {
+        "image_path": "images/test/wheat_powdery_mildew_Bing_0170.jpg",
+        "split": "test",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://s3.ap-southeast-2.amazonaws.com/assets.ccdm.com.au/app/uploads/2022/12/12102143/Picture2.jpg"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Bing_0004.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://groundcover.grdc.com.au/__data/assets/image/0023/443075/wheat-mildew.-CCDM.jpg"
+      },
+      "full_neg_corr": -0.7863388061523438,
+      "phash_distance": 6,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 150,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Google_0128.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt28a61309ca8a00f9/639a158e826cd23db8457c7e/soybean-frogeye-leaf-spot-UNE-Extension_0.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0169.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt28a61309ca8a00f9/639a158e826cd23db8457c7e/soybean-frogeye-leaf-spot-UNE-Extension_0.jpg?disable=upscale&width=1200&height=630&fit=crop"
+      },
+      "full_neg_corr": -0.7857552170753479,
+      "phash_distance": 10,
+      "dhash_distance": 8
+    },
+    {
+      "pair_id": 151,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0103.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt28a61309ca8a00f9/639a158e826cd23db8457c7e/soybean-frogeye-leaf-spot-UNE-Extension_0.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_frog_eye_leaf_spot_Bing_0169.jpg",
+        "split": "train",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://eu-images.contentstack.com/v3/assets/bltdd43779342bd9107/blt28a61309ca8a00f9/639a158e826cd23db8457c7e/soybean-frogeye-leaf-spot-UNE-Extension_0.jpg?disable=upscale&width=1200&height=630&fit=crop"
+      },
+      "full_neg_corr": -0.7852680087089539,
+      "phash_distance": 10,
+      "dhash_distance": 8
+    },
+    {
+      "pair_id": 152,
+      "left": {
+        "image_path": "images/test/apple_black_rot_143.jpg",
+        "split": "test",
+        "class_id": 0,
+        "class_name": "apple black rot",
+        "url": "http://baike.sogou.com/v60480281.htm"
+      },
+      "right": {
+        "image_path": "images/train/apple_black_rot_15.jpg",
+        "split": "train",
+        "class_id": 0,
+        "class_name": "apple black rot",
+        "url": "http://www.360doc.cn/article/4310958_180040780.html"
+      },
+      "full_neg_corr": -0.7785240411758423,
+      "phash_distance": 16,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 153,
+      "left": {
+        "image_path": "images/train/citrus_canker_254.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://m.sohu.com/a/323119695_100263048"
+      },
+      "right": {
+        "image_path": "images/val/citrus_canker_371.jpg",
+        "split": "val",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://m.sohu.com/a/323119695_100263048"
+      },
+      "full_neg_corr": -0.7682345509529114,
+      "shared_url": true
+    },
+    {
+      "pair_id": 154,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Baidu_0310.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://baijiahao.baidu.com/s?id=1825175759949814830&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0197.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.360doc.cn/article/46675223_748364858.html"
+      },
+      "full_neg_corr": -0.7646402716636658,
+      "phash_distance": 4,
+      "dhash_distance": 32
+    },
+    {
+      "pair_id": 155,
+      "left": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0465.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.sohu.com/a/386565163_120149989"
+      },
+      "right": {
+        "image_path": "images/val/wheat_head_scab_Baidu_0001.jpg",
+        "split": "val",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.sohu.com/a/386565163_120149989"
+      },
+      "full_neg_corr": -0.7356496453285217,
+      "shared_url": true
+    },
+    {
+      "pair_id": 156,
+      "left": {
+        "image_path": "images/test/wheat_stripe_rust_Baidu_0349.jpg",
+        "split": "test",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://mt.sohu.com/a/773796102_121123678"
+      },
+      "right": {
+        "image_path": "images/val/wheat_stripe_rust_Baidu_0204.jpg",
+        "split": "val",
+        "class_id": 110,
+        "class_name": "wheat stripe rust",
+        "url": "http://mt.sohu.com/a/773796102_121123678"
+      },
+      "full_neg_corr": -0.7146275043487549,
+      "shared_url": true
+    },
+    {
+      "pair_id": 157,
+      "left": {
+        "image_path": "images/test/citrus_canker_340.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://cn.agropages.com/bcc/Bdetail-1469.htm"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_403.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://cn.agropages.com/bcc/Bdetail-1469.htm"
+      },
+      "full_neg_corr": -0.7029861211776733,
+      "shared_url": true
+    },
+    {
+      "pair_id": 158,
+      "left": {
+        "image_path": "images/test/citrus_canker_255.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1837211828273110986&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_403.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://cn.agropages.com/bcc/Bdetail-1469.htm"
+      },
+      "full_neg_corr": -0.7025755047798157,
+      "phash_distance": 10,
+      "dhash_distance": 14
+    },
+    {
+      "pair_id": 159,
+      "left": {
+        "image_path": "images/test/wheat_loose_smut_Bing_0004.jpg",
+        "split": "test",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://aoplatforma.com/img/builder/84PnrnrNpX.jpeg?crop=0%2C0%2C0%2C0&w=1000"
+      },
+      "right": {
+        "image_path": "images/train/wheat_loose_smut_Bing_0092.jpg",
+        "split": "train",
+        "class_id": 106,
+        "class_name": "wheat loose smut",
+        "url": "https://i.ytimg.com/vi/_MoytsEDwTU/hqdefault.jpg"
+      },
+      "full_neg_corr": -0.6982908844947815,
+      "phash_distance": 16,
+      "dhash_distance": 5
+    },
+    {
+      "pair_id": 160,
+      "left": {
+        "image_path": "images/train/wheat_head_scab_Baidu_0465.jpg",
+        "split": "train",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.sohu.com/a/386565163_120149989"
+      },
+      "right": {
+        "image_path": "images/val/wheat_head_scab_Baidu_0394.jpg",
+        "split": "val",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.sohu.com/a/386565163_120149989"
+      },
+      "full_neg_corr": -0.6938610672950745,
+      "shared_url": true
+    },
+    {
+      "pair_id": 161,
+      "left": {
+        "image_path": "images/test/citrus_canker_255.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1837211828273110986&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_139.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1634060202026824483&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.6797012090682983,
+      "phash_distance": 10,
+      "dhash_distance": 14
+    },
+    {
+      "pair_id": 162,
+      "left": {
+        "image_path": "images/test/citrus_canker_107.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1581198434848796913&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_367.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1581198434848796913&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.6728299856185913,
+      "phash_distance": 22,
+      "dhash_distance": 7,
+      "shared_url": true
+    },
+    {
+      "pair_id": 163,
+      "left": {
+        "image_path": "images/test/banana_bunchy_top_Baidu_0019.jpg",
+        "split": "test",
+        "class_id": 6,
+        "class_name": "banana bunchy top",
+        "url": "http://www.ke82.com/view/151s227737u0.html"
+      },
+      "right": {
+        "image_path": "images/train/banana_bunchy_top_Google_0224.jpg",
+        "split": "train",
+        "class_id": 6,
+        "class_name": "banana bunchy top",
+        "url": "https://pt.chicocrop.com/uploads/image/20221208/14/banana-bunchy-top.jpg"
+      },
+      "full_neg_corr": -0.6713137626647949,
+      "phash_distance": 10,
+      "dhash_distance": 14
+    },
+    {
+      "pair_id": 164,
+      "left": {
+        "image_path": "images/test/citrus_canker_251.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.163.com/dy/article/CQ4SVF3G0514BNMT.html"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_386.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.163.com/dy/article/CQ4SVF3G0514BNMT.html"
+      },
+      "full_neg_corr": -0.6681804656982422,
+      "shared_url": true
+    },
+    {
+      "pair_id": 165,
+      "left": {
+        "image_path": "images/test/tomato_early_blight_136.jpg",
+        "split": "test",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1773992883172827156&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/tomato_early_blight_216.jpg",
+        "split": "train",
+        "class_id": 97,
+        "class_name": "tomato early blight",
+        "url": "http://baijiahao.baidu.com/s?id=1773992883172827156&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.6528394222259521,
+      "shared_url": true
+    },
+    {
+      "pair_id": 166,
+      "left": {
+        "image_path": "images/test/citrus_canker_255.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1837211828273110986&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_44.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1635503616632736820&wfr=spider&for=pc"
+      },
+      "full_neg_corr": -0.6521900296211243,
+      "phash_distance": 8,
+      "dhash_distance": 15
+    },
+    {
+      "pair_id": 167,
+      "left": {
+        "image_path": "images/test/citrus_canker_163.jpg",
+        "split": "test",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://baijiahao.baidu.com/s?id=1642375239973409401&wfr=spider&for=pc"
+      },
+      "right": {
+        "image_path": "images/train/citrus_canker_288.jpg",
+        "split": "train",
+        "class_id": 38,
+        "class_name": "citrus canker",
+        "url": "http://www.360doc.com/content/19/0802/07/50823460_852501315.shtml"
+      },
+      "full_neg_corr": -0.6255549788475037,
+      "phash_distance": 4,
+      "dhash_distance": 14
+    },
+    {
+      "pair_id": 168,
+      "left": {
+        "image_path": "images/test/wheat_leaf_rust_Baidu_0025.jpg",
+        "split": "test",
+        "class_id": 105,
+        "class_name": "wheat leaf rust",
+        "url": "http://www.sohu.com/a/408877628_120717513?_f=index_betapagehotnews_4&_trans_=000018_mpcgame"
+      },
+      "right": {
+        "image_path": "images/train/apple_rust_60.jpg",
+        "split": "train",
+        "class_id": 2,
+        "class_name": "apple rust",
+        "url": "http://www.ke82.com/view/150s229341u0.html"
+      },
+      "full_neg_corr": -0.5811308026313782,
+      "phash_distance": 10,
+      "dhash_distance": 19
+    },
+    {
+      "pair_id": 169,
+      "left": {
+        "image_path": "images/test/corn_rust_google_0094.jpg",
+        "split": "test",
+        "class_id": 46,
+        "class_name": "corn rust",
+        "url": "https://jenreesources.com/wp-content/uploads/2012/07/commonrustcloseup.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0208.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.56935/asset/9184bc74-b294-4245-a52f-c49a41df5cc4/assets/graphic/bugwood-5368286.jpg"
+      },
+      "full_neg_corr": -0.562913179397583,
+      "phash_distance": 20,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 170,
+      "left": {
+        "image_path": "images/test/corn_rust_google_0078.jpg",
+        "split": "test",
+        "class_id": 46,
+        "class_name": "corn rust",
+        "url": "https://agrilife.org/texasrowcrops/files/2020/07/4.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0208.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.56935/asset/9184bc74-b294-4245-a52f-c49a41df5cc4/assets/graphic/bugwood-5368286.jpg"
+      },
+      "full_neg_corr": -0.5210456848144531,
+      "phash_distance": 28,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 171,
+      "left": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0020.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://extension.sdstate.edu/sites/default/files/2019-07/W-00338-01-bacterial-blight-symptoms.jpg"
+      },
+      "right": {
+        "image_path": "images/val/soybean_bacterial_blight_Bing_0047.jpg",
+        "split": "val",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://extension.sdstate.edu/sites/default/files/styles/facebook/public/2019-07/W-00338-01-bacterial-blight-symptoms.jpg?h=06ac0d8c&itok=4h1qmbHo"
+      },
+      "full_neg_corr": -0.5101526379585266,
+      "phash_distance": 16,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 172,
+      "left": {
+        "image_path": "images/test/zucchini_powdery_mildew_Google_0389.jpg",
+        "split": "test",
+        "class_id": 113,
+        "class_name": "zucchini powdery mildew",
+        "url": "https://i0.wp.com/www.lonelypinesfarm.com/wp-content/uploads/2020/07/Powdery-Mildew-1.jpg?resize=952%2C611&ssl=1"
+      },
+      "right": {
+        "image_path": "images/val/wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0214.jpg",
+        "split": "val",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "http://www.163.com/dy/article/FKQTHDAG0512L8KT.html"
+      },
+      "full_neg_corr": -0.48677462339401245,
+      "phash_distance": 10,
+      "dhash_distance": 31
+    },
+    {
+      "pair_id": 173,
+      "left": {
+        "image_path": "images/test/soybean_frog_eye_leaf_spot_Bing_0047.jpg",
+        "split": "test",
+        "class_id": 86,
+        "class_name": "soybean frog eye leaf spot",
+        "url": "https://bugwoodcloud.org/images/384x256/5465824.jpg"
+      },
+      "right": {
+        "image_path": "images/train/tomato_leaf_mold_18.jpg",
+        "split": "train",
+        "class_id": 99,
+        "class_name": "tomato leaf mold",
+        "url": "http://www.sohu.com/a/241480207_764919"
+      },
+      "full_neg_corr": -0.46943041682243347,
+      "phash_distance": 10,
+      "dhash_distance": 33
+    },
+    {
+      "pair_id": 174,
+      "left": {
+        "image_path": "images/train/wheat_powdery_mildew_Baidu_0216.jpg",
+        "split": "train",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "http://www.360doc.com/content/19/0407/14/32555205_826985484.shtml"
+      },
+      "right": {
+        "image_path": "images/val/wheat_powdery_mildew_Bing_0096.jpg",
+        "split": "val",
+        "class_id": 107,
+        "class_name": "wheat powdery mildew",
+        "url": "https://doraagri.com/wp-content/uploads/2018/06/wheat-powdery-mildew.jpg"
+      },
+      "full_neg_corr": -0.43749043345451355,
+      "phash_distance": 10,
+      "dhash_distance": 15
+    },
+    {
+      "pair_id": 175,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Baidu_0053.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "http://www.163.com/dy/article/ECLMOR2K0512M4DM.html"
+      },
+      "right": {
+        "image_path": "images/val/wheat_septoria_blotch_Google_0287.jpg",
+        "split": "val",
+        "class_id": 108,
+        "class_name": "wheat septoria blotch",
+        "url": "https://osuwheat.com/wp-content/uploads/2020/05/image-5.png?w=666"
+      },
+      "full_neg_corr": -0.4158858060836792,
+      "phash_distance": 30,
+      "dhash_distance": 4
+    },
+    {
+      "pair_id": 176,
+      "left": {
+        "image_path": "images/test/banana_cordana_leaf_spot_Bing_0026.jpg",
+        "split": "test",
+        "class_id": 8,
+        "class_name": "banana cordana leaf spot",
+        "url": "https://www.researchgate.net/profile/Majid-Amani-3/publication/321330320/figure/fig2/AS:747101004771329@1555134168420/Symptoms-of-Cordana-left-and-Alternaria-leaf-spot-right-on-surface-of-banana-leaf-in_Q320.jpg"
+      },
+      "right": {
+        "image_path": "images/train/soybean_bacterial_blight_Bing_0208.jpg",
+        "split": "train",
+        "class_id": 83,
+        "class_name": "soybean bacterial blight",
+        "url": "https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.56935/asset/9184bc74-b294-4245-a52f-c49a41df5cc4/assets/graphic/bugwood-5368286.jpg"
+      },
+      "full_neg_corr": -0.34491056203842163,
+      "phash_distance": 34,
+      "dhash_distance": 7
+    },
+    {
+      "pair_id": 177,
+      "left": {
+        "image_path": "images/train/tomato_bacterial_leaf_spot_google_0315.jpg",
+        "split": "train",
+        "class_id": 96,
+        "class_name": "tomato bacterial leaf spot",
+        "url": "https://data.landcareresearch.co.nz/Image/2SZN/cisweblarge"
+      },
+      "right": {
+        "image_path": "images/val/apple_rust_google_0013.jpg",
+        "split": "val",
+        "class_id": 2,
+        "class_name": "apple rust",
+        "url": "https://www.kaaltv.com/wp-content/uploads/2022/09/Rust-pic-4.jpg"
+      },
+      "full_neg_corr": -0.32241883873939514,
+      "phash_distance": 22,
+      "dhash_distance": 6
+    },
+    {
+      "pair_id": 178,
+      "left": {
+        "image_path": "images/test/wheat_head_scab_Google_0083.jpg",
+        "split": "test",
+        "class_id": 104,
+        "class_name": "wheat head scab",
+        "url": "https://www.lsuagcenter.com/~/media/system/c/3/6/b/c36b9fae47bfe1da30f8854999d9adb4/padgett%20bleached%20heads2jpg.jpg?h=1749&la=en&w=2448"
+      },
+      "right": {
+        "image_path": "images/train/wheat_bacterial_leaf_streak_(black_chaff)_Google_0318.jpg",
+        "split": "train",
+        "class_id": 103,
+        "class_name": "wheat bacterial leaf streak (black chaff)",
+        "url": "https://image.slidesharecdn.com/bacterialdiseases-170919172559/75/Bacterial-diseases-of-plants-9-2048.jpg"
+      },
+      "full_neg_corr": -0.15711405873298645,
+      "phash_distance": 10,
+      "dhash_distance": 29
+    },
+    {
+      "pair_id": 179,
+      "left": {
+        "image_path": "images/test/wheat_leaf_rust_Google_0339.jpg",
+        "split": "test",
+        "class_id": 105,
+        "class_name": "wheat leaf rust",
+        "url": "https://s3.eu-west-2.amazonaws.com/uploads.tsl.ac.uk/shared-images/_768x576_crop_center-center_82_line/Moscou-Nat-Comm-Nov-2021-Main_2021-12-02-153307_vopx.png"
+      },
+      "right": {
+        "image_path": "images/val/apple_rust_google_0013.jpg",
+        "split": "val",
+        "class_id": 2,
+        "class_name": "apple rust",
+        "url": "https://www.kaaltv.com/wp-content/uploads/2022/09/Rust-pic-4.jpg"
+      },
+      "full_neg_corr": -0.13320571184158325,
+      "phash_distance": 28,
+      "dhash_distance": 2
+    },
+    {
+      "pair_id": 180,
+      "left": {
+        "image_path": "images/test/wheat_leaf_rust_Google_0339.jpg",
+        "split": "test",
+        "class_id": 105,
+        "class_name": "wheat leaf rust",
+        "url": "https://s3.eu-west-2.amazonaws.com/uploads.tsl.ac.uk/shared-images/_768x576_crop_center-center_82_line/Moscou-Nat-Comm-Nov-2021-Main_2021-12-02-153307_vopx.png"
+      },
+      "right": {
+        "image_path": "images/train/tomato_bacterial_leaf_spot_google_0315.jpg",
+        "split": "train",
+        "class_id": 96,
+        "class_name": "tomato bacterial leaf spot",
+        "url": "https://data.landcareresearch.co.nz/Image/2SZN/cisweblarge"
+      },
+      "full_neg_corr": -0.13315650820732117,
+      "phash_distance": 28,
+      "dhash_distance": 4
+    }
+  ]
+}

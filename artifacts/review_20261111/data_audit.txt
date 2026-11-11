@@ -1,0 +1,59 @@
+Audited 4,349 images across 43 original categories
+Cross-partition groups: 73; conflicting-label groups: 34
+Retained 4,148; excluded 201
+Retained by original partition: {'train': 2843, 'val': 458, 'test': 847}
+Assignment A: 25 known classes
+  train: {'known': 1666}
+  val: {'familiar_dev': 54, 'known': 278, 'unfamiliar_dev': 42}
+  test: {'familiar_test': 145, 'known': 495, 'unfamiliar_test': 27}
+Assignment B: 25 known classes
+  train: {'known': 1516}
+  val: {'familiar_dev': 70, 'known': 257, 'unfamiliar_dev': 42}
+  test: {'familiar_test': 132, 'known': 460, 'unfamiliar_test': 27}
+Unreadable selected RGB images: 0 / 4,349
+
+Per-class counts after duplicate exclusions, before role filtering:
+Class                                             Train    Val   Test
+apple black rot                                      43      8     12
+apple mosaic virus                                   52      8     13
+apple rust                                           62     12     22
+apple scab                                          113     18     35
+banana anthracnose                                   33      6      9
+banana black leaf streak                             75      9     24
+banana bunchy top                                    51      8     13
+banana cigar end rot                                 20      2      9
+banana cordana leaf spot                             18      2      8
+banana panama disease                                33      6     10
+citrus canker                                       223     33     65
+citrus greening disease                              66      9     18
+corn gray leaf spot                                  49     10     17
+corn northern leaf blight                            65      9     18
+corn rust                                            84     13     23
+corn smut                                            91     14     26
+potato early blight                                  43      7      9
+potato late blight                                   51      7     18
+soybean bacterial blight                             39      5     13
+soybean brown spot                                   33      2     10
+soybean downy mildew                                 52      6     14
+soybean frog eye leaf spot                          102     13     28
+soybean mosaic                                       60     11     17
+soybean rust                                         44      7     14
+tomato bacterial leaf spot                           62      8     16
+tomato early blight                                  97     16     32
+tomato late blight                                   84     14     19
+tomato leaf mold                                     71     13     18
+tomato mosaic virus                                  27      4      8
+tomato septoria leaf spot                            62     13     18
+tomato yellow leaf curl virus                        41      4     14
+wheat bacterial leaf streak (black chaff)            51     10     18
+wheat head scab                                     133     23     43
+wheat leaf rust                                      49      7     14
+wheat loose smut                                     89     14     24
+wheat powdery mildew                                116     24     35
+wheat septoria blotch                                81     17     24
+wheat stem rust                                      50     11     22
+wheat stripe rust                                   145     24     42
+zucchini bacterial wilt                              37      7     12
+zucchini downy mildew                                25      3      5
+zucchini powdery mildew                              82     15     27
+zucchini yellow mosaic virus                         39      6     11
