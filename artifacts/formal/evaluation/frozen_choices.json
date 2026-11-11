@@ -1,0 +1,187 @@
+{
+  "provenance": {
+    "manifest_sha256": "bd98c23f968b2b4f6e572a32226fcad20e42639deb6262ddc115a3c0b149be1e",
+    "protocol_sha256": "bb83a77408c50781d9061553105d23984e4f21f47bb70fb2c304acc40815672b"
+  },
+  "validation_grid_sha256": "b0a763e3d3a59d40c1b8575b4dc07abd69d346bac5719f71d2e9df6c0cc67947",
+  "primary_score": "MaxLogit",
+  "baseline_grid_mean_familiar_host_auoscr": {
+    "MSP": 0.6232477666190092,
+    "MaxLogit": 0.62709358684935,
+    "Negative energy": 0.6240752600293077
+  },
+  "known_macro_f1_tolerance": 0.02,
+  "known_calibration_target": 0.95,
+  "selection_rule": "Choose one score from baseline familiar-host validation AUOSCR averaged across assignments, seeds and both learning rates. Break score ties in the order MSP, MaxLogit, Negative energy. For each assignment, among learning rates whose mean paired known macro-F1 difference is at least -0.02, select the learning rate that maximizes the equal-weight mean of both models' familiar-host validation AUOSCR. Break ties by smaller learning rate. If no rate is eligible, select the best known macro-F1 difference, then the best equal-weight mean AUOSCR, then the smaller rate, and report that the tolerance was missed during selection.",
+  "assignments": {
+    "A": {
+      "selected_learning_rate": 0.0001,
+      "validation_tolerance_satisfied": true,
+      "validation_candidates": [
+        {
+          "learning_rate": 0.0001,
+          "mean_paired_known_macro_f1_difference": 0.0030584486577227197,
+          "baseline_mean_familiar_host_auoscr": 0.621321823076209,
+          "lesion_mean_familiar_host_auoscr": 0.6269377146570129,
+          "paired_mean_familiar_host_auoscr": 0.624129768866611,
+          "within_known_macro_f1_tolerance": true
+        },
+        {
+          "learning_rate": 0.0003,
+          "mean_paired_known_macro_f1_difference": -0.011314899736661851,
+          "baseline_mean_familiar_host_auoscr": 0.6290494755407036,
+          "lesion_mean_familiar_host_auoscr": 0.6125498932516477,
+          "paired_mean_familiar_host_auoscr": 0.6207996843961756,
+          "within_known_macro_f1_tolerance": true
+        }
+      ],
+      "runs": {
+        "baseline_A_seed42_lr0.0001_epochs20": {
+          "seed": 42,
+          "model": "baseline",
+          "checkpoint_sha256": "359bcea16788383b72b20e01c5194d5db47273aee8d2a6a0240c6e96c79e0280",
+          "thresholds": {
+            "MSP": 0.33466872572898865,
+            "MaxLogit": 3.228999137878418,
+            "Negative energy": 4.110265254974365
+          }
+        },
+        "lesion_A_seed42_lr0.0001_epochs20": {
+          "seed": 42,
+          "model": "lesion",
+          "checkpoint_sha256": "e371380c27055370fe8bebb3521c84a1c5e6042a00417c131a8059f6fd5ee01f",
+          "thresholds": {
+            "MSP": 0.35877785086631775,
+            "MaxLogit": 3.1977338790893555,
+            "Negative energy": 4.124200344085693
+          }
+        },
+        "baseline_A_seed123_lr0.0001_epochs20": {
+          "seed": 123,
+          "model": "baseline",
+          "checkpoint_sha256": "a5bcbdaed08a59c68976c51e95ea3390597a9a57cbace32dc7fcfa57dbd5c39c",
+          "thresholds": {
+            "MSP": 0.35195133090019226,
+            "MaxLogit": 3.312330484390259,
+            "Negative energy": 4.19982385635376
+          }
+        },
+        "lesion_A_seed123_lr0.0001_epochs20": {
+          "seed": 123,
+          "model": "lesion",
+          "checkpoint_sha256": "5b695e62bd455ad3099c1a4516b5497e8cef831c5e5914f404a698d427582fb3",
+          "thresholds": {
+            "MSP": 0.40643495321273804,
+            "MaxLogit": 3.39140248298645,
+            "Negative energy": 4.327239990234375
+          }
+        },
+        "baseline_A_seed2026_lr0.0001_epochs20": {
+          "seed": 2026,
+          "model": "baseline",
+          "checkpoint_sha256": "9dd7d738f16789bd2890151ac015210c830dd3ef7eda8704aee3b6ff6a5f17b9",
+          "thresholds": {
+            "MSP": 0.3259658217430115,
+            "MaxLogit": 2.9687299728393555,
+            "Negative energy": 4.001429557800293
+          }
+        },
+        "lesion_A_seed2026_lr0.0001_epochs20": {
+          "seed": 2026,
+          "model": "lesion",
+          "checkpoint_sha256": "eea90254ccb1d88d89f834e08fdb689a4ff4432ca375a780ab981f42d361b865",
+          "thresholds": {
+            "MSP": 0.33712080121040344,
+            "MaxLogit": 2.983222723007202,
+            "Negative energy": 3.9978199005126953
+          }
+        }
+      }
+    },
+    "B": {
+      "selected_learning_rate": 0.0001,
+      "validation_tolerance_satisfied": true,
+      "validation_candidates": [
+        {
+          "learning_rate": 0.0001,
+          "mean_paired_known_macro_f1_difference": 0.0026241441282333078,
+          "baseline_mean_familiar_host_auoscr": 0.6428268970189702,
+          "lesion_mean_familiar_host_auoscr": 0.642382283197832,
+          "paired_mean_familiar_host_auoscr": 0.6426045901084011,
+          "within_known_macro_f1_tolerance": true
+        },
+        {
+          "learning_rate": 0.0003,
+          "mean_paired_known_macro_f1_difference": -0.008708911632624957,
+          "baseline_mean_familiar_host_auoscr": 0.6151761517615176,
+          "lesion_mean_familiar_host_auoscr": 0.6169122628726287,
+          "paired_mean_familiar_host_auoscr": 0.6160442073170731,
+          "within_known_macro_f1_tolerance": true
+        }
+      ],
+      "runs": {
+        "baseline_B_seed42_lr0.0001_epochs20": {
+          "seed": 42,
+          "model": "baseline",
+          "checkpoint_sha256": "6db89f6f28c98567df2d15588448430f5f5758b0d467103765c49b238ffe543b",
+          "thresholds": {
+            "MSP": 0.361598938703537,
+            "MaxLogit": 3.072849750518799,
+            "Negative energy": 4.030051231384277
+          }
+        },
+        "lesion_B_seed42_lr0.0001_epochs20": {
+          "seed": 42,
+          "model": "lesion",
+          "checkpoint_sha256": "610e54abd03c210b0def7f4e2abf6090e23e0934ccb224c8aec0be6990cc5fd6",
+          "thresholds": {
+            "MSP": 0.32660678029060364,
+            "MaxLogit": 3.0514180660247803,
+            "Negative energy": 4.075363636016846
+          }
+        },
+        "baseline_B_seed123_lr0.0001_epochs20": {
+          "seed": 123,
+          "model": "baseline",
+          "checkpoint_sha256": "069ff35485c439e064a5b893f0b40f86dd37013e0d9d5e51e0e083e37bc447a7",
+          "thresholds": {
+            "MSP": 0.3615844249725342,
+            "MaxLogit": 3.2624170780181885,
+            "Negative energy": 4.111299991607666
+          }
+        },
+        "lesion_B_seed123_lr0.0001_epochs20": {
+          "seed": 123,
+          "model": "lesion",
+          "checkpoint_sha256": "c050ac02a58fc45d6a5485e40195a46c189d88f8b23693727d730d7eeef390c1",
+          "thresholds": {
+            "MSP": 0.32680898904800415,
+            "MaxLogit": 3.042283535003662,
+            "Negative energy": 4.09089469909668
+          }
+        },
+        "baseline_B_seed2026_lr0.0001_epochs20": {
+          "seed": 2026,
+          "model": "baseline",
+          "checkpoint_sha256": "5339cfe31b3829eb7479f14b18d651f35d55d124d041c2395118653e98737ec4",
+          "thresholds": {
+            "MSP": 0.3520730435848236,
+            "MaxLogit": 3.196765661239624,
+            "Negative energy": 4.092528343200684
+          }
+        },
+        "lesion_B_seed2026_lr0.0001_epochs20": {
+          "seed": 2026,
+          "model": "lesion",
+          "checkpoint_sha256": "ad401d779b48ff33c45ecf786290ccc0b651dbb7c3db97c43a8e023ea2cd5870",
+          "thresholds": {
+            "MSP": 0.3529873192310333,
+            "MaxLogit": 3.2202253341674805,
+            "Negative energy": 4.144637107849121
+          }
+        }
+      }
+    }
+  },
+  "frozen_at_utc": "2026-11-11T05:23:35.629333+00:00"
+}

@@ -1,0 +1,2979 @@
+{
+  "provenance": {
+    "manifest_sha256": "bd98c23f968b2b4f6e572a32226fcad20e42639deb6262ddc115a3c0b149be1e",
+    "protocol_sha256": "bb83a77408c50781d9061553105d23984e4f21f47bb70fb2c304acc40815672b"
+  },
+  "split": "val",
+  "disease_name_rule": "Use the PlantSeg metadata class names and plant names recorded in the manifest. Apply Unicode NFKC, case folding and whitespace normalization, then remove the leading host name. Compare exact remaining names across different hosts. No synonyms or disease families are merged.",
+  "familiar_disease_matches": {
+    "A": {
+      "apple black rot": {
+        "normalized_disease_name": "black rot",
+        "other_known_hosts": []
+      },
+      "banana anthracnose": {
+        "normalized_disease_name": "anthracnose",
+        "other_known_hosts": []
+      },
+      "corn gray leaf spot": {
+        "normalized_disease_name": "gray leaf spot",
+        "other_known_hosts": []
+      },
+      "soybean bacterial blight": {
+        "normalized_disease_name": "bacterial blight",
+        "other_known_hosts": []
+      },
+      "tomato bacterial leaf spot": {
+        "normalized_disease_name": "bacterial leaf spot",
+        "other_known_hosts": []
+      },
+      "wheat bacterial leaf streak (black chaff)": {
+        "normalized_disease_name": "bacterial leaf streak (black chaff)",
+        "other_known_hosts": []
+      },
+      "zucchini bacterial wilt": {
+        "normalized_disease_name": "bacterial wilt",
+        "other_known_hosts": []
+      }
+    },
+    "B": {
+      "apple mosaic virus": {
+        "normalized_disease_name": "mosaic virus",
+        "other_known_hosts": [
+          "tomato"
+        ]
+      },
+      "banana black leaf streak": {
+        "normalized_disease_name": "black leaf streak",
+        "other_known_hosts": []
+      },
+      "corn northern leaf blight": {
+        "normalized_disease_name": "northern leaf blight",
+        "other_known_hosts": []
+      },
+      "soybean brown spot": {
+        "normalized_disease_name": "brown spot",
+        "other_known_hosts": []
+      },
+      "tomato early blight": {
+        "normalized_disease_name": "early blight",
+        "other_known_hosts": []
+      },
+      "wheat head scab": {
+        "normalized_disease_name": "head scab",
+        "other_known_hosts": []
+      },
+      "zucchini downy mildew": {
+        "normalized_disease_name": "downy mildew",
+        "other_known_hosts": []
+      }
+    }
+  },
+  "runs": {
+    "baseline_A_seed42_lr0.0001_epochs20": {
+      "checkpoint_sha256": "359bcea16788383b72b20e01c5194d5db47273aee8d2a6a0240c6e96c79e0280",
+      "evaluation_device": "mps",
+      "selected_epoch": 19,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 218,
+        "known_accuracy": 0.8195488721804511,
+        "known_macro_f1": 0.8029459571756759,
+        "scores": {
+          "MSP": {
+            "threshold": 0.33466872572898865,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7894736842105263,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.633249791144528,
+                "unknown_auroc": 0.7250069618490671,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6429535376903798,
+                "unknown_auroc": 0.7394447657605552,
+                "unknown_false_acceptance": 0.8717948717948718,
+                "unknown_accepted_count": 34
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.633249791144528,
+                "unknown_auroc": 0.7250069618490671,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.228999137878418,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7894736842105263,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6324143692564745,
+                "unknown_auroc": 0.7322472848788638,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6446886446886446,
+                "unknown_auroc": 0.7518796992481203,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6324143692564745,
+                "unknown_auroc": 0.7322472848788638,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.110265254974365,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6277499303815094,
+                "unknown_auroc": 0.7293929267613478,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6415076151918258,
+                "unknown_auroc": 0.7514941199151726,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6277499303815094,
+                "unknown_auroc": 0.7293929267613478,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed42_lr0.0001_epochs20": {
+      "checkpoint_sha256": "e371380c27055370fe8bebb3521c84a1c5e6042a00417c131a8059f6fd5ee01f",
+      "evaluation_device": "mps",
+      "selected_epoch": 19,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 218,
+        "known_accuracy": 0.8195488721804511,
+        "known_macro_f1": 0.8011605970249909,
+        "scores": {
+          "MSP": {
+            "threshold": 0.35877785086631775,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6319270398217767,
+                "unknown_auroc": 0.7287663603453078,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6419895893580103,
+                "unknown_auroc": 0.7419510314247155,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6319270398217767,
+                "unknown_auroc": 0.7287663603453078,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.1977338790893555,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7819548872180451,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6327624617098302,
+                "unknown_auroc": 0.7364940128098023,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6404472720262194,
+                "unknown_auroc": 0.7504337767495662,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6327624617098302,
+                "unknown_auroc": 0.7364940128098023,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.124200344085693,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7819548872180451,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6283068783068783,
+                "unknown_auroc": 0.7341966026176552,
+                "unknown_false_acceptance": 0.8148148148148148,
+                "unknown_accepted_count": 44
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6375554270291113,
+                "unknown_auroc": 0.7496626180836707,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6283068783068783,
+                "unknown_auroc": 0.7341966026176552,
+                "unknown_false_acceptance": 0.8148148148148148,
+                "unknown_accepted_count": 44
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_A_seed123_lr0.0001_epochs20": {
+      "checkpoint_sha256": "a5bcbdaed08a59c68976c51e95ea3390597a9a57cbace32dc7fcfa57dbd5c39c",
+      "evaluation_device": "mps",
+      "selected_epoch": 10,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 214,
+        "known_accuracy": 0.8045112781954887,
+        "known_macro_f1": 0.74751311875397,
+        "scores": {
+          "MSP": {
+            "threshold": 0.35195133090019226,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7744360902255639,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6259398496240602,
+                "unknown_auroc": 0.7302979671400724,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6549064970117602,
+                "unknown_auroc": 0.7641218430692114,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6259398496240602,
+                "unknown_auroc": 0.7302979671400724,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.312330484390259,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7706766917293233,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6197438039543302,
+                "unknown_auroc": 0.727165135059872,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6412184306921149,
+                "unknown_auroc": 0.7534220165799113,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6197438039543302,
+                "unknown_auroc": 0.727165135059872,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.19982385635376,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7706766917293233,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6105541631857422,
+                "unknown_auroc": 0.7156780840991367,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.633314054366686,
+                "unknown_auroc": 0.7452284557547715,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6105541631857422,
+                "unknown_auroc": 0.7156780840991367,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed123_lr0.0001_epochs20": {
+      "checkpoint_sha256": "5b695e62bd455ad3099c1a4516b5497e8cef831c5e5914f404a698d427582fb3",
+      "evaluation_device": "mps",
+      "selected_epoch": 16,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 213,
+        "known_accuracy": 0.8007518796992481,
+        "known_macro_f1": 0.7487003540840353,
+        "scores": {
+          "MSP": {
+            "threshold": 0.40643495321273804,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.793233082706767,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6354079643553328,
+                "unknown_auroc": 0.7373294346978557,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6458453826874879,
+                "unknown_auroc": 0.7502409870830923,
+                "unknown_false_acceptance": 0.6923076923076923,
+                "unknown_accepted_count": 27
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6354079643553328,
+                "unknown_auroc": 0.7373294346978557,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.39140248298645,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7819548872180451,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6296296296296297,
+                "unknown_auroc": 0.7312726260094682,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.637941006362059,
+                "unknown_auroc": 0.7465779834200886,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6296296296296297,
+                "unknown_auroc": 0.7312726260094682,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.327239990234375,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7744360902255639,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6199526594263436,
+                "unknown_auroc": 0.7211083263714843,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6329284750337382,
+                "unknown_auroc": 0.742818584923848,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6199526594263436,
+                "unknown_auroc": 0.7211083263714843,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_A_seed2026_lr0.0001_epochs20": {
+      "checkpoint_sha256": "9dd7d738f16789bd2890151ac015210c830dd3ef7eda8704aee3b6ff6a5f17b9",
+      "evaluation_device": "mps",
+      "selected_epoch": 7,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 211,
+        "known_accuracy": 0.793233082706767,
+        "known_macro_f1": 0.7696659532784963,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3259658217430115,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7781954887218046,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6159147869674185,
+                "unknown_auroc": 0.7190893901420217,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.656834393676499,
+                "unknown_auroc": 0.7733757470599576,
+                "unknown_false_acceptance": 0.6923076923076923,
+                "unknown_accepted_count": 27
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6159147869674185,
+                "unknown_auroc": 0.7190893901420217,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 2.9687299728393555,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7781954887218046,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6118072960178222,
+                "unknown_auroc": 0.7213868003341688,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6663774821669559,
+                "unknown_auroc": 0.7976672450356661,
+                "unknown_false_acceptance": 0.5897435897435898,
+                "unknown_accepted_count": 23
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6118072960178222,
+                "unknown_auroc": 0.7213868003341688,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.001429557800293,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7706766917293233,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6021303258145364,
+                "unknown_auroc": 0.7147730437204121,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6642567958357433,
+                "unknown_auroc": 0.8013302486986698,
+                "unknown_false_acceptance": 0.6153846153846154,
+                "unknown_accepted_count": 24
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6021303258145364,
+                "unknown_auroc": 0.7147730437204121,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed2026_lr0.0001_epochs20": {
+      "checkpoint_sha256": "eea90254ccb1d88d89f834e08fdb689a4ff4432ca375a780ab981f42d361b865",
+      "evaluation_device": "mps",
+      "selected_epoch": 7,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 214,
+        "known_accuracy": 0.8045112781954887,
+        "known_macro_f1": 0.7794394240722841,
+        "scores": {
+          "MSP": {
+            "threshold": 0.33712080121040344,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.793233082706767,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.620231133389028,
+                "unknown_auroc": 0.716374269005848,
+                "unknown_false_acceptance": 0.7592592592592593,
+                "unknown_accepted_count": 41
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6680161943319838,
+                "unknown_auroc": 0.7800269905533063,
+                "unknown_false_acceptance": 0.6666666666666666,
+                "unknown_accepted_count": 26
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.620231133389028,
+                "unknown_auroc": 0.716374269005848,
+                "unknown_false_acceptance": 0.7592592592592593,
+                "unknown_accepted_count": 41
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 2.983222723007202,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.618421052631579,
+                "unknown_auroc": 0.7213868003341688,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6806439174860228,
+                "unknown_auroc": 0.8061499903605166,
+                "unknown_false_acceptance": 0.6153846153846154,
+                "unknown_accepted_count": 24
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.618421052631579,
+                "unknown_auroc": 0.7213868003341688,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 3.9978199005126953,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7819548872180451,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6109718741297687,
+                "unknown_auroc": 0.7156084656084656,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6781376518218625,
+                "unknown_auroc": 0.8090418353576248,
+                "unknown_false_acceptance": 0.6153846153846154,
+                "unknown_accepted_count": 24
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6109718741297687,
+                "unknown_auroc": 0.7156084656084656,
+                "unknown_false_acceptance": 0.7962962962962963,
+                "unknown_accepted_count": 43
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_A_seed42_lr0.0003_epochs20": {
+      "checkpoint_sha256": "45b1a56494f02aeb021a2accbe618133a4c0b5b21b09192d65df19e9b6061c2c",
+      "evaluation_device": "mps",
+      "selected_epoch": 17,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 209,
+        "known_accuracy": 0.7857142857142857,
+        "known_macro_f1": 0.7466612815836834,
+        "scores": {
+          "MSP": {
+            "threshold": 0.44409650564193726,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7593984962406015,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6247563352826511,
+                "unknown_auroc": 0.7351016429963798,
+                "unknown_false_acceptance": 0.8148148148148148,
+                "unknown_accepted_count": 44
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6104684788895316,
+                "unknown_auroc": 0.7160208212839791,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6247563352826511,
+                "unknown_auroc": 0.7351016429963798,
+                "unknown_false_acceptance": 0.8148148148148148,
+                "unknown_accepted_count": 44
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.5047576427459717,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7593984962406015,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6205792258423837,
+                "unknown_auroc": 0.7325257588415484,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6069018700597648,
+                "unknown_auroc": 0.7128397917871603,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6205792258423837,
+                "unknown_auroc": 0.7325257588415484,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.285709381103516,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7631578947368421,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6193957115009747,
+                "unknown_auroc": 0.730646059593428,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6049739733950261,
+                "unknown_auroc": 0.7102371312897628,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6193957115009747,
+                "unknown_auroc": 0.730646059593428,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed42_lr0.0003_epochs20": {
+      "checkpoint_sha256": "2ceb09e779f0daec2a49dbc2f9e12d2ada5f1ee84327f4c84cf61008589a9ba4",
+      "evaluation_device": "mps",
+      "selected_epoch": 13,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 213,
+        "known_accuracy": 0.8007518796992481,
+        "known_macro_f1": 0.7710857170774559,
+        "scores": {
+          "MSP": {
+            "threshold": 0.4208412170410156,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7669172932330827,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6221804511278195,
+                "unknown_auroc": 0.7441520467836258,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6499903605166764,
+                "unknown_auroc": 0.7742433005590901,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6221804511278195,
+                "unknown_auroc": 0.7441520467836258,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.6974847316741943,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7669172932330827,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6242690058479532,
+                "unknown_auroc": 0.7446393762183237,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.653846153846154,
+                "unknown_auroc": 0.7828224407171775,
+                "unknown_false_acceptance": 0.6666666666666666,
+                "unknown_accepted_count": 26
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6242690058479532,
+                "unknown_auroc": 0.7446393762183237,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.337556838989258,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7706766917293233,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6220412141464774,
+                "unknown_auroc": 0.7417153996101364,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.655002891844997,
+                "unknown_auroc": 0.7851359167148642,
+                "unknown_false_acceptance": 0.6666666666666666,
+                "unknown_accepted_count": 26
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6220412141464774,
+                "unknown_auroc": 0.7417153996101364,
+                "unknown_false_acceptance": 0.7777777777777778,
+                "unknown_accepted_count": 42
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_A_seed123_lr0.0003_epochs20": {
+      "checkpoint_sha256": "d75f85c7562850de4e98606a2e04eed1d82efd521cfe904e2c2b42d480aee443",
+      "evaluation_device": "mps",
+      "selected_epoch": 18,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 215,
+        "known_accuracy": 0.8082706766917294,
+        "known_macro_f1": 0.7916050449665919,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3977784514427185,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6342940685045948,
+                "unknown_auroc": 0.7355193539404066,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.686620397146713,
+                "unknown_auroc": 0.8037401195295932,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6342940685045948,
+                "unknown_auroc": 0.7355193539404066,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.4141674041748047,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6249651907546645,
+                "unknown_auroc": 0.7296017822333611,
+                "unknown_false_acceptance": 0.8888888888888888,
+                "unknown_accepted_count": 48
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6729323308270676,
+                "unknown_auroc": 0.789955658376711,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6249651907546645,
+                "unknown_auroc": 0.7296017822333611,
+                "unknown_false_acceptance": 0.8888888888888888,
+                "unknown_accepted_count": 48
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.21761417388916,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7857142857142857,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6205096073517126,
+                "unknown_auroc": 0.7261904761904762,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6680161943319838,
+                "unknown_auroc": 0.7850395218816271,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6205096073517126,
+                "unknown_auroc": 0.7261904761904762,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed123_lr0.0003_epochs20": {
+      "checkpoint_sha256": "36eae8ffe91fb98eddf35d77ff0f99923b9d01d074e4102bece18bdb5b347de7",
+      "evaluation_device": "mps",
+      "selected_epoch": 14,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 205,
+        "known_accuracy": 0.7706766917293233,
+        "known_macro_f1": 0.7508696151870626,
+        "scores": {
+          "MSP": {
+            "threshold": 0.422695517539978,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7481203007518797,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.603104984683932,
+                "unknown_auroc": 0.7118490671122251,
+                "unknown_false_acceptance": 0.8888888888888888,
+                "unknown_accepted_count": 48
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6638712165027955,
+                "unknown_auroc": 0.7924619240408715,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.603104984683932,
+                "unknown_auroc": 0.7118490671122251,
+                "unknown_false_acceptance": 0.8888888888888888,
+                "unknown_accepted_count": 48
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.612083673477173,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7518796992481203,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.5906432748538012,
+                "unknown_auroc": 0.6998050682261209,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6490264121843069,
+                "unknown_auroc": 0.7732793522267206,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.5906432748538012,
+                "unknown_auroc": 0.6998050682261209,
+                "unknown_false_acceptance": 0.8333333333333334,
+                "unknown_accepted_count": 45
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.4713263511657715,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7443609022556391,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.5854915065441381,
+                "unknown_auroc": 0.6956279587858536,
+                "unknown_false_acceptance": 0.7592592592592593,
+                "unknown_accepted_count": 41
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6423751686909582,
+                "unknown_auroc": 0.7672064777327936,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.5854915065441381,
+                "unknown_auroc": 0.6956279587858536,
+                "unknown_false_acceptance": 0.7592592592592593,
+                "unknown_accepted_count": 41
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_A_seed2026_lr0.0003_epochs20": {
+      "checkpoint_sha256": "f39253d4ab940c10cb9aa83254a0b23831b16073a197aff3ae802c23a3ca0cbb",
+      "evaluation_device": "mps",
+      "selected_epoch": 16,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 216,
+        "known_accuracy": 0.8120300751879699,
+        "known_macro_f1": 0.7865801991788168,
+        "scores": {
+          "MSP": {
+            "threshold": 0.43004894256591797,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.8007518796992481,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6556669451406294,
+                "unknown_auroc": 0.7493734335839599,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6909581646423752,
+                "unknown_auroc": 0.7938114517061886,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6556669451406294,
+                "unknown_auroc": 0.7493734335839599,
+                "unknown_false_acceptance": 0.8518518518518519,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.2273213863372803,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7969924812030075,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6416040100250626,
+                "unknown_auroc": 0.7305068226120857,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6742818584923849,
+                "unknown_auroc": 0.7753036437246964,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6416040100250626,
+                "unknown_auroc": 0.7305068226120857,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.034871578216553,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.793233082706767,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6343636869952659,
+                "unknown_auroc": 0.7222222222222222,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6683053788316947,
+                "unknown_auroc": 0.7693271640640061,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6343636869952659,
+                "unknown_auroc": 0.7222222222222222,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_A_seed2026_lr0.0003_epochs20": {
+      "checkpoint_sha256": "e1cbd2b76f4e962a4700638bf9b49aa359087f9c7fd11d2c71bfd7657ca45f18",
+      "evaluation_device": "mps",
+      "selected_epoch": 16,
+      "metrics": {
+        "known_count": 266,
+        "known_correct_count": 208,
+        "known_accuracy": 0.7819548872180451,
+        "known_macro_f1": 0.768946494254588,
+        "scores": {
+          "MSP": {
+            "threshold": 0.34683406352996826,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7631578947368421,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6283068783068784,
+                "unknown_auroc": 0.7355889724310778,
+                "unknown_false_acceptance": 0.9629629629629629,
+                "unknown_accepted_count": 52
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.647291305186042,
+                "unknown_auroc": 0.7503373819163293,
+                "unknown_false_acceptance": 0.9230769230769231,
+                "unknown_accepted_count": 36
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6283068783068784,
+                "unknown_auroc": 0.7355889724310778,
+                "unknown_false_acceptance": 0.9629629629629629,
+                "unknown_accepted_count": 52
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.280017137527466,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7669172932330827,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6227373990531886,
+                "unknown_auroc": 0.7325953773322195,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6455561981877771,
+                "unknown_auroc": 0.7603624445729709,
+                "unknown_false_acceptance": 0.8717948717948718,
+                "unknown_accepted_count": 34
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6227373990531886,
+                "unknown_auroc": 0.7325953773322195,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.09794807434082,
+            "known_acceptance": 0.9511278195488722,
+            "known_correct_acceptance": 0.7631578947368421,
+            "known_accepted_count": 253,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 54,
+                "auoscr": 0.6145224171539961,
+                "unknown_auroc": 0.724310776942356,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6446886446886447,
+                "unknown_auroc": 0.761615577405051,
+                "unknown_false_acceptance": 0.8717948717948718,
+                "unknown_accepted_count": 34
+              },
+              "familiar_shared_name": {
+                "unknown_count": 0,
+                "auoscr": null,
+                "unknown_auroc": null,
+                "unknown_false_acceptance": null,
+                "unknown_accepted_count": 0
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 54,
+                "auoscr": 0.6145224171539961,
+                "unknown_auroc": 0.724310776942356,
+                "unknown_false_acceptance": 0.8703703703703703,
+                "unknown_accepted_count": 47
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed42_lr0.0001_epochs20": {
+      "checkpoint_sha256": "6db89f6f28c98567df2d15588448430f5f5758b0d467103765c49b238ffe543b",
+      "evaluation_device": "mps",
+      "selected_epoch": 9,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 186,
+        "known_accuracy": 0.7560975609756098,
+        "known_macro_f1": 0.736045970279565,
+        "scores": {
+          "MSP": {
+            "threshold": 0.361598938703537,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7439024390243902,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6432291666666667,
+                "unknown_auroc": 0.7889989837398375,
+                "unknown_false_acceptance": 0.71875,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5426308109234939,
+                "unknown_auroc": 0.6418594955180321,
+                "unknown_false_acceptance": 0.8974358974358975,
+                "unknown_accepted_count": 35
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6199186991869919,
+                "unknown_auroc": 0.7505081300813008,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6465592334494774,
+                "unknown_auroc": 0.7944976771196284,
+                "unknown_false_acceptance": 0.6964285714285714,
+                "unknown_accepted_count": 39
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.072849750518799,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6493267276422765,
+                "unknown_auroc": 0.8090701219512195,
+                "unknown_false_acceptance": 0.6875,
+                "unknown_accepted_count": 44
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5667083593912863,
+                "unknown_auroc": 0.6912653741922035,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6316056910569106,
+                "unknown_auroc": 0.7754065040650406,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6518583042973287,
+                "unknown_auroc": 0.8138792102206736,
+                "unknown_false_acceptance": 0.6607142857142857,
+                "unknown_accepted_count": 37
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.030051231384277,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7276422764227642,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6450076219512195,
+                "unknown_auroc": 0.8117378048780488,
+                "unknown_false_acceptance": 0.734375,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5674379820721285,
+                "unknown_auroc": 0.7036689597665208,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6260162601626016,
+                "unknown_auroc": 0.7708333333333334,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6477206736353077,
+                "unknown_auroc": 0.8175813008130082,
+                "unknown_false_acceptance": 0.6964285714285714,
+                "unknown_accepted_count": 39
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed42_lr0.0001_epochs20": {
+      "checkpoint_sha256": "610e54abd03c210b0def7f4e2abf6090e23e0934ccb224c8aec0be6990cc5fd6",
+      "evaluation_device": "mps",
+      "selected_epoch": 9,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 186,
+        "known_accuracy": 0.7560975609756098,
+        "known_macro_f1": 0.737262805962275,
+        "scores": {
+          "MSP": {
+            "threshold": 0.32660678029060364,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7439024390243902,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.641577743902439,
+                "unknown_auroc": 0.7827743902439024,
+                "unknown_false_acceptance": 0.765625,
+                "unknown_accepted_count": 49
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5518032103397957,
+                "unknown_auroc": 0.6526996039191162,
+                "unknown_false_acceptance": 0.9743589743589743,
+                "unknown_accepted_count": 38
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6270325203252034,
+                "unknown_auroc": 0.7581300813008129,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6436556329849014,
+                "unknown_auroc": 0.7862950058072009,
+                "unknown_false_acceptance": 0.75,
+                "unknown_accepted_count": 42
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.0514180660247803,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6521214430894309,
+                "unknown_auroc": 0.8094512195121951,
+                "unknown_false_acceptance": 0.6875,
+                "unknown_accepted_count": 44
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5752553679382948,
+                "unknown_auroc": 0.6992912236814677,
+                "unknown_false_acceptance": 0.8974358974358975,
+                "unknown_accepted_count": 35
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6361788617886179,
+                "unknown_auroc": 0.7809959349593496,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6543989547038327,
+                "unknown_auroc": 0.8135162601626016,
+                "unknown_false_acceptance": 0.6607142857142857,
+                "unknown_accepted_count": 37
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.075363636016846,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7317073170731707,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6475482723577236,
+                "unknown_auroc": 0.8122459349593496,
+                "unknown_false_acceptance": 0.6875,
+                "unknown_accepted_count": 44
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5746299770690014,
+                "unknown_auroc": 0.7123202001250781,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6270325203252032,
+                "unknown_auroc": 0.771849593495935,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.650479094076655,
+                "unknown_auroc": 0.8180168408826946,
+                "unknown_false_acceptance": 0.6607142857142857,
+                "unknown_accepted_count": 37
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed123_lr0.0001_epochs20": {
+      "checkpoint_sha256": "069ff35485c439e064a5b893f0b40f86dd37013e0d9d5e51e0e083e37bc447a7",
+      "evaluation_device": "mps",
+      "selected_epoch": 19,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 194,
+        "known_accuracy": 0.7886178861788617,
+        "known_macro_f1": 0.7389751850615788,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3615844249725342,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7642276422764228,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6294461382113822,
+                "unknown_auroc": 0.7443470528455285,
+                "unknown_false_acceptance": 0.8125,
+                "unknown_accepted_count": 52
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6099645611840734,
+                "unknown_auroc": 0.7235772357723578,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.641260162601626,
+                "unknown_auroc": 0.7535569105691057,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6277584204413473,
+                "unknown_auroc": 0.7430313588850175,
+                "unknown_false_acceptance": 0.7857142857142857,
+                "unknown_accepted_count": 44
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.2624170780181885,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7601626016260162,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.643483231707317,
+                "unknown_auroc": 0.7641006097560976,
+                "unknown_false_acceptance": 0.734375,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.619345424223473,
+                "unknown_auroc": 0.7375442985199083,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6402439024390244,
+                "unknown_auroc": 0.7576219512195121,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6439459930313589,
+                "unknown_auroc": 0.7650261324041812,
+                "unknown_false_acceptance": 0.7142857142857143,
+                "unknown_accepted_count": 40
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.111299991607666,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7642276422764228,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6448170731707317,
+                "unknown_auroc": 0.7675940040650406,
+                "unknown_false_acceptance": 0.796875,
+                "unknown_accepted_count": 51
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6224723785699395,
+                "unknown_auroc": 0.7419220346049614,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6427845528455285,
+                "unknown_auroc": 0.7611788617886179,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6451074332171893,
+                "unknown_auroc": 0.7685104529616725,
+                "unknown_false_acceptance": 0.7678571428571429,
+                "unknown_accepted_count": 43
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed123_lr0.0001_epochs20": {
+      "checkpoint_sha256": "c050ac02a58fc45d6a5485e40195a46c189d88f8b23693727d730d7eeef390c1",
+      "evaluation_device": "mps",
+      "selected_epoch": 18,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 196,
+        "known_accuracy": 0.7967479674796748,
+        "known_macro_f1": 0.7479925166358801,
+        "scores": {
+          "MSP": {
+            "threshold": 0.32680898904800415,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7682926829268293,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6307799796747967,
+                "unknown_auroc": 0.7393292682926829,
+                "unknown_false_acceptance": 0.84375,
+                "unknown_accepted_count": 54
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6093391703147801,
+                "unknown_auroc": 0.713362518240567,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6387195121951219,
+                "unknown_auroc": 0.7393292682926829,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6296457607433217,
+                "unknown_auroc": 0.7393292682926829,
+                "unknown_false_acceptance": 0.8214285714285714,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.042283535003662,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7682926829268293,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6432926829268293,
+                "unknown_auroc": 0.7577489837398375,
+                "unknown_false_acceptance": 0.8125,
+                "unknown_accepted_count": 52
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6152803835730666,
+                "unknown_auroc": 0.7249322493224932,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6432926829268293,
+                "unknown_auroc": 0.75,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6432926829268293,
+                "unknown_auroc": 0.7588559814169571,
+                "unknown_false_acceptance": 0.7857142857142857,
+                "unknown_accepted_count": 44
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.09089469909668,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7764227642276422,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6486280487804879,
+                "unknown_auroc": 0.7666412601626016,
+                "unknown_false_acceptance": 0.78125,
+                "unknown_accepted_count": 50
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6159057744423598,
+                "unknown_auroc": 0.7271211173650198,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6438008130081301,
+                "unknown_auroc": 0.7566056910569106,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6493176538908246,
+                "unknown_auroc": 0.768074912891986,
+                "unknown_false_acceptance": 0.75,
+                "unknown_accepted_count": 42
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed2026_lr0.0001_epochs20": {
+      "checkpoint_sha256": "5339cfe31b3829eb7479f14b18d651f35d55d124d041c2395118653e98737ec4",
+      "evaluation_device": "mps",
+      "selected_epoch": 13,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 186,
+        "known_accuracy": 0.7560975609756098,
+        "known_macro_f1": 0.709089122843722,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3520730435848236,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6147103658536586,
+                "unknown_auroc": 0.7500635162601625,
+                "unknown_false_acceptance": 0.796875,
+                "unknown_accepted_count": 51
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5802584948926413,
+                "unknown_auroc": 0.7064832186783407,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.556910569105691,
+                "unknown_auroc": 0.6504065040650406,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6229674796747968,
+                "unknown_auroc": 0.7643002322880372,
+                "unknown_false_acceptance": 0.7678571428571429,
+                "unknown_accepted_count": 43
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.196765661239624,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7398373983739838,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6356707317073171,
+                "unknown_auroc": 0.7869029471544715,
+                "unknown_false_acceptance": 0.765625,
+                "unknown_accepted_count": 49
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6097560975609756,
+                "unknown_auroc": 0.7526579111944965,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6092479674796747,
+                "unknown_auroc": 0.7296747967479675,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6394454123112661,
+                "unknown_auroc": 0.7950783972125436,
+                "unknown_false_acceptance": 0.7321428571428571,
+                "unknown_accepted_count": 41
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.092528343200684,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6413871951219512,
+                "unknown_auroc": 0.7997967479674797,
+                "unknown_false_acceptance": 0.75,
+                "unknown_accepted_count": 48
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6136126745882844,
+                "unknown_auroc": 0.7642276422764227,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6260162601626016,
+                "unknown_auroc": 0.7616869918699187,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6435830429732868,
+                "unknown_auroc": 0.8052409988385598,
+                "unknown_false_acceptance": 0.7142857142857143,
+                "unknown_accepted_count": 40
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed2026_lr0.0001_epochs20": {
+      "checkpoint_sha256": "ad401d779b48ff33c45ecf786290ccc0b651dbb7c3db97c43a8e023ea2cd5870",
+      "evaluation_device": "mps",
+      "selected_epoch": 19,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 186,
+        "known_accuracy": 0.7560975609756098,
+        "known_macro_f1": 0.7067273879714107,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3529873192310333,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6192200203252032,
+                "unknown_auroc": 0.7536204268292683,
+                "unknown_false_acceptance": 0.765625,
+                "unknown_accepted_count": 49
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5679591411298728,
+                "unknown_auroc": 0.6830310610798416,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5477642276422764,
+                "unknown_auroc": 0.6310975609756098,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6294279907084785,
+                "unknown_auroc": 0.7711236933797909,
+                "unknown_false_acceptance": 0.75,
+                "unknown_accepted_count": 42
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.2202253341674805,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7398373983739838,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6317327235772359,
+                "unknown_auroc": 0.7826473577235773,
+                "unknown_false_acceptance": 0.734375,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5897435897435898,
+                "unknown_auroc": 0.7238899312070044,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5807926829268293,
+                "unknown_auroc": 0.693089430894309,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6390098722415796,
+                "unknown_auroc": 0.7954413472706157,
+                "unknown_false_acceptance": 0.7142857142857143,
+                "unknown_accepted_count": 40
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.144637107849121,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7398373983739838,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6368775406504065,
+                "unknown_auroc": 0.7934451219512195,
+                "unknown_false_acceptance": 0.71875,
+                "unknown_accepted_count": 46
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5954763393787784,
+                "unknown_auroc": 0.7370231394621638,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5995934959349594,
+                "unknown_auroc": 0.722560975609756,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6422038327526132,
+                "unknown_auroc": 0.8035714285714286,
+                "unknown_false_acceptance": 0.6964285714285714,
+                "unknown_accepted_count": 39
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed42_lr0.0003_epochs20": {
+      "checkpoint_sha256": "725c640d7a2eade50290946ff8b6079f0a7c25077c291e96f7e56a756491a0a8",
+      "evaluation_device": "mps",
+      "selected_epoch": 8,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 184,
+        "known_accuracy": 0.7479674796747967,
+        "known_macro_f1": 0.7462956916327993,
+        "scores": {
+          "MSP": {
+            "threshold": 0.4211215078830719,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7235772357723578,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6316692073170731,
+                "unknown_auroc": 0.794334349593496,
+                "unknown_false_acceptance": 0.765625,
+                "unknown_accepted_count": 49
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5613925370022932,
+                "unknown_auroc": 0.7035647279549719,
+                "unknown_false_acceptance": 0.6923076923076923,
+                "unknown_accepted_count": 27
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6046747967479675,
+                "unknown_auroc": 0.7423780487804877,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6355255516840883,
+                "unknown_auroc": 0.8017566782810686,
+                "unknown_false_acceptance": 0.7321428571428571,
+                "unknown_accepted_count": 41
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.55896258354187,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7195121951219512,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6392911585365854,
+                "unknown_auroc": 0.8184070121951219,
+                "unknown_false_acceptance": 0.703125,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5857827809047322,
+                "unknown_auroc": 0.7499478840942255,
+                "unknown_false_acceptance": 0.6153846153846154,
+                "unknown_accepted_count": 24
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.633130081300813,
+                "unknown_auroc": 0.809451219512195,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.64017131242741,
+                "unknown_auroc": 0.8196864111498258,
+                "unknown_false_acceptance": 0.6785714285714286,
+                "unknown_accepted_count": 38
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.233663558959961,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7195121951219512,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6359247967479675,
+                "unknown_auroc": 0.818407012195122,
+                "unknown_false_acceptance": 0.765625,
+                "unknown_accepted_count": 49
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5843235355430477,
+                "unknown_auroc": 0.7517198248905566,
+                "unknown_false_acceptance": 0.6153846153846154,
+                "unknown_accepted_count": 24
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6387195121951219,
+                "unknown_auroc": 0.820630081300813,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6355255516840882,
+                "unknown_auroc": 0.818089430894309,
+                "unknown_false_acceptance": 0.75,
+                "unknown_accepted_count": 42
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed42_lr0.0003_epochs20": {
+      "checkpoint_sha256": "9f064f07623909a8deda79a9e1a6dc68d3edeb591c8d7a42e573ed37abeb5b56",
+      "evaluation_device": "mps",
+      "selected_epoch": 15,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 184,
+        "known_accuracy": 0.7479674796747967,
+        "known_macro_f1": 0.730259223343399,
+        "scores": {
+          "MSP": {
+            "threshold": 0.37908440828323364,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7235772357723578,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6209349593495934,
+                "unknown_auroc": 0.7561610772357723,
+                "unknown_false_acceptance": 0.8125,
+                "unknown_accepted_count": 52
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5961017302480718,
+                "unknown_auroc": 0.7247237856993956,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5802845528455285,
+                "unknown_auroc": 0.6798780487804879,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6267421602787456,
+                "unknown_auroc": 0.7670586527293844,
+                "unknown_false_acceptance": 0.7857142857142857,
+                "unknown_accepted_count": 44
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.1520888805389404,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7235772357723578,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6371951219512195,
+                "unknown_auroc": 0.7903963414634146,
+                "unknown_false_acceptance": 0.84375,
+                "unknown_accepted_count": 54
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6183031061079841,
+                "unknown_auroc": 0.7719407963310403,
+                "unknown_false_acceptance": 0.717948717948718,
+                "unknown_accepted_count": 28
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6107723577235772,
+                "unknown_auroc": 0.747459349593496,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6409698025551684,
+                "unknown_auroc": 0.7965301974448316,
+                "unknown_false_acceptance": 0.8214285714285714,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.10670804977417,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7276422764227642,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6372586382113821,
+                "unknown_auroc": 0.7950965447154472,
+                "unknown_false_acceptance": 0.828125,
+                "unknown_accepted_count": 53
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6216385240775485,
+                "unknown_auroc": 0.7815301229935376,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.6178861788617886,
+                "unknown_auroc": 0.7611788617886179,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6400261324041812,
+                "unknown_auroc": 0.7999419279907085,
+                "unknown_false_acceptance": 0.8035714285714286,
+                "unknown_accepted_count": 45
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed123_lr0.0003_epochs20": {
+      "checkpoint_sha256": "3e077778e3683e377fe0d0f4050f78bbb09617a22a7ea07dc8b14f590d7354d6",
+      "evaluation_device": "mps",
+      "selected_epoch": 12,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 186,
+        "known_accuracy": 0.7560975609756098,
+        "known_macro_f1": 0.7322776792240079,
+        "scores": {
+          "MSP": {
+            "threshold": 0.3437499701976776,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5911458333333333,
+                "unknown_auroc": 0.7033155487804879,
+                "unknown_false_acceptance": 0.890625,
+                "unknown_accepted_count": 57
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5955805711903273,
+                "unknown_auroc": 0.7172190952678758,
+                "unknown_false_acceptance": 0.8717948717948718,
+                "unknown_accepted_count": 34
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5497967479674797,
+                "unknown_auroc": 0.6438008130081301,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.5970528455284553,
+                "unknown_auroc": 0.7118176538908246,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 49
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 2.802852153778076,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7317073170731707,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6067073170731707,
+                "unknown_auroc": 0.724974593495935,
+                "unknown_false_acceptance": 0.90625,
+                "unknown_accepted_count": 58
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6039191161142381,
+                "unknown_auroc": 0.7318115488847197,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5482723577235772,
+                "unknown_auroc": 0.6488821138211383,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.615055168408827,
+                "unknown_auroc": 0.7358449477351916,
+                "unknown_false_acceptance": 0.8928571428571429,
+                "unknown_accepted_count": 50
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 3.953237771987915,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7357723577235772,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6057545731707317,
+                "unknown_auroc": 0.7268165650406504,
+                "unknown_false_acceptance": 0.890625,
+                "unknown_accepted_count": 57
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.6054825932874713,
+                "unknown_auroc": 0.7355638941004794,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5467479674796748,
+                "unknown_auroc": 0.6473577235772358,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6141840882694541,
+                "unknown_auroc": 0.7381678281068526,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 49
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed123_lr0.0003_epochs20": {
+      "checkpoint_sha256": "4ed48a0c38ca27df45d8012374591462d2bc84f5adc1dbaadfa59c9e23ad5925",
+      "evaluation_device": "mps",
+      "selected_epoch": 18,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 190,
+        "known_accuracy": 0.7723577235772358,
+        "known_macro_f1": 0.7256779084409718,
+        "scores": {
+          "MSP": {
+            "threshold": 0.4146513342857361,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7520325203252033,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6039126016260162,
+                "unknown_auroc": 0.7038236788617886,
+                "unknown_false_acceptance": 0.890625,
+                "unknown_accepted_count": 57
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5973525119866583,
+                "unknown_auroc": 0.7057535959974984,
+                "unknown_false_acceptance": 0.7435897435897436,
+                "unknown_accepted_count": 29
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5792682926829269,
+                "unknown_auroc": 0.6788617886178862,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6074332171893148,
+                "unknown_auroc": 0.7073896631823462,
+                "unknown_false_acceptance": 0.8928571428571429,
+                "unknown_accepted_count": 50
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.3787529468536377,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7479674796747967,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6192200203252032,
+                "unknown_auroc": 0.7368521341463414,
+                "unknown_false_acceptance": 0.828125,
+                "unknown_accepted_count": 53
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5981863664790494,
+                "unknown_auroc": 0.7164894725870335,
+                "unknown_false_acceptance": 0.8205128205128205,
+                "unknown_accepted_count": 32
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5675813008130082,
+                "unknown_auroc": 0.6707317073170732,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6265969802555169,
+                "unknown_auroc": 0.7462979094076656,
+                "unknown_false_acceptance": 0.8214285714285714,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.206709861755371,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7479674796747967,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6220782520325203,
+                "unknown_auroc": 0.7452362804878048,
+                "unknown_false_acceptance": 0.8125,
+                "unknown_accepted_count": 52
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5959974984365228,
+                "unknown_auroc": 0.7168021680216803,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5685975609756098,
+                "unknown_auroc": 0.6727642276422765,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6297183507549362,
+                "unknown_auroc": 0.755589430894309,
+                "unknown_false_acceptance": 0.8035714285714286,
+                "unknown_accepted_count": 45
+              }
+            }
+          }
+        }
+      }
+    },
+    "baseline_B_seed2026_lr0.0003_epochs20": {
+      "checkpoint_sha256": "aedb6b56c99fe8872fb6b1e3b0cf1f2b31db2b7c136b215f5d497862913c1634",
+      "evaluation_device": "mps",
+      "selected_epoch": 16,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 183,
+        "known_accuracy": 0.7439024390243902,
+        "known_macro_f1": 0.7159416125815767,
+        "scores": {
+          "MSP": {
+            "threshold": 0.4148140251636505,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7276422764227642,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5789507113821138,
+                "unknown_auroc": 0.6948043699186992,
+                "unknown_false_acceptance": 0.796875,
+                "unknown_accepted_count": 51
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5454450698353137,
+                "unknown_auroc": 0.6492599541380029,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5111788617886179,
+                "unknown_auroc": 0.5792682926829269,
+                "unknown_false_acceptance": 0.875,
+                "unknown_accepted_count": 7
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.5886324041811846,
+                "unknown_auroc": 0.7113095238095238,
+                "unknown_false_acceptance": 0.7857142857142857,
+                "unknown_accepted_count": 44
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.503847122192383,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7235772357723578,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5995299796747968,
+                "unknown_auroc": 0.7351371951219512,
+                "unknown_false_acceptance": 0.703125,
+                "unknown_accepted_count": 45
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.571503022722535,
+                "unknown_auroc": 0.6934542422347301,
+                "unknown_false_acceptance": 0.7692307692307693,
+                "unknown_accepted_count": 30
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5182926829268293,
+                "unknown_auroc": 0.5980691056910569,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6111353077816493,
+                "unknown_auroc": 0.7547183507549362,
+                "unknown_false_acceptance": 0.6607142857142857,
+                "unknown_accepted_count": 37
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.171504974365234,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7235772357723578,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.6013084349593496,
+                "unknown_auroc": 0.7414253048780488,
+                "unknown_false_acceptance": 0.734375,
+                "unknown_accepted_count": 47
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5746299770690014,
+                "unknown_auroc": 0.7013758599124453,
+                "unknown_false_acceptance": 0.7948717948717948,
+                "unknown_accepted_count": 31
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5188008130081301,
+                "unknown_auroc": 0.6021341463414634,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6130952380952381,
+                "unknown_auroc": 0.7613240418118467,
+                "unknown_false_acceptance": 0.6964285714285714,
+                "unknown_accepted_count": 39
+              }
+            }
+          }
+        }
+      }
+    },
+    "lesion_B_seed2026_lr0.0003_epochs20": {
+      "checkpoint_sha256": "bae2556afd375d08adc623851f1985c266f8f76daca93fa3768af81ad10fef01",
+      "evaluation_device": "mps",
+      "selected_epoch": 16,
+      "metrics": {
+        "known_count": 246,
+        "known_correct_count": 183,
+        "known_accuracy": 0.7439024390243902,
+        "known_macro_f1": 0.7124511167561383,
+        "scores": {
+          "MSP": {
+            "threshold": 0.4216262698173523,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7154471544715447,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5761559959349594,
+                "unknown_auroc": 0.7021087398373984,
+                "unknown_false_acceptance": 0.828125,
+                "unknown_accepted_count": 53
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5416927246195539,
+                "unknown_auroc": 0.6492599541380029,
+                "unknown_false_acceptance": 0.8717948717948718,
+                "unknown_accepted_count": 34
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5086382113821138,
+                "unknown_auroc": 0.5741869918699187,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.5858013937282229,
+                "unknown_auroc": 0.7203832752613241,
+                "unknown_false_acceptance": 0.8035714285714286,
+                "unknown_accepted_count": 45
+              }
+            }
+          },
+          "MaxLogit": {
+            "threshold": 3.325310230255127,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7154471544715447,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5943216463414634,
+                "unknown_auroc": 0.7341209349593496,
+                "unknown_false_acceptance": 0.84375,
+                "unknown_accepted_count": 54
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.5717114863456327,
+                "unknown_auroc": 0.6994996873045654,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5147357723577236,
+                "unknown_auroc": 0.5914634146341464,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6056910569105691,
+                "unknown_auroc": 0.754500580720093,
+                "unknown_false_acceptance": 0.8214285714285714,
+                "unknown_accepted_count": 46
+              }
+            }
+          },
+          "Negative energy": {
+            "threshold": 4.213568687438965,
+            "known_acceptance": 0.9512195121951219,
+            "known_correct_acceptance": 0.7195121951219512,
+            "known_accepted_count": 234,
+            "groups": {
+              "familiar_host": {
+                "unknown_count": 64,
+                "auoscr": 0.5969893292682926,
+                "unknown_auroc": 0.7385035569105691,
+                "unknown_false_acceptance": 0.796875,
+                "unknown_accepted_count": 51
+              },
+              "unfamiliar_host": {
+                "unknown_count": 39,
+                "auoscr": 0.577861163227017,
+                "unknown_auroc": 0.7124244319366271,
+                "unknown_false_acceptance": 0.8461538461538461,
+                "unknown_accepted_count": 33
+              },
+              "familiar_shared_name": {
+                "unknown_count": 8,
+                "auoscr": 0.5208333333333334,
+                "unknown_auroc": 0.6026422764227642,
+                "unknown_false_acceptance": 1.0,
+                "unknown_accepted_count": 8
+              },
+              "familiar_unshared_name": {
+                "unknown_count": 56,
+                "auoscr": 0.6078687572590011,
+                "unknown_auroc": 0.7579123112659698,
+                "unknown_false_acceptance": 0.7678571428571429,
+                "unknown_accepted_count": 43
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "missing_runs": []
+}
