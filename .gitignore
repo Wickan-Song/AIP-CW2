@@ -6,3 +6,4 @@ data/plantseg/
 *.pt
 *.zip
 .locks/
+.release_downloads/
