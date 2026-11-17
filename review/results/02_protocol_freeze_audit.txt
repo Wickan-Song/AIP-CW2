@@ -1,0 +1,37 @@
+[PASS] protocol pre-registers AUOSCR gain >= 0.02
+[PASS] protocol pre-registers >= 2 positive paired seeds
+[PASS] protocol pre-registers known macro-F1 drop <= 0.02
+[PASS] protocol seeds {42,123,2026}
+[PASS] protocol LR candidates {1e-4, 3e-4}
+[PASS] protocol models {baseline, lesion}
+[PASS] protocol budget 20 epochs / batch 32 / AdamW
+[PASS] backbone is generic ImageNet ResNet-18 (no PlantSeg checkpoint)
+[PASS] protocol recorded before training started — protocol=2026-11-11 09:37:01+08:00 training=2026-11-11 09:41:34+08:00
+[PASS] manifest/protocol/grid hashes bind the freeze chain
+[PASS] test_results pins frozen_choices sha256 and reuses provenance
+[PASS] validation grid covers exactly the 24 planned runs — n=24
+[PASS] primary score recomputed from 24 baseline runs is MaxLogit — {'MSP': 0.623248, 'MaxLogit': 0.627094, 'Negative energy': 0.624075}
+[PASS] primary-score margin exceeds tie-break territory — margin=0.003018
+[PASS] stored baseline grid means match recomputation
+[PASS] [A] learning-rate selection recomputes to stored choice — mine=0.0001 stored=0.0001
+[PASS] [A] stored candidate table matches recomputation
+[PASS] [A] all frozen thresholds match validation grid
+[PASS] [A] every calibration accepts >= 95% known validation — []
+    [A] calibration acceptance range: 0.9511–0.9511 (slack 0.0011)
+[PASS] [B] learning-rate selection recomputes to stored choice — mine=0.0001 stored=0.0001
+[PASS] [B] stored candidate table matches recomputation
+[PASS] [B] all frozen thresholds match validation grid
+[PASS] [B] every calibration accepts >= 95% known validation — []
+    [B] calibration acceptance range: 0.9512–0.9512 (slack 0.0012)
+[PASS] log records the freeze event
+[PASS] freeze timestamp precedes frozen test start (second granularity) — freeze=2026-11-11T13:23:35.629333+08:00 test=2026-11-11T13:23:35+08:00
+    note: frozen_at (2026-11-11T13:23:35.629333+08:00) is sub-second after the whole-second test log stamp (2026-11-11T13:23:35+08:00); ordering within that second is not resolvable from the log, same second is recorded.
+[PASS] test evaluations reference only frozen-selected checkpoints
+[PASS] no lr0.0003 run was test-evaluated
+    resume events in log: 0
+[PASS] experiment finished after test
+[PASS] exactly 480 validation epochs logged (24 runs x 20 epochs) — n=480
+[PASS] every one of the 24 runs logged epochs 1..20 — []
+[PASS] all training epochs precede the freeze entry in the log — last epoch line=552, freeze line=578
+
+0 finding(s).

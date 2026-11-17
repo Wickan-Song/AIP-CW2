@@ -7,3 +7,4 @@ data/plantseg/
 *.zip
 .locks/
 .release_downloads/
+.vscode/

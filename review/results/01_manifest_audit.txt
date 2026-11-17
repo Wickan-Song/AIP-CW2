@@ -1,0 +1,47 @@
+[PASS] manifest sha256 matches protocol/frozen chain — bd98c23f968b2b4f6e572a32226fcad20e42639deb6262ddc115a3c0b149be1e
+[PASS] [A] 43 host-disease categories — n=43
+[PASS] [A] exactly the nine coursework hosts — ['apple', 'banana', 'citrus', 'corn', 'potato', 'soybean', 'tomato', 'wheat', 'zucchini']
+[PASS] [A] roles re-derived from alphabetical rule (task sheet 4.2) — {}
+[PASS] [A] 25 known classes — n=25
+[PASS] [A] known_class_order equals known classes ordered by class id
+[PASS] [A] sample targets equal position in known_class_order
+[PASS] [A] split/role counts equal published table — {}
+[PASS] [A] no forbidden split/role combination — set()
+[PASS] [A] every sample role matches its class role — []
+[PASS] [A] training uses known classes only
+[PASS] [A] no test-unknown class images in validation
+[PASS] [A] no dev-unknown class images in test
+[PASS] [A] lesion masks recorded for train rows only
+[PASS] [A] every known training row carries a mask path
+[PASS] [A] image paths unique within assignment — []
+[PASS] [A] no image in two splits (leakage)
+[PASS] [A] train targets cover 0..24 exactly — [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 2
+[PASS] [A] non-known rows carry null target
+[PASS] [A] every known class has training support — min train=18
+[PASS] [A] every known class has validation support — min val=2
+[PASS] [B] 43 host-disease categories — n=43
+[PASS] [B] exactly the nine coursework hosts — ['apple', 'banana', 'citrus', 'corn', 'potato', 'soybean', 'tomato', 'wheat', 'zucchini']
+[PASS] [B] roles re-derived from alphabetical rule (task sheet 4.2) — {}
+[PASS] [B] 25 known classes — n=25
+[PASS] [B] known_class_order equals known classes ordered by class id
+[PASS] [B] sample targets equal position in known_class_order
+[PASS] [B] split/role counts equal published table — {}
+[PASS] [B] no forbidden split/role combination — set()
+[PASS] [B] every sample role matches its class role — []
+[PASS] [B] training uses known classes only
+[PASS] [B] no test-unknown class images in validation
+[PASS] [B] no dev-unknown class images in test
+[PASS] [B] lesion masks recorded for train rows only
+[PASS] [B] every known training row carries a mask path
+[PASS] [B] image paths unique within assignment — []
+[PASS] [B] no image in two splits (leakage)
+[PASS] [B] train targets cover 0..24 exactly — [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 2
+[PASS] [B] non-known rows carry null target
+[PASS] [B] every known class has training support — min train=18
+[PASS] [B] every known class has validation support — min val=2
+[PASS] exclusions: 201 exact-pixel + 209 near-duplicate — exact=201 near=209 total=410 reasons={'conflicting labels for identical RGB pixels': 70, 'duplicate RGB pixels': 131, 'conflicting labels for visually confirmed near-duplicate photographs': 30, 'visually confirmed near-duplicate photograph': 179}
+[PASS] arithmetic: 4,349 original = 3,939 retained + 410 excluded — retained=3939 excluded=410
+[PASS] partition ratios approximately 70/10/20 (task sheet 2.2) — {'test': 0.21, 'train': 0.679, 'val': 0.11}
+[PASS] excluded images absent from retained samples — []
+
+0 finding(s).
