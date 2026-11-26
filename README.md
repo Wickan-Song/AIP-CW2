@@ -4,6 +4,16 @@
 
 Start with the [five-page report](report/main.pdf), the [formal experiment notebook](Formal_Experiment.ipynb), or the [experiment overview](docs/experiment-overview.md). The 24 formal training runs, frozen test evaluation, and validation error analysis are complete. A run in a fresh Colab or Kaggle environment has yet to be verified.
 
+## Submission entry points
+
+| Item | Where to start |
+|---|---|
+| Formal notebook | [Formal_Experiment.ipynb](Formal_Experiment.ipynb). Run all cells in review mode to regenerate the saved results and report figures. |
+| Report | [Five-page PDF](report/main.pdf). The [LaTeX source and figure list](report/README.md) are provided for reproducibility. |
+| Inference | Use the final notebook section after restoring the assets, or run `python verify_package.py --demo` from the repository root. |
+
+The coursework video is a separate submission. The task sheet specifies a three-minute maximum, a visible presenter, and a working inference demonstration.
+
 ## Results
 
 | Assignment | Known accuracy, baseline → lesion | Familiar-host AUOSCR, baseline → lesion | Paired AUOSCR change |
@@ -41,4 +51,4 @@ Values are means over three paired seeds under the frozen MaxLogit rule. Both as
 - [Formal artifacts](artifacts/formal/) contain the split manifest, protocol, logs, and [frozen evaluation outputs](artifacts/formal/evaluation/). The [near-duplicate audit](artifacts/near_duplicate_audit/README.md) documents the exclusions.
 - [Report sources](report/README.md) explain how to compile the report. Run `python report_figures.py` to regenerate report figures. Without restored images, the prediction gallery is skipped.
 
-To rerun the full training grid, use a separate working copy and preserve the frozen results. See [run_formal_experiment.sh](run_formal_experiment.sh) on macOS, Linux, or WSL. Windows users can call the equivalent Python functions from the notebook. The training code detects CUDA, Apple MPS, or CPU. A first training run may require downloading ImageNet weights.
+To rerun training without touching the frozen results, follow the flags in the notebook. Its outputs go under `.cw2_outputs/`. For the original shell workflow, use [run_formal_experiment.sh](run_formal_experiment.sh) in a separate checkout on macOS, Linux, or WSL. The training code detects CUDA, Apple MPS, or CPU. A first training run may require downloading ImageNet weights.

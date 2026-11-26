@@ -17,6 +17,7 @@ Run:  .venv/bin/python report_figures.py
 Outputs: artifacts/formal/figures/report/
 """
 
+import argparse
 import json
 import sys
 import textwrap
@@ -704,10 +705,11 @@ def main():
     fig2_score_distributions()
     fig3_paired_seeds()
     fig4_false_acceptance_destinations()
+    fig4_false_acceptance_destinations(top_k=6, name_suffix="_top6")
     fig5_oscr_curves()
     fig6_shared_unseen()
     fig7_confusion_matrices()
-    fig7_host_confusion()
+    fig7_host_confusion(name_suffix="_report")
     fig7b_confusion_by_host()
     fig8_training_curves()
     fig9_prediction_gallery()
@@ -744,4 +746,7 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--outdir", type=Path, default=OUT, help="Directory for regenerated figures.")
+    OUT = parser.parse_args().outdir.resolve()
     main()

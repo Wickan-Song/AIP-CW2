@@ -46,7 +46,7 @@ def check_files(full):
         print('All file SHA-256 checksums verified.')
 
 
-def demo():
+def demo(data_root=DATA):
     import torch
     from formal_training import RGBDataset, RunSpec, build_model, load_manifest, read_checkpoint
 
@@ -56,7 +56,7 @@ def demo():
     assignment = frozen['assignments']['A']
     row = next(r for r in manifest['samples']['A'] if r['split']=='val' and r['role']=='known')
     classes = manifest['known_class_order']['A']
-    image, _ = RGBDataset([row], DATA)[0]
+    image, _ = RGBDataset([row], data_root)[0]
     for key, run in assignment['runs'].items():
         if run['seed'] != 42:
             continue
