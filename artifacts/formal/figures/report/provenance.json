@@ -1,0 +1,279 @@
+{
+  "generated_at_utc": "2026-11-22T18:15:46.021640+00:00",
+  "generator": "report_figures.py",
+  "python": "3.12.13",
+  "matplotlib": "3.9.4",
+  "palette": "Okabe-Ito (colour-blind friendly); baseline=#0072B2, lesion=#D55E00",
+  "readability_audit": {
+    "min_font_pt": 6.0,
+    "violations": {},
+    "note": "Canvas sizes derive from content (label widths, class counts); each figure is checked for clipped text, sub-floor fonts and tick-label collisions at its exported page size."
+  },
+  "frozen_inputs": {
+    "manifest_sha256_pinned": "bd98c23f968b2b4f6e572a32226fcad20e42639deb6262ddc115a3c0b149be1e",
+    "test_results": "artifacts/formal/evaluation/test_results.json",
+    "frozen_choices": "artifacts/formal/evaluation/frozen_choices.json"
+  },
+  "figures": [
+    {
+      "figure": "fig1_data_and_design",
+      "pdf": "artifacts/formal/figures/report/fig1_data_and_design.pdf",
+      "png": "artifacts/formal/figures/report/fig1_data_and_design.png",
+      "size_in": [
+        7.2047244094488185,
+        2.9133858267716537
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Stacked partition/role counts per assignment; the class-role rule is stated in the caption.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig1b_class_counts",
+      "pdf": "artifacts/formal/figures/report/fig1b_class_counts.pdf",
+      "png": "artifacts/formal/figures/report/fig1b_class_counts.png",
+      "size_in": [
+        7.2047244094488185,
+        3.779527559055118
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Horizontal frequencies keep all 25 class names readable at print size.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig2_score_distributions",
+      "pdf": "artifacts/formal/figures/report/fig2_score_distributions.pdf",
+      "png": "artifacts/formal/figures/report/fig2_score_distributions.png",
+      "size_in": [
+        7.2047244094488185,
+        2.5984251968503935
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Test score distributions under the frozen MaxLogit rule; dashed lines are per-seed thresholds.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig3_paired_seeds",
+      "pdf": "artifacts/formal/figures/report/fig3_paired_seeds.pdf",
+      "png": "artifacts/formal/figures/report/fig3_paired_seeds.png",
+      "size_in": [
+        7.2047244094488185,
+        4.251968503937007
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Per-seed paired comparison against the identity line; diamonds are seed means with SD.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig4_false_acceptance_destinations",
+      "pdf": "artifacts/formal/figures/report/fig4_false_acceptance_destinations.pdf",
+      "png": "artifacts/formal/figures/report/fig4_false_acceptance_destinations.png",
+      "size_in": [
+        7.2047244094488185,
+        4.645669291338582
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Most frequent true-unknown to predicted-known destinations at the frozen thresholds.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig5_oscr_curves",
+      "pdf": "artifacts/formal/figures/report/fig5_oscr_curves.pdf",
+      "png": "artifacts/formal/figures/report/fig5_oscr_curves.png",
+      "size_in": [
+        6.65748031496063,
+        2.5984251968503935
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "OSCR curves per seed; thick line seed 42, thin lines seeds 123 and 2026.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig6_shared_unseen_names",
+      "pdf": "artifacts/formal/figures/report/fig6_shared_unseen_names.pdf",
+      "png": "artifacts/formal/figures/report/fig6_shared_unseen_names.png",
+      "size_in": [
+        5.255905511811024,
+        2.3622047244094486
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Familiar-host unknowns split by disease name shared with a known class on another host.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig7_confusion_A",
+      "pdf": "artifacts/formal/figures/report/fig7_confusion_A.pdf",
+      "png": "artifacts/formal/figures/report/fig7_confusion_A.png",
+      "size_in": [
+        7.2047244094488185,
+        4.9225154686474735
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Colour-only full matrix; grey lines separate plant hosts.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig7_confusion_B",
+      "pdf": "artifacts/formal/figures/report/fig7_confusion_B.pdf",
+      "png": "artifacts/formal/figures/report/fig7_confusion_B.png",
+      "size_in": [
+        7.2047244094488185,
+        5.395044765522473
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Colour-only full matrix; grey lines separate plant hosts.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig7b_confusion_by_host",
+      "pdf": "artifacts/formal/figures/report/fig7b_confusion_by_host.pdf",
+      "png": "artifacts/formal/figures/report/fig7b_confusion_by_host.png",
+      "size_in": [
+        7.2047244094488185,
+        5.905511811023622
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "7x7 host aggregation of Figure 7 counts with per-cell numbers.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig8_training_curves",
+      "pdf": "artifacts/formal/figures/report/fig8_training_curves.pdf",
+      "png": "artifacts/formal/figures/report/fig8_training_curves.png",
+      "size_in": [
+        7.2047244094488185,
+        2.5984251968503935
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Curves parsed from experiment.log at the selected learning rate.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig9_prediction_gallery_A",
+      "pdf": "artifacts/formal/figures/report/fig9_prediction_gallery_A.pdf",
+      "png": "artifacts/formal/figures/report/fig9_prediction_gallery_A.png",
+      "size_in": [
+        7.2047244094488185,
+        6.2204724409448815
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Rows: correct accepts, correct rejects, false accepts.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig9_prediction_gallery_B",
+      "pdf": "artifacts/formal/figures/report/fig9_prediction_gallery_B.pdf",
+      "png": "artifacts/formal/figures/report/fig9_prediction_gallery_B.png",
+      "size_in": [
+        7.2047244094488185,
+        6.2204724409448815
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Rows: correct accepts, correct rejects, false accepts.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    }
+  ]
+}

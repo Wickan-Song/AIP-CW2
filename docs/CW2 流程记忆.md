@@ -155,6 +155,27 @@ Notebook 保存了三种分数在两组未知图上的 AUOSCR、AUROC 和 OSCR �
 
 目前证据不足以把问题归因于 ResNet-18 或 AdamW。建议保留本轮正式实验结论。若需要追加研究，围绕一个明确假设，在验证集做配对的病斑损失权重试验，并标记为探索。见 [英文排查记录](../artifacts/formal/diagnostics/validation_findings.md)。
 
+## 图表可读性整改（2026-11-21）
+
+按“不固定初始画布、优先完整显示与可读性、允许扩画布/重排/拆图、按论文最终尺寸检查”的要求，重做了全部报告图和 Notebook 图。数值与数据来源不变，仅改排版。
+
+- 新增 [figure_audit.py](../figure_audit.py)：对每张图做程序化检查（文字不出画布、字体不低于下限、刻度标签不重叠、图例不裁剪），不改动 rcParams。报告图下限 6pt（[report_figures.py](../report_figures.py)），Notebook 图下限 7pt（[formal_figures.py](../formal_figures.py)）；两脚本重新生成时自动审计，有违规即非零退出。
+- 报告图拆分与重排：fig1 拆为 `fig1_data_and_design`（分区/角色构成）与新的 `fig1b_class_counts`（25 类训练频数改横向条形图，类别名保持水平 ≥7pt，原 4.4pt 竖排标签作废）；fig3 由 1×4 改 2×2；fig4 由左右并排改为上下堆叠（目的地标签 7pt）；fig7 两模型共享 y 轴标签、画布高度按最长类名实测计算（A 125mm、B 137mm），标签从 4.2pt 提到 6pt；fig2 图例移到图外下方；fig9 标题按字符换行防溢出。
+- 画布尺寸按内容推导（类数 × 行距、实测标签宽度），不再写死拥挤的固定值；报告图保持 183mm 整页宽导出，PDF 页面尺寸已逐张核对。`bbox_inches="tight"` 全部移除，统一 constrained layout。
+- `report_figures.py` 运行后额外输出 `final_size_preview_96dpi.png` / `final_size_preview_150dpi.png`（按 183mm 页宽的 100% / 150% 屏幕缩放拼贴全部报告图），用于论文排版前的最终尺寸目检；审计结果写入 [provenance.json](../artifacts/formal/figures/report/provenance.json)。
+- Notebook 图（`formal_figures.py`）：类别频数改横向条形（原 4.5pt），混淆矩阵标签 7pt、画布按最长标签算高度，误接收目的地改单行标签并按行数定高度，预测画廊标题换行。`Formal_Experiment.ipynb` 重跑第 11 个单元格即可刷新内嵌显示，保存的旧输出图在重跑前保留。
+- 遗留问题（与本次改动无关、待决定）：`python verify_package.py --full` 在 `.gitignore` 和 `Formal_Experiment.ipynb` 两个文件上报校验和不符；git 显示两文件相对 HEAD 无改动，说明 SHA256SUMS.txt 固定的是未提交版本。重新生成图不在 SHA256SUMS 清单内，不影响冻结证据校验。是否重 pin 由后续决定。
+
+## 英文报告 LaTeX 工程（2026-11-23）
+
+完成 Option 2 的 5 页英文 PDF 报告，工程在 [report/](../report/)：`main.tex`、`refs.bib`（15 条文献，任务单给出的 10 条按原样引用，另加 ResNet/MSP/AdamW/U-Net/V-Net 五条经典方法出处）、`figures/`（5 张矢量图）、编译好的 `main.pdf`（latexmk/pdflatex+bibtex，正文 5 页含图表、文献与 AI 声明）。
+
+- 结构按任务单 §6.2：问题与动机（含预注册假设）、相关工作（区分拒识/识别未见类/健康弃权三种设定，定位为新的受控比较）、数据与协议（两次去重审计、A/B 角色、泄露防护、冻结清单）、方法（匹配双臂 + 病灶分割辅助损失 0.25 权重、三种打分、阈值规则）、实验与结果（主结果未达 +0.02 门槛：A +0.0071、B −0.0020；已知类持平）、解释与局限、AI 声明与文献。
+- 报告用图为 `report_figures.py` 的紧凑变体：目的地分析图改 top-6（183×78mm），预测画廊保留在 Notebook、两个关键例子写进正文；其余四图原样。编译后逐项核对过页数（5）、无未定义引用、无 overfull、关键数字全部在文（0.6245/0.6316/+0.0071/0.6007/0.5987 等）。
+- 2026-11-24 补充：按任务单 §6.3 "可读子集入报告、全矩阵留 Notebook" 的指引，新增紧凑宿主级混淆图 `fig7_host_confusion_report`（1×2、7×7 带计数、lesion 组、183×84mm，通过可读性审计），§5.2 增加引用与同宿主错误占比；为守住 5 页撤下分区构成图（计数仍在 §3 正文，Notebook 可再生），参考文献降为 footnotesize、微缩 fig3/fig5。重编译后仍为 5 页、零 overfull、关键数字齐全。
+- 待补两处（红色 TODO）：作者姓名学号；个人/小组贡献声明。任务单要求的视频与干净 Colab/Kaggle 复现仍是独立待办。
+- 写作过程应用了仓库内 academic-humanizer（两轮：初稿连贯性 + 定稿前按 Layer 目录审计拆分 6 个超长句、核查无夸大动词与模板用语）与 scientific-visualization（图片尺寸/可读性下限、紧凑变体重绘）两个 skill；AI 声明一节如实写明工具、任务与核验方式。
+
 ## 下一步
 
 继续整理相关方法、分析代表性误判、完成单张图推理演示，并验证干净云端环境。报告和视频完成后按交接清单打包。
