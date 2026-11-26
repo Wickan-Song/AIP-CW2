@@ -21,10 +21,9 @@
 \setlength{\textfloatsep}{9pt plus 2pt minus 4pt}
 
 \newcommand{\tbf}[1]{\textbf{#1}}
-\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 
 \title{\vspace{-8mm}Lesion-mask supervision for rejecting unseen plant diseases:\\a controlled comparison on PlantSeg}
-\author{\todo{student name(s) and ID(s)}}
+\author{Xinru Song \and Zhicheng Yang \and Hongyao Yang}
 \date{AIP304 Machine Learning, Coursework 2 (Option 2: research challenge)}
 
 \begin{document}
@@ -155,7 +154,7 @@ seeds positive, and fell by $-0.0020$ in Assignment~B with 1 of 3 positive. Neit
 the required $+0.02$, and the seed-level pairing is inconsistent. Under the criteria fixed before
 training, the evidence does not support the hypothesis that lesion supervision improves rejection of
 unfamiliar diseases on familiar hosts. Known-class performance was preserved as required: macro-F1
-differences were $+0.0011$ (A) and $+0.0014$ (B), well inside the 0.02 tolerance, and the same holds for
+differences were $+0.0011$ (A) and $+0.0013$ (B), well inside the 0.02 tolerance, and the same holds for
 accuracy. The OSCR curves of the two arms nearly coincide in both assignments
 (Figure~\ref{fig:oscr}), which is the curve-level view of the same result.
 
@@ -165,7 +164,7 @@ accuracy. The OSCR curves of the two arms nearly coincide in both assignments
 \caption{Paired seed-level comparison (3 seeds). Each point pairs one seed's baseline value (x) with the
 lesion-supervised value (y); grey drops connect pairs to the identity line; the black diamond is the seed
 mean $\pm$ SD. Top row: familiar-host AUOSCR (A $+0.0071$, 2/3 seeds $>0$; B $-0.0020$, 1/3). Bottom row:
-known-class macro-F1 (A $+0.0011$, B $+0.0014$). Differences are descriptive; no significance test was
+known-class macro-F1 (A $+0.0011$, B $+0.0013$). Differences are descriptive; no significance test was
 pre-registered.}
 \label{fig:paired}
 \end{figure}
@@ -218,7 +217,7 @@ images span both the lowest-scoring correct reject (2.1) and false accepts as ap
 \caption{Known-class test confusion aggregated to the seven familiar hosts, pooled over the three
 lesion-supervised seeds (cell numbers are seed-level judgments; A: 1{,}470, B: 1{,}356). The mass sits on
 the diagonal (91.4\% of A and 90.6\% of B judgments stay on the true host), and most off-diagonal
-class-level errors are within-host disease confusions (A: 190/316, B: 214/342); the largest single cell is
+class-level errors are within-host disease confusions (A: 190/317, B: 214/342); the largest single cell is
 tomato yellow leaf curl virus confused with tomato mosaic virus. Baseline panels are nearly identical; the
 full 25$\times$25 class-level matrices and all four host-level panels are in the notebook.}
 \label{fig:conf}
@@ -268,8 +267,7 @@ shared initialisation, augmentation, budget, and search, and every configuration
 inference.
 
 \section{AI-use disclosure and contributions}
-\todo{single author or team contribution statement: name each member's work on implementation,
-experiments, analysis, writing, and demonstration, or state single-author completion.}
+All three team members actively participated in completing this coursework.
 AI tools were used with the author remaining responsible for correctness, originality, citations, and
 reproducibility. An OpenAI Codex CLI agent assisted with data-audit scripting, experiment design, and
 notebook implementation. A GitHub Copilot agent (VS Code, November 2026 sessions) assisted with figure
