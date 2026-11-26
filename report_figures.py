@@ -243,8 +243,9 @@ def fig3_paired_seeds():
     results = _load(EVAL / "test_results.json")
     # 2x2 grid: each panel is ~85 mm wide, so two-line titles and tick labels
     # fit without clipping (the previous 1x4 row squeezed them to ~44 mm).
-    fig, axes = plt.subplots(2, 2, figsize=(FULL_W, 108 * MM), layout="constrained",
-                             sharex="col")
+    # No shared x-axis: the two rows are different quantities, so each panel
+    # needs its own square limits for the identity line to mean anything.
+    fig, axes = plt.subplots(2, 2, figsize=(FULL_W, 108 * MM), layout="constrained")
     for r, (metric, label) in enumerate((("auoscr", "Familiar-host AUOSCR"),
                                          ("macro_f1", "Known-class macro-F1"))):
         for c, assignment in enumerate(ASSIGNMENTS):
@@ -254,6 +255,8 @@ def fig3_paired_seeds():
             b, l = np.array(data["baseline"]), np.array(data["lesion"])
             lo = min(b.min(), l.min()) - 0.015
             hi = max(b.max(), l.max()) + 0.015
+            ax.set_xlim(lo, hi)
+            ax.set_ylim(lo, hi)
             ax.plot([lo, hi], [lo, hi], color=OI["grey"], lw=.8, ls=":")
             for i, seed in enumerate(SEEDS):
                 ax.plot([b[i], b[i]], [b[i], l[i]], color=OI["grey"], lw=.8, zorder=1)
@@ -264,11 +267,9 @@ def fig3_paired_seeds():
             d = l - b
             ax.set_title(f"Assignment {assignment} — mean diff {d.mean():+.4f} "
                          f"({sum(d > 0)}/3 seeds > 0)", loc="left", fontsize=8, pad=6)
-            if r == 1:
-                ax.set_xlabel(f"Baseline {short}")
-            ax.set_xlim(lo, hi)
-            ax.set_ylim(lo, hi)
+            ax.set_xlabel(f"Baseline {short}")
             ax.xaxis.set_major_locator(MaxNLocator(prune="upper", nbins=5))
+            ax.yaxis.set_major_locator(MaxNLocator(prune="upper", nbins=5))
             if c == 0:
                 ax.set_ylabel(f"Lesion-supervised\n{short}")
             if r == 0 and c == 0:
@@ -704,10 +705,11 @@ def main():
     fig2_score_distributions()
     fig3_paired_seeds()
     fig4_false_acceptance_destinations()
+    fig4_false_acceptance_destinations(top_k=6, name_suffix="_top6")
     fig5_oscr_curves()
     fig6_shared_unseen()
     fig7_confusion_matrices()
-    fig7_host_confusion()
+    fig7_host_confusion("_report")
     fig7b_confusion_by_host()
     fig8_training_curves()
     fig9_prediction_gallery()

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-22T18:15:46.021640+00:00",
+  "generated_at_utc": "2026-11-26T06:53:04.636293+00:00",
   "generator": "report_figures.py",
   "python": "3.12.13",
   "matplotlib": "3.9.4",
@@ -101,7 +101,27 @@
       "png": "artifacts/formal/figures/report/fig4_false_acceptance_destinations.png",
       "size_in": [
         7.2047244094488185,
-        4.645669291338582
+        4.015748031496063
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Most frequent true-unknown to predicted-known destinations at the frozen thresholds.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
+      "figure": "fig4_false_acceptance_destinations_top6",
+      "pdf": "artifacts/formal/figures/report/fig4_false_acceptance_destinations_top6.pdf",
+      "png": "artifacts/formal/figures/report/fig4_false_acceptance_destinations_top6.png",
+      "size_in": [
+        7.2047244094488185,
+        3.0708661417322833
       ],
       "audit": {
         "min_font_pt": 6.0,
@@ -196,6 +216,26 @@
       ]
     },
     {
+      "figure": "fig7_host_confusion_report",
+      "pdf": "artifacts/formal/figures/report/fig7_host_confusion_report.pdf",
+      "png": "artifacts/formal/figures/report/fig7_host_confusion_report.png",
+      "size_in": [
+        7.2047244094488185,
+        3.3070866141732282
+      ],
+      "audit": {
+        "min_font_pt": 6.0,
+        "violations": []
+      },
+      "note": "Report-sized host aggregation of the known-class test confusion; the full 25x25 matrices and the baseline panels are in the notebook.",
+      "sources": [
+        "artifacts/formal/manifest.json",
+        "artifacts/formal/evaluation/test_results.json",
+        "artifacts/formal/evaluation/frozen_choices.json",
+        "artifacts/formal/evaluation/test_predictions/"
+      ]
+    },
+    {
       "figure": "fig7b_confusion_by_host",
       "pdf": "artifacts/formal/figures/report/fig7b_confusion_by_host.pdf",
       "png": "artifacts/formal/figures/report/fig7b_confusion_by_host.png",
@@ -241,7 +281,7 @@
       "png": "artifacts/formal/figures/report/fig9_prediction_gallery_A.png",
       "size_in": [
         7.2047244094488185,
-        6.2204724409448815
+        5.905511811023622
       ],
       "audit": {
         "min_font_pt": 6.0,
@@ -261,7 +301,7 @@
       "png": "artifacts/formal/figures/report/fig9_prediction_gallery_B.png",
       "size_in": [
         7.2047244094488185,
-        6.2204724409448815
+        5.905511811023622
       ],
       "audit": {
         "min_font_pt": 6.0,
