@@ -11,6 +11,8 @@ CLI:  python formal_figures.py [--all] [--outdir artifacts/formal/figures]
 import argparse
 import json
 import re
+import sys
+import textwrap
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -19,6 +21,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.ticker import MaxNLocator
+
+from figure_audit import audit_figure, text_width_mm
 
 ROOT = Path(__file__).resolve().parent
 F = ROOT / "artifacts/formal"
@@ -35,6 +40,24 @@ plt.rcParams.update({
     "axes.spines.top": False, "axes.spines.right": False,
     "axes.titlesize": 10, "axes.labelsize": 9, "legend.fontsize": 8,
 })
+
+# Notebook-grade figures are read on screen, not printed; still enforce a
+# readable floor and content-driven canvas sizes instead of fixed cramped ones.
+MIN_FONT_PT = 7.0
+AUDIT = {}          # figure name -> list of violation strings
+
+
+def _save(fig, name, path):
+    """Audit readability, then save at the exact figure page size."""
+    problems = audit_figure(fig, name, min_pt=MIN_FONT_PT)
+    AUDIT[name] = problems
+    if problems:
+        print(f"WARNING {name}: {len(problems)} audit problem(s)")
+        for p in problems:
+            print(f"  - {p}")
+    fig.savefig(path)
+    plt.close(fig)
+    return Path(path)
 
 
 def _load(path):
@@ -60,28 +83,30 @@ def _predictions(results, assignment):
 
 # ---------------------------------------------------------------- F1 class bars
 def class_frequency(outdir):
+    """Horizontal bars: 25 class names stay horizontal and >= 7pt instead of
+    4.5pt rotated labels squeezed into a fixed half-width panel."""
     manifest = _load(F / "manifest.json")
-    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), sharey=False)
+    label_fs = 7.0
+    row_in = 0.30                      # one readable text row per class
+    fig, axes = plt.subplots(2, 1, figsize=(9.5, 1.6 + 25 * row_in),
+                             layout="constrained", sharex=True)
     for ax, assignment in zip(axes, ASSIGNMENTS):
         order = manifest["known_class_order"][assignment]
         counts = Counter(
             s["class_name"] for s in manifest["samples"][assignment]
             if s["split"] == "train")
+        y = np.arange(len(order))[::-1]
         values = [counts[c] for c in order]
-        ax.bar(range(len(order)), values, color="#4c72b0", alpha=.85)
-        ax.set_xticks(range(len(order)))
-        ax.set_xticklabels([c.replace(" ", "\n", 1) for c in order],
-                           rotation=90, fontsize=4.5, va="top")
-        ax.set_title(f"Assignment {assignment}: known-class training counts")
-        ax.set_ylabel("Training images")
-        for i, v in enumerate(values):
-            ax.text(i, v + 3, str(v), ha="center", fontsize=4.5)
-        ax.set_ylim(0, max(values) * 1.12)
-    fig.tight_layout()
+        ax.barh(y, values, color="#4c72b0", alpha=.85)
+        ax.set_yticks(y)
+        ax.set_yticklabels(order, fontsize=label_fs)
+        ax.set_title(f"Assignment {assignment}: known-class training counts", loc="left")
+        ax.set_xlabel("Training images")
+        for yi, v in zip(y, values):
+            ax.text(v + 2, yi, str(v), va="center", fontsize=7.0, color="#444")
+        ax.set_xlim(0, max(values) * 1.12)
     path = Path(outdir) / "class_frequency.png"
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _save(fig, "class_frequency", path)
 
 
 # ------------------------------------------------------------- F2 training curves
@@ -103,7 +128,7 @@ def training_curves(outdir):
     grid = _load(EVAL / "validation_grid.json")
     frozen = _load(EVAL / "frozen_choices.json")
     curve = _parse_log_curves()
-    fig, axes = plt.subplots(1, 2, figsize=(9, 3.6))
+    fig, axes = plt.subplots(1, 2, figsize=(9, 3.8), layout="constrained")
     epochs = np.arange(1, 21)
     for ax, assignment in zip(axes, ASSIGNMENTS):
         lr = frozen["assignments"][assignment]["selected_learning_rate"]
@@ -124,21 +149,22 @@ def training_curves(outdir):
         ax.set_title(f"Assignment {assignment} (selected learning rate)")
         ax.set_xticks([1, 5, 10, 15, 20])
         ax.legend(frameon=False, loc="lower right")
-    fig.suptitle("Validation learning curves, mean over 3 seeds (band: min-max); dots mark selected checkpoints", fontsize=9, y=1.02)
-    fig.tight_layout()
+    fig.suptitle("Validation learning curves, mean over 3 seeds (band: min-max); dots mark selected checkpoints", fontsize=9)
     path = Path(outdir) / "training_curves.png"
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _save(fig, "training_curves", path)
 
 
 # ------------------------------------------------------ F3 confusion + destination
 def confusion_heatmap(outdir, top_k=12):
     results = _load(EVAL / "test_results.json")
+    label_fs = 7.0                     # readable on screen at notebook scale
     for assignment in ASSIGNMENTS:
         preds, _ = _predictions(results, assignment)
         order = _load(F / "manifest.json")["known_class_order"][assignment]
-        fig, axes = plt.subplots(1, 2, figsize=(11.5, 5.2))
+        # Height follows the longest rotated x label so nothing gets clipped.
+        xlab_in = max(text_width_mm(c, label_fs) for c in order) / 25.4 + 0.15
+        fig, axes = plt.subplots(1, 2, figsize=(12.5, xlab_in + 5.6), layout="constrained",
+                                 sharey=True)
         for ax, model in zip(axes, MODELS):
             cm = np.zeros((25, 25))
             for seed in SEEDS:
@@ -148,23 +174,28 @@ def confusion_heatmap(outdir, top_k=12):
             cm_norm = cm / cm.sum(axis=1, keepdims=True)
             im = ax.imshow(cm_norm, cmap="Blues", vmin=0, vmax=1)
             ax.set_xticks(range(25)); ax.set_yticks(range(25))
-            ax.set_xticklabels(order, rotation=90, fontsize=4)
-            ax.set_yticklabels(order, fontsize=4)
-            ax.set_xlabel("Predicted class"); ax.set_ylabel("True class")
-            ax.set_title(f"{MODEL_LABEL[model]} (summed over 3 seeds)")
+            ax.set_xticklabels(order, rotation=90, fontsize=label_fs)
+            ax.set_yticklabels(order, fontsize=label_fs)
+            if model == "baseline":
+                ax.set_ylabel("True class")
+            ax.set_title(f"{MODEL_LABEL[model]} (summed over 3 seeds)", loc="left")
             for i in range(25):
                 for j in range(25):
                     if cm[i, j] >= 15:  # annotate only substantial cells
                         ax.text(j, i, int(cm[i, j]), ha="center", va="center",
-                                fontsize=3.5, color="white" if cm_norm[i, j] > .5 else "#333")
+                                fontsize=7, color="white" if cm_norm[i, j] > .5 else "#333")
+        fig.supxlabel("Predicted class")
         fig.colorbar(im, ax=axes, shrink=.7, label="Row-normalised recall")
         fig.suptitle(f"Assignment {assignment}: known-class test confusion", fontsize=11)
         path = Path(outdir) / f"confusion_{assignment}.png"
-        fig.savefig(path, bbox_inches="tight")
-        plt.close(fig)
+        _save(fig, f"confusion_{assignment}", path)
 
         # destination of false-accepted familiar unknowns
-        fig, axes = plt.subplots(1, 2, figsize=(10.5, 3.8), sharey=True)
+        # One line per destination keeps 12 rows readable; height follows
+        # the row count instead of a fixed canvas.
+        row_in = 0.30
+        fig, axes = plt.subplots(1, 2, figsize=(11.5, 1.4 + top_k * row_in),
+                                 layout="constrained")
         for ax, model in zip(axes, MODELS):
             dest = Counter()
             total = Counter()
@@ -175,19 +206,18 @@ def confusion_heatmap(outdir, top_k=12):
                         if row["accepted"]["MaxLogit"]:
                             dest[(row["class_name"], order[row["predicted_known_index"]])] += 1
             pairs = dest.most_common(top_k)
-            labels = [f"{a.replace(' ', '\n', 1)}\n→ {b.replace(' ', '\n', 1)}" for (a, b), _ in pairs]
+            labels = [f"{a} → {b}" for (a, b), _ in pairs]
             values = [v for _, v in pairs]
             ax.barh(range(len(pairs)), values, color=MODEL_COLOR[model], alpha=.85)
             ax.set_yticks(range(len(pairs)))
-            ax.set_yticklabels(labels, fontsize=5)
+            ax.set_yticklabels(labels, fontsize=7)
             ax.invert_yaxis()
             ax.set_xlabel("False-accepted images (of 3 seeds)")
-            ax.set_title(MODEL_LABEL[model])
+            ax.xaxis.set_major_locator(MaxNLocator(prune="upper"))  # keep edge ticks inside
+            ax.set_title(MODEL_LABEL[model], loc="left")
         fig.suptitle(f"Assignment {assignment}: where false-accepted familiar-host unknowns go (MaxLogit)", fontsize=10)
-        fig.tight_layout()
         path_d = Path(outdir) / f"unknown_destination_{assignment}.png"
-        fig.savefig(path_d, bbox_inches="tight")
-        plt.close(fig)
+        _save(fig, f"unknown_destination_{assignment}", path_d)
     return [Path(outdir) / f"confusion_{a}.png" for a in ASSIGNMENTS] + \
            [Path(outdir) / f"unknown_destination_{a}.png" for a in ASSIGNMENTS]
 
@@ -195,7 +225,7 @@ def confusion_heatmap(outdir, top_k=12):
 # ------------------------------------------------------- F4 score distributions
 def score_distributions(outdir, score="MaxLogit"):
     results = _load(EVAL / "test_results.json")
-    fig, axes = plt.subplots(1, 2, figsize=(10, 3.8))
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.0), layout="constrained")
     for ax, assignment in zip(axes, ASSIGNMENTS):
         preds, thresholds = _predictions(results, assignment)
         groups = {"known": [], "familiar": [], "unfamiliar": []}
@@ -217,13 +247,10 @@ def score_distributions(outdir, score="MaxLogit"):
         ax.set_xlabel(f"{score} score")
         ax.set_ylabel("Density")
         ax.set_title(f"Assignment {assignment}")
-        ax.legend(frameon=False, fontsize=7)
-    fig.suptitle(f"Test score distributions under the frozen {score} rule (dashed: per-seed thresholds)", fontsize=10, y=1.02)
-    fig.tight_layout()
+        ax.legend(frameon=False, fontsize=7.5)
+    fig.suptitle(f"Test score distributions under the frozen {score} rule (dashed: per-seed thresholds)", fontsize=10)
     path = Path(outdir) / "score_distributions.png"
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _save(fig, "score_distributions", path)
 
 
 # ------------------------------------------------------------ F5 paired seeds
@@ -231,7 +258,7 @@ def paired_seeds(outdir):
     results = _load(EVAL / "test_results.json")
     frozen = _load(EVAL / "frozen_choices.json")
     prim = results["primary_score"]
-    fig, axes = plt.subplots(2, 2, figsize=(7.5, 7))
+    fig, axes = plt.subplots(2, 2, figsize=(7.5, 7), layout="constrained")
     metrics = [("familiar_host/auoscr", "Familiar-host AUOSCR"),
                ("known_macro_f1", "Known macro-F1")]
     for col, assignment in enumerate(ASSIGNMENTS):
@@ -255,7 +282,7 @@ def paired_seeds(outdir):
                             arrowprops=dict(arrowstyle="-", color="#bbb", lw=.7))
                 ax.scatter(b_vals[i], l_vals[i], s=26, color=MODEL_COLOR["lesion"],
                            edgecolor="white", linewidth=.6, zorder=3)
-                ax.annotate(f"seed {s}", (b_vals[i], l_vals[i]), fontsize=6.5,
+                ax.annotate(f"seed {s}", (b_vals[i], l_vals[i]), fontsize=7,
                             xytext=(4, 4), textcoords="offset points")
             ax.errorbar(np.mean(b_vals), np.mean(l_vals),
                         xerr=np.std(b_vals, ddof=1), yerr=np.std(l_vals, ddof=1),
@@ -266,18 +293,15 @@ def paired_seeds(outdir):
             ax.set_title(f"Assignment {assignment} — paired seeds", fontsize=9)
             if row == 0 and col == 0:
                 ax.legend(frameon=False, fontsize=7, loc="upper left")
-    fig.tight_layout()
     path = Path(outdir) / "paired_seeds.png"
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _save(fig, "paired_seeds", path)
 
 
 # ------------------------------------------------- F6 shared vs unshared names
 def shared_unshared(outdir):
     results = _load(EVAL / "test_results.json")
     prim = results["primary_score"]
-    fig, ax = plt.subplots(figsize=(7.2, 3.6))
+    fig, ax = plt.subplots(figsize=(7.2, 3.8), layout="constrained")
     width = .35
     xs = []
     x = 0
@@ -314,14 +338,12 @@ def shared_unshared(outdir):
     ax.set_xticks(xs)
     ax.set_xticklabels(labels)
     ax.set_ylabel("Familiar-host AUOSCR")
-    ax.set_title("Test familiar-host unknowns split by shared vs unseen disease names (bars: seed mean ± SD; dots: seeds)")
+    ax.set_title("Test familiar-host unknowns split by shared vs unseen disease names\n"
+                 "(bars: seed mean ± SD; dots: seeds)", fontsize=9)
     ax.legend(frameon=False)
     ax.set_ylim(0.45, 0.75)
-    fig.tight_layout()
     path = Path(outdir) / "shared_unshared.png"
-    fig.savefig(path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _save(fig, "shared_unshared", path)
 
 
 # ------------------------------------------------------------ F7 prediction gallery
@@ -392,7 +414,7 @@ def prediction_gallery(outdir, data_root=None):
         rows = [("Correctly accepted known", row_accept, "#55a868"),
                 ("Correctly rejected unknown", row_reject, "#4c72b0"),
                 ("False-accepted unknown", row_false, "#c44e52")]
-        fig, axes = plt.subplots(3, 4, figsize=(11, 8.2))
+        fig, axes = plt.subplots(3, 4, figsize=(11, 8.6), layout="constrained")
         for r, (label, items, color) in enumerate(rows):
             for c, ax in enumerate(axes[r]):
                 ax.axis("off")
@@ -406,16 +428,15 @@ def prediction_gallery(outdir, data_root=None):
                     verdict = f"✓ rejected  {e['median']:.1f} < thr {e['threshold']:.1f}"
                 else:
                     verdict = f"✗ → {e['pred_names'].pop()}  {e['median']:.1f} ≥ thr {e['threshold']:.1f}"
-                ax.set_title(f"{e['class_name']}\n{verdict}", fontsize=7.5, color=color)
+                name_line = "\n".join(textwrap.wrap(e["class_name"], 14))
+                verdict_line = "\n".join(textwrap.wrap(verdict, 20))
+                ax.set_title(f"{name_line}\n{verdict_line}", fontsize=7.5, color=color)
             axes[r][0].text(-0.08, 0.5, label, rotation=90, va="center", ha="center",
                             transform=axes[r][0].transAxes, fontsize=9, color=rows[r][2])
         fig.suptitle(f"Assignment {assignment} test gallery — frozen MaxLogit, "
                      "median over 3 lesion-supervised seeds", fontsize=11)
-        fig.tight_layout()
         path = Path(outdir) / f"prediction_gallery_{assignment}.png"
-        fig.savefig(path, bbox_inches="tight")
-        plt.close(fig)
-        paths.append(path)
+        paths.append(_save(fig, f"prediction_gallery_{assignment}", path))
     return paths
 
 
@@ -436,6 +457,14 @@ def main():
     args = parser.parse_args()
     for path in generate_all(args.outdir):
         print(f"saved {path}")
+    failures = {n: p for n, p in AUDIT.items() if p}
+    if failures:
+        print(f"AUDIT FAILED for {len(failures)} figure(s):", file=sys.stderr)
+        for n, p in failures.items():
+            for problem in p:
+                print(f"  {n}: {problem}", file=sys.stderr)
+        sys.exit(1)
+    print("readability audit clean (7pt floor, no clipping, no tick collisions)")
 
 
 if __name__ == "__main__":

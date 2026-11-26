@@ -31,12 +31,14 @@ python verify_package.py --full
 |---|---|
 | 任务单、中文报告、Codex 流程记忆及复查笔记 | `docs/` |
 | 试跑和正式实验 Notebook | `Predict.ipynb`、`Formal_Experiment.ipynb` |
-| 清单生成、训练及评估代码 | `formal_manifest.py`、`formal_training.py`、`formal_evaluation.py` |
+| 清单生成、训练、评估及图表代码 | `formal_manifest.py`、`formal_training.py`、`formal_evaluation.py`、`formal_figures.py`、`report_figures.py`、`figure_audit.py` |
 | PlantSeg v7 的完整已解压数据 | `data/plantseg/` |
 | 近重复候选、接触表和排除决策 | `artifacts/near_duplicate_audit/` |
 | 两份试跑模型权重、指标和试跑复查 | `artifacts/`、`artifacts/review_20261111/` |
 | 24 份正式权重、训练日志、方案与样本清单 | `artifacts/formal/` |
 | 冻结规则、正式结果、每张测试图的预测 | `artifacts/formal/evaluation/` |
+| 论文报告图（PDF+PNG）、可读性审计与最终尺寸预览 | `artifacts/formal/figures/report/` |
+| 5 页英文 PDF 报告的 LaTeX 工程与编译产物 | `report/` |
 | 验证误判、病斑热图及复现脚本 | `artifacts/formal/diagnostics/` |
 
 Release 的 `plantseg.zip.partNN` 分段可还原为未经改动的原始数据包。恢复脚本校验原始附件和每个恢复文件，并把数据放在项目根目录下的 `data/plantseg`，把权重放回 `artifacts/`。若你把数据单独移到别处，可自行设置 `PLANTSEG_ROOT` 指向包含 `Metadata.csv`、`images/` 和 `annotations/` 的目录。保留数据内的元数据和原始分区。原始下载记录及来源是 [PlantSeg v7](https://zenodo.org/records/17719108)。
@@ -63,6 +65,6 @@ python verify_package.py --demo
 jupyter lab
 ```
 
-选择该环境的 Python 内核。CPU 可以完成自检和读结果。训练代码可自动选择 CUDA、Apple MPS 或 CPU，具体取决于安装的 PyTorch 和机器。正式 Notebook 的 `RUN_TRAINING`、`RUN_VALIDATION`、`RUN_TEST` 默认为 `False`。要用已有模型看结果，按默认值运行。要从头复训，先在项目的副本中保留好打包时的正式产物，再用独立的输出目录运行训练、验证、冻结和测试。需要下载 ImageNet 预训练权重时，首次训练需要网络。`run_formal_experiment.sh` 是 macOS/Linux/WSL 的命令行入口，Windows 也可以在 Notebook 中运行相同的 Python 函数。
+选择该环境的 Python 内核。CPU 可以完成自检和读结果。重新生成论文报告图（含可读性审计与最终尺寸预览）只需 `python report_figures.py`，数据未被还原时预测画廊会自动跳过。训练代码可自动选择 CUDA、Apple MPS 或 CPU，具体取决于安装的 PyTorch 和机器。正式 Notebook 的 `RUN_TRAINING`、`RUN_VALIDATION`、`RUN_TEST` 默认为 `False`。要用已有模型看结果，按默认值运行。要从头复训，先在项目的副本中保留好打包时的正式产物，再用独立的输出目录运行训练、验证、冻结和测试。需要下载 ImageNet 预训练权重时，首次训练需要网络。`run_formal_experiment.sh` 是 macOS/Linux/WSL 的命令行入口，Windows 也可以在 Notebook 中运行相同的 Python 函数。
 
 用于交接的改动仅涉及包内路径、解释器查找和跨平台文件锁。冻结清单、模型权重、结果和原来的 Notebook 内容随包保留。交接版本已在 Mac 的新目录核验文件、模型加载和正式 Notebook 的查看模式。课程要求的干净 Colab/Kaggle 验证仍在待办中。
