@@ -1,70 +1,44 @@
-# AIP CW2
+# AIP304 Coursework 2: Plant disease recognition with lesion supervision
 
-**Plant disease recognition with lesion supervision · AIP304 Coursework 2, Option 2**
+**Option 2: open-set recognition on PlantSeg v7.** This project tests whether auxiliary lesion-mask supervision helps a classifier reject unseen diseases on familiar plants while preserving known-disease performance.
 
-这是截至 2026 年 11 月 11 日的 Option 2 项目快照。24 次正式训练、冻结后的测试和验证误判分析已经完成。中文流程报告用于读懂当前工作。最终英文报告、演示视频、文献整理和云端复现仍待完成。
+Start with the [five-page report](report/main.pdf), the [formal experiment notebook](Formal_Experiment.ipynb), or the [experiment overview](docs/experiment-overview.md). The 24 formal training runs, frozen test evaluation, and validation error analysis are complete. A run in a fresh Colab or Kaggle environment has yet to be verified.
 
-## 快速开始
+## Results
 
-1. Clone 本仓库，或下载仓库的 Source code ZIP 后解压。从包含 `README.md` 的目录打开 Codex 或 IDE。
-2. 从项目根目录运行下面的命令。脚本会从 [GitHub Release](https://github.com/Wickan-Song/AIP-CW2/releases/tag/v0.1.0) 下载分段、还原原始 PlantSeg ZIP 和 26 份权重，并校验后放回正确位置。如果已经拿到完整 ZIP，也可以直接执行 `python restore_assets.py plantseg.zip AIP-CW2-weights.zip`。
-
-```shell
-python download_release_assets.py
-python verify_package.py --full
-```
-
-3. 让 Codex 先读 `AGENTS.md`、本 README 和 [CW2 流程记忆](<docs/CW2 流程记忆.md>)。也可以先读[中文实验流程报告](<docs/AIP304 CW2 实验流程与阶段结果.pdf>)，再打开 [Formal_Experiment.ipynb](Formal_Experiment.ipynb)。正式 Notebook 保存了结果表和图，默认查看模式可以在恢复附件后重新生成输出。
-
-## 正式结果
-
-| 划分 | 已知病准确率，基线 → 病斑组 | 熟悉宿主 AUOSCR，基线 → 病斑组 | 配对差值 |
+| Assignment | Known accuracy, baseline → lesion | Familiar-host AUOSCR, baseline → lesion | Paired AUOSCR change |
 |---|---:|---:|---:|
 | A | 78.50% → 78.44% | 0.6245 → 0.6316 | +0.0071 |
-| B | 74.71% → 74.78% | 0.6007 → 0.5987 | -0.0020 |
+| B | 74.71% → 74.78% | 0.6007 → 0.5987 | −0.0020 |
 
-数值为冻结 MaxLogit 规则下三个随机种子的平均值。两套划分均满足已知病 Macro-F1 容差，均未达到预设的 AUOSCR 平均增益 0.02。[验证误判排查](artifacts/formal/diagnostics/validation_findings.md)记录了实际病斑图和误判案例。
+Values are means over three paired seeds under the frozen MaxLogit rule. Both assignments met the known-class macro-F1 tolerance. Neither reached the predefined AUOSCR gain of 0.02. See the [validation error analysis](artifacts/formal/diagnostics/validation_findings.md) for lesion maps and false-acceptance examples.
 
-## 文件在哪里
+## Setup and inference
 
-| 内容 | 包内路径 |
-|---|---|
-| 任务单、中文报告、Codex 流程记忆及复查笔记 | `docs/` |
-| 试跑和正式实验 Notebook | `Predict.ipynb`、`Formal_Experiment.ipynb` |
-| 清单生成、训练、评估及图表代码 | `formal_manifest.py`、`formal_training.py`、`formal_evaluation.py`、`formal_figures.py`、`report_figures.py`、`figure_audit.py` |
-| PlantSeg v7 的完整已解压数据 | `data/plantseg/` |
-| 近重复候选、接触表和排除决策 | `artifacts/near_duplicate_audit/` |
-| 两份试跑模型权重、指标和试跑复查 | `artifacts/`、`artifacts/review_20261111/` |
-| 24 份正式权重、训练日志、方案与样本清单 | `artifacts/formal/` |
-| 冻结规则、正式结果、每张测试图的预测 | `artifacts/formal/evaluation/` |
-| 论文报告图（PDF+PNG）、可读性审计与最终尺寸预览 | `artifacts/formal/figures/report/` |
-| 5 页英文 PDF 报告的 LaTeX 工程与编译产物 | `report/` |
-| 验证误判、病斑热图及复现脚本 | `artifacts/formal/diagnostics/` |
+1. Clone this repository or download and extract the source ZIP. Run commands from the repository root.
+2. Restore the split assets from [release v0.1.0](https://github.com/Wickan-Song/AIP-CW2/releases/tag/v0.1.0), then verify the package:
 
-Release 的 `plantseg.zip.partNN` 分段可还原为未经改动的原始数据包。恢复脚本校验原始附件和每个恢复文件，并把数据放在项目根目录下的 `data/plantseg`，把权重放回 `artifacts/`。若你把数据单独移到别处，可自行设置 `PLANTSEG_ROOT` 指向包含 `Metadata.csv`、`images/` 和 `annotations/` 的目录。保留数据内的元数据和原始分区。原始下载记录及来源是 [PlantSeg v7](https://zenodo.org/records/17719108)。
+   ```sh
+   python download_release_assets.py
+   python verify_package.py --full
+   ```
 
-## 检查文件与运行
+   If you already have both original archives, run `python restore_assets.py plantseg.zip AIP-CW2-weights.zip` instead. The restore scripts verify and extract the original [PlantSeg v7](https://zenodo.org/records/17719108) archive and 26 checkpoints. For notebook and experiment code, you can use an alternate extracted location by pointing `PLANTSEG_ROOT` to the directory containing `Metadata.csv`, `images/`, and `annotations/`. The package verifier and its CPU demo expect the standard directory layout.
+3. Create a Python 3.9–3.12 virtual environment with `python -m venv .venv`. Activate it with `source .venv/bin/activate` on macOS/Linux or `.\.venv\Scripts\Activate.ps1` in Windows PowerShell. Then run:
 
-仅查看 PDF、日志、流程记忆和 Notebook 保存的输出时，可以直接打开文件。完整校验使用 Python 标准库。在项目根目录执行：
+   ```sh
+   python -m pip install -r requirements.txt
+   python verify_package.py --demo
+   jupyter lab
+   ```
 
-```shell
-python verify_package.py --full
-```
+   The demo loads two frozen checkpoints and runs inference on a validation image on CPU. Select the same Python environment as your notebook kernel.
 
-如果要运行 Notebook 或做推理，用 Python 3.9–3.12 新建自己的虚拟环境，再安装依赖。macOS/Linux 用 `source .venv/bin/activate` 激活，Windows PowerShell 用 `.\.venv\Scripts\Activate.ps1` 激活。
+## Reading and reproducing the experiments
 
-```shell
-python -m venv .venv
-```
+- [Formal_Experiment.ipynb](Formal_Experiment.ipynb) contains the main evaluation and saved figures. Training, validation, and test rerun flags default to `False`. [Predict.ipynb](Predict.ipynb) records the earlier pilot.
+- [Experiment handoff](docs/experiment-handoff.md) records split construction, training choices, verification, and limitations. The [task sheet](<docs/AIP304 CW2 Task Sheet.pdf>) defines the original assignment.
+- [Formal artifacts](artifacts/formal/) contain the split manifest, protocol, logs, and [frozen evaluation outputs](artifacts/formal/evaluation/). The [near-duplicate audit](artifacts/near_duplicate_audit/README.md) documents the exclusions.
+- [Report sources](report/README.md) explain how to compile the report. Run `python report_figures.py` to regenerate report figures. Without restored images, the prediction gallery is skipped.
 
-激活后执行：
-
-```shell
-python -m pip install -r requirements.txt
-python verify_package.py --demo
-jupyter lab
-```
-
-选择该环境的 Python 内核。CPU 可以完成自检和读结果。重新生成论文报告图（含可读性审计与最终尺寸预览）只需 `python report_figures.py`，数据未被还原时预测画廊会自动跳过。训练代码可自动选择 CUDA、Apple MPS 或 CPU，具体取决于安装的 PyTorch 和机器。正式 Notebook 的 `RUN_TRAINING`、`RUN_VALIDATION`、`RUN_TEST` 默认为 `False`。要用已有模型看结果，按默认值运行。要从头复训，先在项目的副本中保留好打包时的正式产物，再用独立的输出目录运行训练、验证、冻结和测试。需要下载 ImageNet 预训练权重时，首次训练需要网络。`run_formal_experiment.sh` 是 macOS/Linux/WSL 的命令行入口，Windows 也可以在 Notebook 中运行相同的 Python 函数。
-
-用于交接的改动仅涉及包内路径、解释器查找和跨平台文件锁。冻结清单、模型权重、结果和原来的 Notebook 内容随包保留。交接版本已在 Mac 的新目录核验文件、模型加载和正式 Notebook 的查看模式。课程要求的干净 Colab/Kaggle 验证仍在待办中。
+To rerun the full training grid, use a separate working copy and preserve the frozen results. See [run_formal_experiment.sh](run_formal_experiment.sh) on macOS, Linux, or WSL. Windows users can call the equivalent Python functions from the notebook. The training code detects CUDA, Apple MPS, or CPU. A first training run may require downloading ImageNet weights.

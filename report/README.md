@@ -41,12 +41,6 @@ booktabs, titlesec, microtype, hyperref). The compiled result is `main.pdf`
   pages; its counts appear in §3 of the report text.
 - `main.pdf` — compiled deliverable.
 
-## Before submission (must edit in `main.tex`)
+## Submission checks
 
-1. `\author{...}` — replace the red TODO with the student name(s) and ID(s).
-2. §7 first paragraph — replace the TODO with the contribution statement
-   (single-author completion, or each team member's work).
-
-Everything else is content-complete: hypothesis, protocol, methods, frozen
-results, negative-result interpretation, limitations, AI-use disclosure, and
-references.
+The repository PDF is five pages and lists all three team members with a shared acknowledgement. Check the separate notebook and video against the task sheet before submission.
